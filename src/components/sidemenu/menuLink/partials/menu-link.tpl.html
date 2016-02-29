@@ -1,0 +1,11 @@
+<md-button ui-sref-active="active-state" ui-sref="{{vm.section.state}}">
+    <span ng-class="{'{{vm.section.icon}}' : true}"></span>
+    <span ng-if="vm.section.stackedIcons.length > 0" class="fa-stack">
+        <i ng-repeat="iconObject in vm.section.stackedIcons track by $index" class="fa" ng-class="{'{{iconObject.icon}}': true, '{{iconObject.iconStyle}}': true}"></i>
+    </span>
+    <span ng-show="vm.menuIsSlidOpen || vm.menuIsHover" style="padding-left: 5px;">{{vm.section | humanizeDoc}}</span>
+    <span class="md-visually-hidden " ng-if="vm.isSelected()">
+        current page
+    </span>
+</md-button>
+<!--<md-tooltip md-direction="right">{{vm.section.description}}</md-tooltip>-->

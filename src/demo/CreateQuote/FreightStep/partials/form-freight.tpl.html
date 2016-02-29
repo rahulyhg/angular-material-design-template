@@ -1,0 +1,56 @@
+<div layout="column" class="">
+    <form name="createQuoteFreight.freightStepForm">
+        <div layout="row" class="field-row">
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Transport Mode (required)</label>
+                <md-select name="TransportMode" ng-model="createQuoteFreight.data.TransportMode" required>
+                    <md-option ng-repeat="transportMode in createQuoteFreight.TransportModes" value="{{transportMode.Id}}">
+                        {{transportMode.Description}}
+                    </md-option>
+                </md-select>
+                <div ng-messages="createQuoteFreight.freightStepForm.TransportMode.$error">
+                    <div ng-message="required">Transport Mode is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Loading Port (required)</label>
+                <input name="LoadingPort" ng-model="createQuoteFreight.data.LoadingPort" required>
+                <div ng-messages="createQuoteFreight.freightStepForm.LoadingPort.$error">
+                    <div ng-message="required">Loading Port is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Destination Port (required)</label>
+                <input name="DestinationPort" ng-model="createQuoteFreight.data.DestinationPort" required>
+                <div ng-messages="createQuoteFreight.freightStepForm.TransportMode.$error">
+                    <div ng-message="required">Destination Port is required.</div>
+                </div>
+            </md-input-container>
+        </div>
+        <div layout="row" class="field-row">
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Incoterms (required</label>
+                <md-select name="IncotermsList" ng-model="createQuoteFreight.data.Incoterms" required>
+                    <md-option ng-repeat="incoterm in createQuoteFreight.IncotermsList" value="{{incoterm.Id}}">
+                        {{incoterm.Description}}
+                    </md-option>
+                </md-select>
+                <div ng-messages="createQuoteFreight.freightStepForm.IncotermsList.$error">
+                    <div ng-message="required">Incoterms is required.</div>
+                </div>
+            </md-input-container>
+        </div>
+        <div layout="row" class="field-row">
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Shipping Factory (required)</label>
+                <input name="Factory" ng-model="createQuoteFreight.data.Factory" required>
+                <div ng-messages="createQuoteFreight.freightStepForm.Factory.$error">
+                    <div ng-message="required">Factory is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container flex="50">
+                Factory Details
+            </md-input-container>
+        </div>
+    </form>
+</div>

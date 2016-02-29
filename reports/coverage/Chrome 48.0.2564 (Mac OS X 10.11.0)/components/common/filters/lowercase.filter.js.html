@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for components/common/filters/lowercase.filter.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">components/common/filters/</a> lowercase.filter.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>9/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>6/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>9/9</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">217×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">214×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">212×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+/*global angular */
+(function () {
+    'use strict';
+&nbsp;
+    angular.module('lowercase.filter', [])
+    /**
+     *replace uppercase to regular case
+     */
+    .filter('humanizeDoc', function () {
+        return function (doc) {
+            if (!doc) {
+                return;
+            }
+            if (doc.type === 'directive') {
+                return doc.name.replace(/([A-Z])/g, function ($1) {
+                    return '-' + $1.toLowerCase();
+                });
+            }
+            return doc.label || doc.name;
+        };
+    });
+})();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qYWNvYnR1Y2tlci9Ub29sYm94L1dvcmtzcGFjZS9naXQvYW5ndWxhci1tYXRlcmlhbC1kZXNpZ24tdGVtcGxhdGUvc3JjL2NvbXBvbmVudHMvY29tbW9uL2ZpbHRlcnMvbG93ZXJjYXNlLmZpbHRlci5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFDQSxDQUFDLFlBQVk7QUFDVCxpQkFEUzs7QUFFVCxZQUFRLE1BQVIsQ0FBZSxrQkFBZixFQUFtQyxFQUFuQzs7OztLQUlLLE1BSkwsQ0FJWSxhQUpaLEVBSTJCLFlBQVk7QUFDL0IsZUFBTyxVQUFVLEdBQVYsRUFBZTtBQUNsQixnQkFBSSxDQUFDLEdBQUQsRUFBTTtBQUNOLHVCQURNO2FBQVY7QUFHQSxnQkFBSSxJQUFJLElBQUosS0FBYSxXQUFiLEVBQTBCO0FBQzFCLHVCQUFPLElBQUksSUFBSixDQUFTLE9BQVQsQ0FBaUIsVUFBakIsRUFBNkIsVUFBVSxFQUFWLEVBQWM7QUFDOUMsMkJBQU8sTUFBTSxHQUFHLFdBQUgsRUFBTixDQUR1QztpQkFBZCxDQUFwQyxDQUQwQjthQUE5QjtBQUtBLG1CQUFPLElBQUksS0FBSixJQUFhLElBQUksSUFBSixDQVRGO1NBQWYsQ0FEd0I7S0FBWixDQUozQixDQUZTO0NBQVosR0FBRCIsImZpbGUiOiJsb3dlcmNhc2UuZmlsdGVyLmVzNS5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qZ2xvYmFsIGFuZ3VsYXIgKi9cbihmdW5jdGlvbiAoKSB7XG4gICAgJ3VzZSBzdHJpY3QnO1xuICAgIGFuZ3VsYXIubW9kdWxlKCdsb3dlcmNhc2UuZmlsdGVyJywgW10pXG4gICAgICAgIC8qKlxuICAgICAgICAgKnJlcGxhY2UgdXBwZXJjYXNlIHRvIHJlZ3VsYXIgY2FzZVxuICAgICAgICAgKi9cbiAgICAgICAgLmZpbHRlcignaHVtYW5pemVEb2MnLCBmdW5jdGlvbiAoKSB7XG4gICAgICAgICAgICByZXR1cm4gZnVuY3Rpb24gKGRvYykge1xuICAgICAgICAgICAgICAgIGlmICghZG9jKSB7XG4gICAgICAgICAgICAgICAgICAgIHJldHVybjtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgaWYgKGRvYy50eXBlID09PSAnZGlyZWN0aXZlJykge1xuICAgICAgICAgICAgICAgICAgICByZXR1cm4gZG9jLm5hbWUucmVwbGFjZSgvKFtBLVpdKS9nLCBmdW5jdGlvbiAoJDEpIHtcbiAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiAnLScgKyAkMS50b0xvd2VyQ2FzZSgpO1xuICAgICAgICAgICAgICAgICAgICB9KTtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgcmV0dXJuIGRvYy5sYWJlbCB8fCBkb2MubmFtZTtcbiAgICAgICAgICAgIH07XG4gICAgICAgIH0pO1xufSgpKTtcbiJdfQ==</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Feb 24 2016 08:52:38 GMT-0600 (CST)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

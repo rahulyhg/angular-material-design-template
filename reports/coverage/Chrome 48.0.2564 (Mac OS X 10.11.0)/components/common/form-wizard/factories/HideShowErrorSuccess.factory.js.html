@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for components/common/form-wizard/factories/HideShowErrorSuccess.factory.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">components/common/form-wizard/factories/</a> HideShowErrorSuccess.factory.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">18.75% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>6/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">14.29% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">18.75% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>6/32</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+/*global angular */
+/*jshint esnext: true */
+(function () {
+    'use strict';
+&nbsp;
+    angular.module('formWizard').factory('HideShowErrorSuccess', HideShowErrorSuccess);
+&nbsp;
+    HideShowErrorSuccess.$inject = [];
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function HideShowErrorSuccess() {</span>
+<span class="cstat-no" title="statement not covered" >        var factory;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        factory = {</span>
+            GetCurrentStep: getCurrentStep,
+            SetTabError: setTabError
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return factory;</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function getCurrentStep(FormSteps, controllerState) {</span>
+<span class="cstat-no" title="statement not covered" >            var activeStep;</span>
+<span class="cstat-no" title="statement not covered" >            angular.forEach(FormSteps.steps, <span class="fstat-no" title="function not covered" >function (step) {</span></span>
+<span class="cstat-no" title="statement not covered" >                if (step.State === controllerState) {</span>
+<span class="cstat-no" title="statement not covered" >                    activeStep = step;</span>
+                }
+            });
+<span class="cstat-no" title="statement not covered" >            return activeStep;</span>
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function setTabError(activeStep, form) {</span>
+<span class="cstat-no" title="statement not covered" >            var tabError;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            tabError = setTabError;</span>
+<span class="cstat-no" title="statement not covered" >            console.log(form);</span>
+<span class="cstat-no" title="statement not covered" >            tabError.forceShowFieldError = <span class="fstat-no" title="function not covered" >function () {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                angular.forEach(Object.keys(form), <span class="fstat-no" title="function not covered" >function (key) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    if (key.indexOf('$') &lt; 0 &amp;&amp; Object.keys(form[key].$error).length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                        console.log(form[key]);</span>
+<span class="cstat-no" title="statement not covered" >                        form[key].$setDirty();</span>
+<span class="cstat-no" title="statement not covered" >                        form[key].$setTouched();</span>
+                    }
+                });
+            };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (form.$invalid &amp;&amp; (form.$dirty || activeStep.PreviouslyVisited)) {</span>
+<span class="cstat-no" title="statement not covered" >                activeStep.ShowError = true;</span>
+<span class="cstat-no" title="statement not covered" >                activeStep.ShowComplete = false;</span>
+<span class="cstat-no" title="statement not covered" >                tabError.forceShowFieldError();</span>
+            } else <span class="cstat-no" title="statement not covered" >if (form.$valid &amp;&amp; (form.$dirty || activeStep.PreviouslyVisited)) {</span>
+<span class="cstat-no" title="statement not covered" >                activeStep.ShowError = false;</span>
+<span class="cstat-no" title="statement not covered" >                activeStep.ShowComplete = true;</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                activeStep.ShowError = false;</span>
+<span class="cstat-no" title="statement not covered" >                activeStep.ShowComplete = false;</span>
+            }
+        }
+    }
+})();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qYWNvYnR1Y2tlci9Ub29sYm94L1dvcmtzcGFjZS9naXQvYW5ndWxhci1tYXRlcmlhbC1kZXNpZ24tdGVtcGxhdGUvc3JjL2NvbXBvbmVudHMvY29tbW9uL2Zvcm0td2l6YXJkL2ZhY3Rvcmllcy9IaWRlU2hvd0Vycm9yU3VjY2Vzcy5mYWN0b3J5LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFFQSxDQUFDLFlBQVc7QUFDUixpQkFEUTs7QUFFUixZQUFRLE1BQVIsQ0FBZSxZQUFmLEVBQ0ssT0FETCxDQUNhLHNCQURiLEVBQ3FDLG9CQURyQyxFQUZROztBQUtSLHlCQUFxQixPQUFyQixHQUErQixFQUEvQixDQUxROztBQU9SLGFBQVMsb0JBQVQsR0FBaUM7QUFDN0IsWUFBSSxPQUFKLENBRDZCOztBQUc3QixrQkFBVTtBQUNOLDRCQUFnQixjQUFoQjtBQUNBLHlCQUFhLFdBQWI7U0FGSixDQUg2Qjs7QUFRN0IsZUFBTyxPQUFQLENBUjZCOztBQVU3QixpQkFBUyxjQUFULENBQXlCLFNBQXpCLEVBQW9DLGVBQXBDLEVBQXFEO0FBQ2pELGdCQUFJLFVBQUosQ0FEaUQ7QUFFakQsb0JBQVEsT0FBUixDQUFnQixVQUFVLEtBQVYsRUFBaUIsVUFBQyxJQUFELEVBQVU7QUFDdkMsb0JBQUksS0FBSyxLQUFMLEtBQWUsZUFBZixFQUFnQztBQUNoQyxpQ0FBYSxJQUFiLENBRGdDO2lCQUFwQzthQUQ2QixDQUFqQyxDQUZpRDtBQU9qRCxtQkFBTyxVQUFQLENBUGlEO1NBQXJEOztBQVVBLGlCQUFTLFdBQVQsQ0FBc0IsVUFBdEIsRUFBa0MsSUFBbEMsRUFBd0M7QUFDcEMsZ0JBQUksUUFBSixDQURvQzs7QUFHcEMsdUJBQVcsV0FBWCxDQUhvQztBQUlwQyxvQkFBUSxHQUFSLENBQVksSUFBWixFQUpvQztBQUtwQyxxQkFBUyxtQkFBVCxHQUErQixZQUFZOztBQUV2Qyx3QkFBUSxPQUFSLENBQWdCLE9BQU8sSUFBUCxDQUFZLElBQVosQ0FBaEIsRUFBbUMsVUFBQyxHQUFELEVBQVM7QUFDeEMsd0JBQUksSUFBSSxPQUFKLENBQVksR0FBWixJQUFtQixDQUFuQixJQUF3QixPQUFPLElBQVAsQ0FBWSxLQUFLLEdBQUwsRUFBVSxNQUFWLENBQVosQ0FBOEIsTUFBOUIsR0FBdUMsQ0FBdkMsRUFBMEM7QUFDbEUsZ0NBQVEsR0FBUixDQUFZLEtBQUssR0FBTCxDQUFaLEVBRGtFO0FBRWxFLDZCQUFLLEdBQUwsRUFBVSxTQUFWLEdBRmtFO0FBR2xFLDZCQUFLLEdBQUwsRUFBVSxXQUFWLEdBSGtFO3FCQUF0RTtpQkFEK0IsQ0FBbkMsQ0FGdUM7YUFBWixDQUxLOztBQWdCcEMsZ0JBQUksS0FBSyxRQUFMLEtBQWtCLEtBQUssTUFBTCxJQUFlLFdBQVcsaUJBQVgsQ0FBakMsRUFBZ0U7QUFDaEUsMkJBQVcsU0FBWCxHQUF1QixJQUF2QixDQURnRTtBQUVoRSwyQkFBVyxZQUFYLEdBQTBCLEtBQTFCLENBRmdFO0FBR2hFLHlCQUFTLG1CQUFULEdBSGdFO2FBQXBFLE1BSU8sSUFBSSxLQUFLLE1BQUwsS0FBZ0IsS0FBSyxNQUFMLElBQWUsV0FBVyxpQkFBWCxDQUEvQixFQUE4RDtBQUNyRSwyQkFBVyxTQUFYLEdBQXVCLEtBQXZCLENBRHFFO0FBRXJFLDJCQUFXLFlBQVgsR0FBMEIsSUFBMUIsQ0FGcUU7YUFBbEUsTUFHQTtBQUNILDJCQUFXLFNBQVgsR0FBdUIsS0FBdkIsQ0FERztBQUVILDJCQUFXLFlBQVgsR0FBMEIsS0FBMUIsQ0FGRzthQUhBO1NBcEJYO0tBcEJKO0NBUEgsR0FBRCIsImZpbGUiOiJIaWRlU2hvd0Vycm9yU3VjY2Vzcy5mYWN0b3J5LmVzNS5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qZ2xvYmFsIGFuZ3VsYXIgKi9cbi8qanNoaW50IGVzbmV4dDogdHJ1ZSAqL1xuKGZ1bmN0aW9uKCkge1xuICAgICd1c2Ugc3RyaWN0JztcbiAgICBhbmd1bGFyLm1vZHVsZSgnZm9ybVdpemFyZCcpXG4gICAgICAgIC5mYWN0b3J5KCdIaWRlU2hvd0Vycm9yU3VjY2VzcycsIEhpZGVTaG93RXJyb3JTdWNjZXNzKTtcblxuICAgIEhpZGVTaG93RXJyb3JTdWNjZXNzLiRpbmplY3QgPSBbXTtcblxuICAgIGZ1bmN0aW9uIEhpZGVTaG93RXJyb3JTdWNjZXNzICgpIHtcbiAgICAgICAgdmFyIGZhY3Rvcnk7XG5cbiAgICAgICAgZmFjdG9yeSA9IHtcbiAgICAgICAgICAgIEdldEN1cnJlbnRTdGVwOiBnZXRDdXJyZW50U3RlcCxcbiAgICAgICAgICAgIFNldFRhYkVycm9yOiBzZXRUYWJFcnJvclxuICAgICAgICB9O1xuXG4gICAgICAgIHJldHVybiBmYWN0b3J5O1xuXG4gICAgICAgIGZ1bmN0aW9uIGdldEN1cnJlbnRTdGVwIChGb3JtU3RlcHMsIGNvbnRyb2xsZXJTdGF0ZSkge1xuICAgICAgICAgICAgdmFyIGFjdGl2ZVN0ZXA7XG4gICAgICAgICAgICBhbmd1bGFyLmZvckVhY2goRm9ybVN0ZXBzLnN0ZXBzLCAoc3RlcCkgPT4ge1xuICAgICAgICAgICAgICAgIGlmIChzdGVwLlN0YXRlID09PSBjb250cm9sbGVyU3RhdGUpIHtcbiAgICAgICAgICAgICAgICAgICAgYWN0aXZlU3RlcCA9IHN0ZXA7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfSk7XG4gICAgICAgICAgICByZXR1cm4gYWN0aXZlU3RlcDtcbiAgICAgICAgfVxuXG4gICAgICAgIGZ1bmN0aW9uIHNldFRhYkVycm9yIChhY3RpdmVTdGVwLCBmb3JtKSB7XG4gICAgICAgICAgICB2YXIgdGFiRXJyb3I7XG5cbiAgICAgICAgICAgIHRhYkVycm9yID0gc2V0VGFiRXJyb3I7XG4gICAgICAgICAgICBjb25zb2xlLmxvZyhmb3JtKTtcbiAgICAgICAgICAgIHRhYkVycm9yLmZvcmNlU2hvd0ZpZWxkRXJyb3IgPSBmdW5jdGlvbiAoKSB7XG5cbiAgICAgICAgICAgICAgICBhbmd1bGFyLmZvckVhY2goT2JqZWN0LmtleXMoZm9ybSksIChrZXkpID0+IHtcbiAgICAgICAgICAgICAgICAgICAgaWYgKGtleS5pbmRleE9mKCckJykgPCAwICYmIE9iamVjdC5rZXlzKGZvcm1ba2V5XS4kZXJyb3IpLmxlbmd0aCA+IDApIHtcbiAgICAgICAgICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKGZvcm1ba2V5XSk7XG4gICAgICAgICAgICAgICAgICAgICAgICBmb3JtW2tleV0uJHNldERpcnR5KCk7XG4gICAgICAgICAgICAgICAgICAgICAgICBmb3JtW2tleV0uJHNldFRvdWNoZWQoKTtcbiAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIH0pO1xuICAgICAgICAgICAgfTtcblxuICAgICAgICAgICAgaWYgKGZvcm0uJGludmFsaWQgJiYgKGZvcm0uJGRpcnR5IHx8IGFjdGl2ZVN0ZXAuUHJldmlvdXNseVZpc2l0ZWQpKSB7XG4gICAgICAgICAgICAgICAgYWN0aXZlU3RlcC5TaG93RXJyb3IgPSB0cnVlO1xuICAgICAgICAgICAgICAgIGFjdGl2ZVN0ZXAuU2hvd0NvbXBsZXRlID0gZmFsc2U7XG4gICAgICAgICAgICAgICAgdGFiRXJyb3IuZm9yY2VTaG93RmllbGRFcnJvcigpO1xuICAgICAgICAgICAgfSBlbHNlIGlmIChmb3JtLiR2YWxpZCAmJiAoZm9ybS4kZGlydHkgfHwgYWN0aXZlU3RlcC5QcmV2aW91c2x5VmlzaXRlZCkpIHtcbiAgICAgICAgICAgICAgICBhY3RpdmVTdGVwLlNob3dFcnJvciA9IGZhbHNlO1xuICAgICAgICAgICAgICAgIGFjdGl2ZVN0ZXAuU2hvd0NvbXBsZXRlID0gdHJ1ZTtcbiAgICAgICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgICAgICAgYWN0aXZlU3RlcC5TaG93RXJyb3IgPSBmYWxzZTtcbiAgICAgICAgICAgICAgICBhY3RpdmVTdGVwLlNob3dDb21wbGV0ZSA9IGZhbHNlO1xuICAgICAgICAgICAgfVxuICAgICAgICB9XG4gICAgfVxuXG59KCkpO1xuIl19</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Feb 24 2016 08:52:38 GMT-0600 (CST)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

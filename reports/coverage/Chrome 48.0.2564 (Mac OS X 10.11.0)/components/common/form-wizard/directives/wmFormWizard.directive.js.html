@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for components/common/form-wizard/directives/wmFormWizard.directive.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">components/common/form-wizard/directives/</a> wmFormWizard.directive.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">28.57% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>8/28</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">14.29% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">28.57% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>8/28</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+/*global angular */
+/*jshint esnext: true */
+(function () {
+    'use strict';
+&nbsp;
+    angular.module('formWizard').directive('wmFormWizard', wmFormWizard);
+&nbsp;
+    wmFormWizard.$inject = ['$templateRequest', '$compile'];
+&nbsp;
+    var isolatedScope;
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function wmFormWizard($templateRequest, $compile) {</span>
+<span class="cstat-no" title="statement not covered" >        return {</span>
+            restrict: 'AE',
+            scope: {
+                wizardTitle: '=',
+                formTabs: '='
+            },
+            controller: FormWizardController,
+            controllerAs: 'vm',
+            bindToController: true,
+            link: linkFunc
+        };
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function linkFunc(scope, element) {</span>
+<span class="cstat-no" title="statement not covered" >            var templatePath;</span>
+<span class="cstat-no" title="statement not covered" >            templatePath = 'common/form-wizard/partials/form-wizard.tpl.html';</span>
+<span class="cstat-no" title="statement not covered" >            $templateRequest(templatePath).then(<span class="fstat-no" title="function not covered" >function (html) {</span></span>
+<span class="cstat-no" title="statement not covered" >                var template;</span>
+<span class="cstat-no" title="statement not covered" >                template = angular.element(html);</span>
+<span class="cstat-no" title="statement not covered" >                element.append(template);</span>
+<span class="cstat-no" title="statement not covered" >                $compile(template)(scope);</span>
+            });
+        }
+    }
+&nbsp;
+    FormWizardController.$inject = ['$state', 'CreateQuoteFormSteps'];
+<span class="fstat-no" title="function not covered" >    function FormWizardController($state, CreateQuoteFormSteps) {</span>
+<span class="cstat-no" title="statement not covered" >        var self;</span>
+<span class="cstat-no" title="statement not covered" >        self = this;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        self.wizardTitle = CreateQuoteFormSteps.title;</span>
+<span class="cstat-no" title="statement not covered" >        self.formTabs = CreateQuoteFormSteps.steps;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        self.Previous = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            if ($state.current.index === 0) {</span>
+<span class="cstat-no" title="statement not covered" >                $state.go('container.form.' + self.formTabs[self.formTabs.length - 1].State);</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                $state.go('container.form.' + self.formTabs[parseInt($state.current.index, 10) - 1].State);</span>
+            }
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        self.Next = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            if ($state.current.index === self.formTabs.length - 1) {</span>
+<span class="cstat-no" title="statement not covered" >                $state.go('container.form.' + self.formTabs[0].State);</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                $state.go('container.form.' + self.formTabs[parseInt($state.current.index, 10) + 1].State);</span>
+            }
+        };
+    }
+})();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qYWNvYnR1Y2tlci9Ub29sYm94L1dvcmtzcGFjZS9naXQvYW5ndWxhci1tYXRlcmlhbC1kZXNpZ24tdGVtcGxhdGUvc3JjL2NvbXBvbmVudHMvY29tbW9uL2Zvcm0td2l6YXJkL2RpcmVjdGl2ZXMvd21Gb3JtV2l6YXJkLmRpcmVjdGl2ZS5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBRUEsQ0FBQyxZQUFZO0FBQ1QsaUJBRFM7O0FBRVQsWUFBUSxNQUFSLENBQWUsWUFBZixFQUNLLFNBREwsQ0FDZSxjQURmLEVBQytCLFlBRC9CLEVBRlM7O0FBS1QsaUJBQWEsT0FBYixHQUF1QixDQUFDLGtCQUFELEVBQXFCLFVBQXJCLENBQXZCLENBTFM7O0FBT1QsUUFBSSxhQUFKLENBUFM7O0FBU1QsYUFBUyxZQUFULENBQXVCLGdCQUF2QixFQUF5QyxRQUF6QyxFQUFtRDtBQUMvQyxlQUFPO0FBQ0gsc0JBQVUsSUFBVjtBQUNBLG1CQUFPO0FBQ0gsNkJBQWEsR0FBYjtBQUNBLDBCQUFVLEdBQVY7YUFGSjtBQUlBLHdCQUFZLG9CQUFaO0FBQ0EsMEJBQWMsSUFBZDtBQUNBLDhCQUFrQixJQUFsQjtBQUNBLGtCQUFNLFFBQU47U0FUSixDQUQrQzs7QUFhL0MsaUJBQVMsUUFBVCxDQUFrQixLQUFsQixFQUF5QixPQUF6QixFQUFrQztBQUM5QixnQkFBSSxZQUFKLENBRDhCO0FBRTlCLDJCQUFjLGtEQUFkLENBRjhCO0FBRzlCLDZCQUFpQixZQUFqQixFQUErQixJQUEvQixDQUFvQyxVQUFVLElBQVYsRUFBZ0I7QUFDaEQsb0JBQUksUUFBSixDQURnRDtBQUVoRCwyQkFBVyxRQUFRLE9BQVIsQ0FBZ0IsSUFBaEIsQ0FBWCxDQUZnRDtBQUdoRCx3QkFBUSxNQUFSLENBQWUsUUFBZixFQUhnRDtBQUloRCx5QkFBUyxRQUFULEVBQW1CLEtBQW5CLEVBSmdEO2FBQWhCLENBQXBDLENBSDhCO1NBQWxDO0tBYko7O0FBeUJBLHlCQUFxQixPQUFyQixHQUErQixDQUFDLFFBQUQsRUFBVyxzQkFBWCxDQUEvQixDQWxDUztBQW1DVCxhQUFTLG9CQUFULENBQStCLE1BQS9CLEVBQXVDLG9CQUF2QyxFQUE2RDtBQUN6RCxZQUFJLElBQUosQ0FEeUQ7QUFFekQsZUFBTyxJQUFQLENBRnlEOztBQUl6RCxhQUFLLFdBQUwsR0FBbUIscUJBQXFCLEtBQXJCLENBSnNDO0FBS3pELGFBQUssUUFBTCxHQUFnQixxQkFBcUIsS0FBckIsQ0FMeUM7O0FBT3pELGFBQUssUUFBTCxHQUFnQixZQUFZO0FBQ3hCLGdCQUFJLE9BQU8sT0FBUCxDQUFlLEtBQWYsS0FBeUIsQ0FBekIsRUFBNEI7QUFDNUIsdUJBQU8sRUFBUCxDQUFVLG9CQUFvQixLQUFLLFFBQUwsQ0FBYyxLQUFLLFFBQUwsQ0FBYyxNQUFkLEdBQXNCLENBQXRCLENBQWQsQ0FBdUMsS0FBdkMsQ0FBOUIsQ0FENEI7YUFBaEMsTUFFTztBQUNILHVCQUFPLEVBQVAsQ0FBVSxvQkFBb0IsS0FBSyxRQUFMLENBQWMsU0FBUyxPQUFPLE9BQVAsQ0FBZSxLQUFmLEVBQXNCLEVBQS9CLElBQXFDLENBQXJDLENBQWQsQ0FBc0QsS0FBdEQsQ0FBOUIsQ0FERzthQUZQO1NBRFksQ0FQeUM7O0FBZXpELGFBQUssSUFBTCxHQUFZLFlBQVk7QUFDcEIsZ0JBQUksT0FBTyxPQUFQLENBQWUsS0FBZixLQUF5QixLQUFLLFFBQUwsQ0FBYyxNQUFkLEdBQXVCLENBQXZCLEVBQTBCO0FBQ25ELHVCQUFPLEVBQVAsQ0FBVSxvQkFBb0IsS0FBSyxRQUFMLENBQWMsQ0FBZCxFQUFpQixLQUFqQixDQUE5QixDQURtRDthQUF2RCxNQUVPO0FBQ0gsdUJBQU8sRUFBUCxDQUFVLG9CQUFvQixLQUFLLFFBQUwsQ0FBYyxTQUFTLE9BQU8sT0FBUCxDQUFlLEtBQWYsRUFBc0IsRUFBL0IsSUFBcUMsQ0FBckMsQ0FBZCxDQUFzRCxLQUF0RCxDQUE5QixDQURHO2FBRlA7U0FEUSxDQWY2QztLQUE3RDtDQW5DSCxHQUFEIiwiZmlsZSI6IndtRm9ybVdpemFyZC5kaXJlY3RpdmUuZXM1LmpzIiwic291cmNlc0NvbnRlbnQiOlsiLypnbG9iYWwgYW5ndWxhciAqL1xuLypqc2hpbnQgZXNuZXh0OiB0cnVlICovXG4oZnVuY3Rpb24gKCkge1xuICAgICd1c2Ugc3RyaWN0JztcbiAgICBhbmd1bGFyLm1vZHVsZSgnZm9ybVdpemFyZCcpXG4gICAgICAgIC5kaXJlY3RpdmUoJ3dtRm9ybVdpemFyZCcsIHdtRm9ybVdpemFyZCk7XG5cbiAgICB3bUZvcm1XaXphcmQuJGluamVjdCA9IFsnJHRlbXBsYXRlUmVxdWVzdCcsICckY29tcGlsZSddO1xuXG4gICAgdmFyIGlzb2xhdGVkU2NvcGU7XG5cbiAgICBmdW5jdGlvbiB3bUZvcm1XaXphcmQgKCR0ZW1wbGF0ZVJlcXVlc3QsICRjb21waWxlKSB7XG4gICAgICAgIHJldHVybiB7XG4gICAgICAgICAgICByZXN0cmljdDogJ0FFJyxcbiAgICAgICAgICAgIHNjb3BlOiB7XG4gICAgICAgICAgICAgICAgd2l6YXJkVGl0bGU6ICc9JyxcbiAgICAgICAgICAgICAgICBmb3JtVGFiczogJz0nXG4gICAgICAgICAgICB9LFxuICAgICAgICAgICAgY29udHJvbGxlcjogRm9ybVdpemFyZENvbnRyb2xsZXIsXG4gICAgICAgICAgICBjb250cm9sbGVyQXM6ICd2bScsXG4gICAgICAgICAgICBiaW5kVG9Db250cm9sbGVyOiB0cnVlLFxuICAgICAgICAgICAgbGluazogbGlua0Z1bmNcbiAgICAgICAgfTtcblxuICAgICAgICBmdW5jdGlvbiBsaW5rRnVuYyhzY29wZSwgZWxlbWVudCkge1xuICAgICAgICAgICAgdmFyIHRlbXBsYXRlUGF0aDtcbiAgICAgICAgICAgIHRlbXBsYXRlUGF0aCA9J2NvbW1vbi9mb3JtLXdpemFyZC9wYXJ0aWFscy9mb3JtLXdpemFyZC50cGwuaHRtbCc7XG4gICAgICAgICAgICAkdGVtcGxhdGVSZXF1ZXN0KHRlbXBsYXRlUGF0aCkudGhlbihmdW5jdGlvbiAoaHRtbCkge1xuICAgICAgICAgICAgICAgIHZhciB0ZW1wbGF0ZTtcbiAgICAgICAgICAgICAgICB0ZW1wbGF0ZSA9IGFuZ3VsYXIuZWxlbWVudChodG1sKTtcbiAgICAgICAgICAgICAgICBlbGVtZW50LmFwcGVuZCh0ZW1wbGF0ZSk7XG4gICAgICAgICAgICAgICAgJGNvbXBpbGUodGVtcGxhdGUpKHNjb3BlKTtcbiAgICAgICAgICAgIH0pO1xuICAgICAgICB9XG4gICAgfVxuXG4gICAgRm9ybVdpemFyZENvbnRyb2xsZXIuJGluamVjdCA9IFsnJHN0YXRlJywgJ0NyZWF0ZVF1b3RlRm9ybVN0ZXBzJ107XG4gICAgZnVuY3Rpb24gRm9ybVdpemFyZENvbnRyb2xsZXIgKCRzdGF0ZSwgQ3JlYXRlUXVvdGVGb3JtU3RlcHMpIHtcbiAgICAgICAgdmFyIHNlbGY7XG4gICAgICAgIHNlbGYgPSB0aGlzO1xuXG4gICAgICAgIHNlbGYud2l6YXJkVGl0bGUgPSBDcmVhdGVRdW90ZUZvcm1TdGVwcy50aXRsZTtcbiAgICAgICAgc2VsZi5mb3JtVGFicyA9IENyZWF0ZVF1b3RlRm9ybVN0ZXBzLnN0ZXBzO1xuXG4gICAgICAgIHNlbGYuUHJldmlvdXMgPSBmdW5jdGlvbiAoKSB7XG4gICAgICAgICAgICBpZiAoJHN0YXRlLmN1cnJlbnQuaW5kZXggPT09IDApIHtcbiAgICAgICAgICAgICAgICAkc3RhdGUuZ28oJ2NvbnRhaW5lci5mb3JtLicgKyBzZWxmLmZvcm1UYWJzW3NlbGYuZm9ybVRhYnMubGVuZ3RoIC0xXS5TdGF0ZSk7XG4gICAgICAgICAgICB9IGVsc2Uge1xuICAgICAgICAgICAgICAgICRzdGF0ZS5nbygnY29udGFpbmVyLmZvcm0uJyArIHNlbGYuZm9ybVRhYnNbcGFyc2VJbnQoJHN0YXRlLmN1cnJlbnQuaW5kZXgsIDEwKSAtIDFdLlN0YXRlKTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfTtcblxuICAgICAgICBzZWxmLk5leHQgPSBmdW5jdGlvbiAoKSB7XG4gICAgICAgICAgICBpZiAoJHN0YXRlLmN1cnJlbnQuaW5kZXggPT09IHNlbGYuZm9ybVRhYnMubGVuZ3RoIC0gMSkge1xuICAgICAgICAgICAgICAgICRzdGF0ZS5nbygnY29udGFpbmVyLmZvcm0uJyArIHNlbGYuZm9ybVRhYnNbMF0uU3RhdGUpO1xuICAgICAgICAgICAgfSBlbHNlIHtcbiAgICAgICAgICAgICAgICAkc3RhdGUuZ28oJ2NvbnRhaW5lci5mb3JtLicgKyBzZWxmLmZvcm1UYWJzW3BhcnNlSW50KCRzdGF0ZS5jdXJyZW50LmluZGV4LCAxMCkgKyAxXS5TdGF0ZSk7XG4gICAgICAgICAgICB9XG4gICAgICAgIH07XG4gICAgfVxufSgpKTtcbiJdfQ==</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Feb 24 2016 08:52:38 GMT-0600 (CST)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

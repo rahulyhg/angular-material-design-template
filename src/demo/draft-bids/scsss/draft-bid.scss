@@ -1,0 +1,23 @@
+.alert-circle {
+    height: 13px;
+    width: 13px;
+    color: white;
+    /* border: 1px solid white; */
+    border-radius: 50%;
+    font-size: 12px;
+    text-align: center;
+    background: red;
+    left: -20px;
+    position: relative;
+}
+
+md-fab-speed-dial {
+    position: fixed;
+    top: 68px;
+    right: 40px;
+    //width: 100%;
+}
+
+.md-scale:not(.md-is-open) .md-fab-action-item {
+    opacity: 0;
+}

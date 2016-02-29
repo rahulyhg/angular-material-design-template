@@ -1,0 +1,13 @@
+md-content {
+    .main-content-menu-closed {
+        //margin-left: 60px;
+        //margin-right: 160px;
+        transition: margin 0.3s ease-in-out;
+    }
+
+    .main-content-menu-open {
+        margin-left: 314px;
+        margin-right: 10px;
+        transition: margin 0.3s ease-in-out;
+    }
+}

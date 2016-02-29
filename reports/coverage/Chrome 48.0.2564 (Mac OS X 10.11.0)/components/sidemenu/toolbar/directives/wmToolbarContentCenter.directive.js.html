@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for components/sidemenu/toolbar/directives/wmToolbarContentCenter.directive.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">components/sidemenu/toolbar/directives/</a> wmToolbarContentCenter.directive.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>14/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>14/14</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+/*global angular */
+(function () {
+    angular.module('sidemenu').directive('wmToolbarContentCenter', wmToolbarContentCenter);
+    wmToolbarContentCenter.$inject = ['$templateRequest', '$compile'];
+    function wmToolbarContentCenter($templateRequest, $compile) {
+        var directive;
+        directive = {
+            restrict: 'AE',
+            replace: true,
+            link: linkFunc
+        };
+&nbsp;
+        return directive;
+&nbsp;
+        function linkFunc(scope, element, attr) {
+            var templatePath;
+            $templateRequest('pages/toolbar-content/center-content.tpl.html').then(function (html) {
+                var template;
+                template = angular.element(html);
+                element.append(template);
+                $compile(template)(scope);
+            });
+        }
+    }
+})();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qYWNvYnR1Y2tlci9Ub29sYm94L1dvcmtzcGFjZS9naXQvYW5ndWxhci1tYXRlcmlhbC1kZXNpZ24tdGVtcGxhdGUvc3JjL2NvbXBvbmVudHMvc2lkZW1lbnUvdG9vbGJhci9kaXJlY3RpdmVzL3dtVG9vbGJhckNvbnRlbnRDZW50ZXIuZGlyZWN0aXZlLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUNBLENBQUMsWUFBWTtBQUNULFlBQVEsTUFBUixDQUFlLFVBQWYsRUFDSyxTQURMLENBQ2Usd0JBRGYsRUFDeUMsc0JBRHpDLEVBRFM7QUFHVCwyQkFBdUIsT0FBdkIsR0FBaUMsQ0FBQyxrQkFBRCxFQUFxQixVQUFyQixDQUFqQyxDQUhTO0FBSVQsYUFBUyxzQkFBVCxDQUFpQyxnQkFBakMsRUFBbUQsUUFBbkQsRUFBNkQ7QUFDekQsWUFBSSxTQUFKLENBRHlEO0FBRXpELG9CQUFZO0FBQ1Isc0JBQVUsSUFBVjtBQUNBLHFCQUFTLElBQVQ7QUFDQSxrQkFBTSxRQUFOO1NBSEosQ0FGeUQ7O0FBUXpELGVBQU8sU0FBUCxDQVJ5RDs7QUFVekQsaUJBQVMsUUFBVCxDQUFrQixLQUFsQixFQUF5QixPQUF6QixFQUFrQyxJQUFsQyxFQUF3QztBQUNwQyxnQkFBSSxZQUFKLENBRG9DO0FBRXBDLDZCQUFpQiwrQ0FBakIsRUFBa0UsSUFBbEUsQ0FBdUUsVUFBVSxJQUFWLEVBQWdCO0FBQ25GLG9CQUFJLFFBQUosQ0FEbUY7QUFFbkYsMkJBQVcsUUFBUSxPQUFSLENBQWdCLElBQWhCLENBQVgsQ0FGbUY7QUFHbkYsd0JBQVEsTUFBUixDQUFlLFFBQWYsRUFIbUY7QUFJbkYseUJBQVMsUUFBVCxFQUFtQixLQUFuQixFQUptRjthQUFoQixDQUF2RSxDQUZvQztTQUF4QztLQVZKO0NBSkgsR0FBRCIsImZpbGUiOiJ3bVRvb2xiYXJDb250ZW50Q2VudGVyLmRpcmVjdGl2ZS5lczUuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKmdsb2JhbCBhbmd1bGFyICovXG4oZnVuY3Rpb24gKCkge1xuICAgIGFuZ3VsYXIubW9kdWxlKCdzaWRlbWVudScpXG4gICAgICAgIC5kaXJlY3RpdmUoJ3dtVG9vbGJhckNvbnRlbnRDZW50ZXInLCB3bVRvb2xiYXJDb250ZW50Q2VudGVyKTtcbiAgICB3bVRvb2xiYXJDb250ZW50Q2VudGVyLiRpbmplY3QgPSBbJyR0ZW1wbGF0ZVJlcXVlc3QnLCAnJGNvbXBpbGUnXTtcbiAgICBmdW5jdGlvbiB3bVRvb2xiYXJDb250ZW50Q2VudGVyICgkdGVtcGxhdGVSZXF1ZXN0LCAkY29tcGlsZSkge1xuICAgICAgICB2YXIgZGlyZWN0aXZlO1xuICAgICAgICBkaXJlY3RpdmUgPSB7XG4gICAgICAgICAgICByZXN0cmljdDogJ0FFJyxcbiAgICAgICAgICAgIHJlcGxhY2U6IHRydWUsXG4gICAgICAgICAgICBsaW5rOiBsaW5rRnVuY1xuICAgICAgICB9O1xuXG4gICAgICAgIHJldHVybiBkaXJlY3RpdmU7XG5cbiAgICAgICAgZnVuY3Rpb24gbGlua0Z1bmMoc2NvcGUsIGVsZW1lbnQsIGF0dHIpIHtcbiAgICAgICAgICAgIHZhciB0ZW1wbGF0ZVBhdGg7XG4gICAgICAgICAgICAkdGVtcGxhdGVSZXF1ZXN0KCdwYWdlcy90b29sYmFyLWNvbnRlbnQvY2VudGVyLWNvbnRlbnQudHBsLmh0bWwnKS50aGVuKGZ1bmN0aW9uIChodG1sKSB7XG4gICAgICAgICAgICAgICAgdmFyIHRlbXBsYXRlO1xuICAgICAgICAgICAgICAgIHRlbXBsYXRlID0gYW5ndWxhci5lbGVtZW50KGh0bWwpO1xuICAgICAgICAgICAgICAgIGVsZW1lbnQuYXBwZW5kKHRlbXBsYXRlKTtcbiAgICAgICAgICAgICAgICAkY29tcGlsZSh0ZW1wbGF0ZSkoc2NvcGUpO1xuICAgICAgICAgICAgfSk7XG4gICAgICAgIH1cbiAgICB9XG59KCkpO1xuIl19</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Feb 24 2016 08:52:38 GMT-0600 (CST)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

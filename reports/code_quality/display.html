@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - JavaScript Introspection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <script>
+    var __options = {"title":"WMSideMenu","flags":{"complexity":{"logicalor":true,"switchcase":true,"forin":false,"trycatch":false,"newmi":true},"jshint":{}}}
+  </script>
+
+  <link href="assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="assets/css/plato.css" rel="stylesheet">
+  <link href="assets/css/plato-display.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>WMSideMenu</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="reportBlock lineCount">
+                <div class="reportContent">
+                    <small class="chart-label">Total / Average Lines</small>
+                    <h1>2007 / 34</h1>
+                </div>
+                <div id="chart_historical_sloc" class="chart js-chart"></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="reportBlock maintainability">
+                <div class="reportContent">
+                    <small class="chart-label">Average Maintainability</small>
+                    <h1>74.94</h1>
+                </div>
+                <div id="chart_historical_maint" class="chart js-chart"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="reportBlock maintainabilityList">
+                <h2 class="reportTitle">Worst Maintainability Scores</h2>
+                <ul class="list-unstyled">
+
+                    <li>
+                        <strong>41 score</strong>
+                        <small>demo/SideMenu/constants/side-menu.constant.js</small>
+                    </li>
+
+                    <li>
+                        <strong>48 score</strong>
+                        <small>demo/CreateQuote/constants/create-quote-form-steps.constant.js</small>
+                    </li>
+
+                    <li>
+                        <strong>52 score</strong>
+                        <small>md-themes/asda/primary.constant.js</small>
+                    </li>
+
+                    <li>
+                        <strong>60 score</strong>
+                        <small>components/sidemenu/factories/sidemenu.factory.js</small>
+                    </li>
+
+                    <li>
+                        <strong>60 score</strong>
+                        <small>md-themes/asda/background.constant.js</small>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="reportBlock locList">
+                <h2 class="reportTitle">Largest Files</h2>
+                <ul class="list-unstyled">
+
+                    <li>
+                        <strong>144 lines</strong>
+                        <small>components/sidemenu/factories/sidemenu.factory.js</small>
+                    </li>
+
+                    <li>
+                        <strong>112 lines</strong>
+                        <small>demo/CreateQuote/PackStep/directives/wmCreateQuotePackStep.directive.js</small>
+                    </li>
+
+                    <li>
+                        <strong>93 lines</strong>
+                        <small>demo/SideMenu/constants/side-menu.constant.js</small>
+                    </li>
+
+                    <li>
+                        <strong>89 lines</strong>
+                        <small>components/sidemenu/directives/sideMenu.directive.js</small>
+                    </li>
+
+                    <li>
+                        <strong>75 lines</strong>
+                        <small>demo/CreateQuote/ProductStep/directives/wmCreateQuoteProductStep.directive.js</small>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="reportBlock lintList">
+                <h2 class="reportTitle">Lint Warnings</h2>
+                <ul class="list-unstyled">
+
+                    <li>
+                        <strong>16 lint errors</strong>
+                        <small>components/partials/partials.min.js</small>
+                   </li>
+
+                    <li>
+                        <strong>6 lint errors</strong>
+                        <small>md-themes/walmart/theme.module.js</small>
+                   </li>
+
+                    <li>
+                        <strong>5 lint errors</strong>
+                        <small>md-themes/asda/theme.module.js</small>
+                   </li>
+
+                    <li>
+                        <strong>4 lint errors</strong>
+                        <small>components/common/form-wizard/directives/wmFormSectionBar.directive.js</small>
+                   </li>
+
+                    <li>
+                        <strong>4 lint errors</strong>
+                        <small>demo/CreateQuote/directives/wmCreateQuoteFormWizard.directive.js</small>
+                   </li>
+
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<script type="text/javascript" src="assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="assets/scripts/plato-display.js"></script>
+
+</body>
+</html>

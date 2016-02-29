@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for common/form-wizard/form-wizard.module.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">common/form-wizard/</a> form-wizard.module.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>7/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/3</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>7/7</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">36×</span>
+<span class="cline-any cline-yes">36×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+/*global angular */
+/*jshint esnext: true */
+(function () {
+    'use strict';
+&nbsp;
+    angular.module('formWizard', ['dynamicState.provider', 'QuoteForm']).config(['$dynamicStateProvider', 'CreateQuoteFormSteps', function ($dynamicStateProvider, CreateQuoteFormSteps) {
+        var count;
+        count = 0;
+        angular.forEach(CreateQuoteFormSteps.steps, function (formStep) {
+            $dynamicStateProvider.$get().addState('container.form.' + formStep.State, formStep.Title, count, formStep.TemplatePath, null);
+            count += 1;
+        });
+    }]);
+})();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qYWNvYnR1Y2tlci9Ub29sYm94L1dvcmtzcGFjZS9naXQvYW5ndWxhci1tYXRlcmlhbC1kZXNpZ24tdGVtcGxhdGUvc3JjL2NvbXBvbmVudHMvY29tbW9uL2Zvcm0td2l6YXJkL2Zvcm0td2l6YXJkLm1vZHVsZS5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBRUEsQ0FBQyxZQUFZO0FBQ1QsaUJBRFM7O0FBRVQsWUFBUSxNQUFSLENBQWUsWUFBZixFQUE2QixDQUFDLHVCQUFELEVBQTBCLFdBQTFCLENBQTdCLEVBQ0ssTUFETCxDQUNZLENBQUMsdUJBQUQsRUFBMEIsc0JBQTFCLEVBQWtELFVBQVUscUJBQVYsRUFBaUMsb0JBQWpDLEVBQXVEO0FBQzdHLFlBQUksS0FBSixDQUQ2RztBQUU3RyxnQkFBUyxDQUFULENBRjZHO0FBRzdHLGdCQUFRLE9BQVIsQ0FBZ0IscUJBQXFCLEtBQXJCLEVBQTRCLFVBQUMsUUFBRCxFQUFjO0FBQ3RELGtDQUFzQixJQUF0QixHQUE2QixRQUE3QixDQUFzQyxvQkFBb0IsU0FBUyxLQUFULEVBQWdCLFNBQVMsS0FBVCxFQUFnQixLQUExRixFQUFpRyxTQUFTLFlBQVQsRUFBdUIsSUFBeEgsRUFEc0Q7QUFFdEQscUJBQVMsQ0FBVCxDQUZzRDtTQUFkLENBQTVDLENBSDZHO0tBQXZELENBRDlELEVBRlM7Q0FBWixHQUFEIiwiZmlsZSI6ImZvcm0td2l6YXJkLm1vZHVsZS5lczUuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKmdsb2JhbCBhbmd1bGFyICovXG4vKmpzaGludCBlc25leHQ6IHRydWUgKi9cbihmdW5jdGlvbiAoKSB7XG4gICAgJ3VzZSBzdHJpY3QnO1xuICAgIGFuZ3VsYXIubW9kdWxlKCdmb3JtV2l6YXJkJywgWydkeW5hbWljU3RhdGUucHJvdmlkZXInLCAnUXVvdGVGb3JtJ10pXG4gICAgICAgIC5jb25maWcoWyckZHluYW1pY1N0YXRlUHJvdmlkZXInLCAnQ3JlYXRlUXVvdGVGb3JtU3RlcHMnLCBmdW5jdGlvbiAoJGR5bmFtaWNTdGF0ZVByb3ZpZGVyLCBDcmVhdGVRdW90ZUZvcm1TdGVwcykge1xuICAgICAgICAgICAgdmFyIGNvdW50O1xuICAgICAgICAgICAgY291bnQgID0gMDtcbiAgICAgICAgICAgIGFuZ3VsYXIuZm9yRWFjaChDcmVhdGVRdW90ZUZvcm1TdGVwcy5zdGVwcywgKGZvcm1TdGVwKSA9PiB7XG4gICAgICAgICAgICAgICAgJGR5bmFtaWNTdGF0ZVByb3ZpZGVyLiRnZXQoKS5hZGRTdGF0ZSgnY29udGFpbmVyLmZvcm0uJyArIGZvcm1TdGVwLlN0YXRlLCBmb3JtU3RlcC5UaXRsZSwgY291bnQsIGZvcm1TdGVwLlRlbXBsYXRlUGF0aCwgbnVsbCk7XG4gICAgICAgICAgICAgICAgY291bnQgKz0gMTtcbiAgICAgICAgICAgIH0pO1xuICAgICAgICB9XSk7XG59KCkpO1xuIl19</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Feb 28 2016 20:52:10 GMT-0600 (CST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

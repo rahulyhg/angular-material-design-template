@@ -1,0 +1,80 @@
+md-sidenav {
+    .hide-title {
+        opacity: 0;
+        -webkit-transition: opacity .1s ease-in-out;
+        -moz-transition: opacity .1s ease-in-out;
+        -o-transition: opacity .1s ease-in-out;
+        transition: opacity .1s ease-in-out;
+    }
+    .show-title {
+        opacity: 1;
+        -webkit-transition: opacity .3s ease-in-out;
+        -moz-transition: opacity .3s ease-in-out;
+        -o-transition: opacity .3s ease-in-out;
+        transition: opacity .3s ease-in-out;
+        -webkit-transition-delay: .2s;
+        -moz-transition-delay: .2s;
+        -o-transition-delay: .2s;
+        transition-delay: .2s;
+    }
+    .side-menu,
+    .side-menu ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 0;
+        li.parent-list-item {
+            -webkit-transition: max-height 0.5s ease-in-out, background-color 0.7s ease-in-out;
+            -moz-transition: max-height 0.5s ease-in-out, background-color 0.7s ease-in-out;
+            transition: max-height 0.5s ease-in-out, background-color 0.7s ease-in-out;
+            &.parentActive {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+
+        }
+        a {
+            &.md-button {
+                &.active-state {
+                    background-color: rgba(255, 255, 255, 0.4);
+                }
+            }
+        }
+        .md-button {
+            border-radius: 0;
+            color: inherit;
+            cursor: pointer;
+            font-weight: 400;
+            line-height: 40px;
+            margin: 0;
+            max-height: 40px;
+            overflow: hidden;
+            padding: 0px 16px;
+            text-align: left;
+            text-decoration: none;
+            white-space: normal;
+            width: 100%;
+        }
+        .menu-toggle-list a.md-button {
+            display: block;
+            padding: 0 16px 0 32px;
+            text-transform: none;
+            text-rendering: optimizeLegibility;
+            font-weight: 500;
+        }
+        .menu-toggle-list .md-button {
+            display: block;
+            padding: 0 16px 0 32px;
+            text-transform: none;
+        }
+        .md-button-toggle .md-toggle-icon {
+            background-size: 100% auto;
+            display: inline-block;
+            margin: auto 15 auto auto;
+            width: 15px;
+            color: #ffffff;
+            &.toggled {
+                transform: rotateZ(180deg);
+                -webkit-transform: rotateZ(180deg);
+            }
+        }
+    }
+}

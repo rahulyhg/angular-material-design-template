@@ -1,0 +1,71 @@
+<div layout="column" class="">
+    <form name="createQuoteProduct.productStepForm">
+        <div layout="row" class="field-row">
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Brand (required)</label>
+                <input name="Brand" ng-model="createQuoteProduct.data.ProductBrand" required>
+                <div ng-messages="createQuoteProduct.productStepForm.Brand.$error">
+                    <div ng-message="required">Brand is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Royalty Category (required)</label>
+                <input name="RoyaltyCategory" ng-model="createQuoteProduct.data.RoyaltyCategory" required>
+                <div ng-messages="createQuoteProduct.productStepForm.RoyaltyCategory.$error">
+                    <div ng-message="required">Royalty Category is required.</div>
+                </div>
+            </md-input-container>
+        </div>
+        <div layout="row" class="field-row">
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Vendor Stock Number</label>
+                <input name="VendorStockNumber" ng-model="createQuoteProduct.data.VendorStockNumber" required>
+                <div ng-messages="createQuoteProduct.productStepForm.VendorStockNumber.$error">
+                    <div ng-message="required">Vendor Stock Number is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Product Fineline (required)</label>
+                <input name="ProductFineline" ng-model="createQuoteProduct.data.ProductFineline" required>
+                <div ng-messages="createQuoteProduct.productStepForm.ProductFineline.$error">
+                    <div ng-message="required">Product Fineline is required.</div>
+                </div>
+            </md-input-container>
+            <div class="inset">
+                <md-switch ng-model="createQuoteProduct.data.IsAssortment" aria-label="Is Product an Assortment?" class="md-primary">
+                    Is Product Assortment? {{ createQuoteProduct.data.IsAssortment | yesno}}
+                </md-switch>
+            </div>
+        </div>
+        <div layout="row" class="field-row">
+            <div class="inset">
+                <md-switch ng-model="createQuoteProduct.data.IsGlobalProduct" aria-label="Is Product a Global Product?" class="md-primary">
+                    Is Global Product? {{ createQuoteProduct.data.IsGlobalProduct | yesno}}
+                </md-switch>
+            </div>
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Production Lead Time (required)</label>
+                <input name="ProductionLeadTime" ng-model="createQuoteProduct.data.ProductionLeadTime" required>
+                <div ng-messages="createQuoteProduct.productStepForm.ProductionLeadTime.$error">
+                    <div ng-message="required">Production Lead Time is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Minium Order Quantity (required)</label>
+                <input name="MinimumOrderQuantity" ng-model="createQuoteProduct.data.MinimumOrderQuantity" required>
+                <div ng-messages="createQuoteProduct.productStepForm.MinimumOrderQuantity.$error">
+                    <div ng-message="required">Minimum Order Quantity is required.</div>
+                </div>
+            </md-input-container>
+        </div>
+        <div layout="row" class="field-row">
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Product Comments (required)</label>
+                <input name="ProductComments" ng-model="createQuoteProduct.data.ProductComments" required>
+                <div ng-messages="createQuoteProduct.productStepForm.ProductComments.$error">
+                    <div ng-message="required">Product Comments is required.</div>
+                </div>
+            </md-input-container>
+        </div>
+    </form>
+</div>

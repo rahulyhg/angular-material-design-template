@@ -1,0 +1,284 @@
+md-content .main-content-menu-closed {
+  margin-left: 60px;
+  margin-right: 160px;
+  transition: margin 0.3s ease-in-out; }
+
+md-content .main-content-menu-open {
+  margin-left: 324px;
+  margin-right: 10px;
+  transition: margin 0.3s ease-in-out; }
+
+md-sidenav md-content.blue-bg {
+  overflow: visible;
+  background-color: #0277bd;
+  overflow: scroll;
+  color: #ffffff; }
+
+md-sidenav md-contentmd-button {
+  line-height: 40px !important;
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #ffffff;
+  padding-left: 6px; }
+  md-sidenav md-contentmd-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #004c91; }
+  md-sidenav md-contentmd-button.active {
+    background-color: #78b9e7; }
+    md-sidenav md-contentmd-button.active:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #004c91; }
+  md-sidenav md-contentmd-button.fa {
+    display: block; }
+
+md-sidenav md-content menu-toggle .sub-indent {
+  padding-left: 20px;
+  display: block; }
+
+md-sidenav md-content menu-toggle .menu-toggle-list {
+  background-color: transparent;
+  max-height: 1300px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: max-height 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  -moz-transition: max-height 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out, background-color 0.5s ease-in-out; }
+  md-sidenav md-content menu-toggle .menu-toggle-list.ng-hide {
+    max-height: 0;
+    -webkit-transition: max-height 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    -moz-transition: max-height 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    transition: max-height 0.5s ease-in-out, background-color 0.5s ease-in-out; }
+
+md-sidenav md-contentmenu-link md-button.active {
+  background-color: #ffc220; }
+  md-sidenav md-contentmenu-link md-button.active:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #004c91; }
+
+md-sidenav .hide-title {
+  opacity: 0;
+  -webkit-transition: opacity .1s ease-in-out;
+  -moz-transition: opacity .1s ease-in-out;
+  -o-transition: opacity .1s ease-in-out;
+  transition: opacity .1s ease-in-out; }
+
+md-sidenav .show-title {
+  opacity: 1;
+  -webkit-transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+  -webkit-transition-delay: .2s;
+  -moz-transition-delay: .2s;
+  -o-transition-delay: .2s;
+  transition-delay: .2s; }
+
+md-sidenav .side-menu,
+md-sidenav .side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0; }
+  md-sidenav .side-menu li.parent-list-item,
+  md-sidenav .side-menu ul li.parent-list-item {
+    -webkit-transition: max-height 0.5s ease-in-out, background-color 0.7s ease-in-out;
+    -moz-transition: max-height 0.5s ease-in-out, background-color 0.7s ease-in-out;
+    transition: max-height 0.5s ease-in-out, background-color 0.7s ease-in-out; }
+    md-sidenav .side-menu li.parent-list-item.parentActive,
+    md-sidenav .side-menu ul li.parent-list-item.parentActive {
+      background-color: rgba(0, 0, 0, 0.3); }
+  md-sidenav .side-menu a.md-button.active-state,
+  md-sidenav .side-menu ul a.md-button.active-state {
+    background-color: rgba(255, 255, 255, 0.4); }
+  md-sidenav .side-menu .md-button,
+  md-sidenav .side-menu ul .md-button {
+    border-radius: 0;
+    color: inherit;
+    cursor: pointer;
+    font-weight: 400;
+    line-height: 40px;
+    margin: 0;
+    max-height: 40px;
+    overflow: hidden;
+    padding: 0px 16px;
+    text-align: left;
+    text-decoration: none;
+    white-space: normal;
+    width: 100%; }
+  md-sidenav .side-menu .menu-toggle-list a.md-button,
+  md-sidenav .side-menu ul .menu-toggle-list a.md-button {
+    display: block;
+    padding: 0 16px 0 32px;
+    text-transform: none;
+    text-rendering: optimizeLegibility;
+    font-weight: 500; }
+  md-sidenav .side-menu .menu-toggle-list .md-button,
+  md-sidenav .side-menu ul .menu-toggle-list .md-button {
+    display: block;
+    padding: 0 16px 0 32px;
+    text-transform: none; }
+  md-sidenav .side-menu .md-button-toggle .md-toggle-icon,
+  md-sidenav .side-menu ul .md-button-toggle .md-toggle-icon {
+    background-size: 100% auto;
+    display: inline-block;
+    margin: auto 15 auto auto;
+    width: 15px;
+    color: #ffffff; }
+    md-sidenav .side-menu .md-button-toggle .md-toggle-icon.toggled,
+    md-sidenav .side-menu ul .md-button-toggle .md-toggle-icon.toggled {
+      transform: rotateZ(180deg);
+      -webkit-transform: rotateZ(180deg); }
+
+md-sidenav menu-toggle span {
+  padding-top: 12px;
+  padding-bottom: 12px; }
+
+md-sidenav {
+  overflow: scroll; }
+  md-sidenav.menu-open {
+    min-width: 304px;
+    max-width: 304px;
+    width: 304px; }
+  md-sidenav.menu-close {
+    width: 40px;
+    transition: width .3s ease-in-out; }
+    md-sidenav.menu-close:hover {
+      width: 304px; }
+  md-sidenav.md-locked-open {
+    position: absolute; }
+
+md-sidenav.menu-expanded {
+  visibility: visible;
+  opacity: 1;
+  width: 304px;
+  transition: width 0.3s ease-in-out; }
+
+md-sidenav.menu-collapsed {
+  visibility: hidden;
+  opacity: 0;
+  width: 0px;
+  transition: width 0.3s ease-in-out, visibility 0s .5s, opacity .5s linear; }
+
+.md-button.menu-expanded {
+  font-size: 1.5em;
+  transition: left 0.3s ease-in-out; }
+
+.md-button.menu-collapsed {
+  left: 0px;
+  font-size: 1.5em;
+  transition: left 0.3s ease-in-out; }
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: white; }
+  body .fill-height {
+    display: flex;
+    flex: 1;
+    min-height: 100%; }
+  body .pad-menu-icon-right {
+    margin-right: 32px; }
+  body .md-subheader {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    top: 64px;
+    left: 0px;
+    z-index: 1;
+    transition: left .3s ease-in-out; }
+    body .md-subheader.menu-expanded {
+      top: 64px;
+      left: 304px; }
+    body .md-subheader.md-Walmart-theme.md-hue-2 {
+      color: #ffffff !important; }
+    body .md-subheader.md-ASDA-theme.md-hue-2 {
+      color: #ffffff !important; }
+  body .fill-width {
+    min-width: 100%; }
+  body .full-screen {
+    position: absolute;
+    min-width: 100%; }
+  body .main-content {
+    top: 64px;
+    overflow-x: scroll; }
+  body .sidenav-fixed {
+    position: fixed; }
+  body .toolbar-fixed {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    transition: left .3s ease-in-out; }
+    body .toolbar-fixed.menu-expanded {
+      top: 0px;
+      left: 304px;
+      overflow-x: hidden;
+      transition: left .3s ease-in-out;
+      padding-right: 314px; }
+  body .toolbar-fixed-bottom {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 30px;
+    min-height: 30px;
+    transition: left .2s ease-in-out; }
+    body .toolbar-fixed-bottom.menu-expanded {
+      bottom: 0px;
+      left: 304px;
+      transition: left .5s ease-in-out;
+      transition-delay: .2s; }
+
+.hide-icon {
+  cursor: pointer; }
+
+.show-icon {
+  width: 20px;
+  opacity: 1;
+  cursor: pointer; }
+
+.md-autocomplete-suggestions li {
+  border-bottom: 1px solid #cccccc;
+  line-height: 18px;
+  height: 36px; }
+  .md-autocomplete-suggestions li:hover {
+    background: #cccccc !important;
+    color: white; }
+    .md-autocomplete-suggestions li:hover span.navicon {
+      background: white;
+      color: #cccccc; }
+  .md-autocomplete-suggestions li:active {
+    background: #cccccc !important;
+    color: white; }
+    .md-autocomplete-suggestions li:active span.navicon {
+      background: white;
+      color: #cccccc; }
+  .md-autocomplete-suggestions li span.navicon {
+    height: 30px;
+    width: 30px;
+    margin-left: -10px;
+    font-size: 1.8em;
+    text-align: center;
+    padding-top: 5px;
+    background-color: #cccccc;
+    color: white; }
+  .md-autocomplete-suggestions li span.global-search-text {
+    margin-left: 4px; }
+
+md-autocomplete {
+  display: inline-block; }
+  md-autocomplete.search-default {
+    opacity: 0;
+    min-width: 0px;
+    width: 0px; }
+  md-autocomplete.hide-search {
+    min-width: 0px;
+    width: 0px;
+    margin: 0px !important;
+    transition: width .5s ease-in-out, min-width .5s ease-in-out, opacity .7s linear, margin .5s linear; }
+  md-autocomplete.show-search {
+    min-width: 215px;
+    width: 215px;
+    opacity: 1;
+    margin-right: 32px;
+    transition: width .5s ease-in-out, min-width .5s ease-in-out; }

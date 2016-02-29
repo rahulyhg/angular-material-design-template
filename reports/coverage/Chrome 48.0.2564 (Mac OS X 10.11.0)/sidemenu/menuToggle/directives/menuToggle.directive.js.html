@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for sidemenu/menuToggle/directives/menuToggle.directive.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">sidemenu/menuToggle/directives/</a> menuToggle.directive.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>23/23</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>5/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>7/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>23/23</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">37×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+/*global angular */
+(function () {
+    'use strict';
+&nbsp;
+    angular.module('sidemenu').directive('menuToggle', menuToggle);
+    menuToggle.$inject = ['$templateRequest', '$compile'];
+&nbsp;
+    function menuToggle($templateRequest, $compile) {
+        var directive = {
+            scope: {
+                section: '=',
+                menuIsSlidOpen: '=',
+                menuIsHover: '='
+            },
+            controller: MenuToggleCtrl,
+            controllerAs: 'vm',
+            bindToController: true,
+            link: linkFunc
+        };
+&nbsp;
+        return directive;
+&nbsp;
+        function linkFunc(scope, element) {
+            $templateRequest('sidemenu/menuToggle/partials/menu-toggle.tpl.html').then(function (html) {
+                var template;
+                template = angular.element(html);
+                element.append(template);
+                $compile(template)(scope);
+            });
+        }
+    }
+&nbsp;
+    MenuToggleCtrl.$inject = ['$q', 'SideMenuFactory'];
+&nbsp;
+    function MenuToggleCtrl($q, SideMenuFactory) {
+        var self;
+        self = this;
+        self.menu = SideMenuFactory;
+        console.log(self.menu);
+&nbsp;
+        self.isOpen = function (section) {
+            return section !== undefined &amp;&amp; section !== null &amp;&amp; section.isOpen;
+        };
+&nbsp;
+        self.toggle = function (section) {
+            if (section) {
+                section.isOpen = !section.isOpen;
+            }
+        };
+    }
+})();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qYWNvYnR1Y2tlci9Ub29sYm94L1dvcmtzcGFjZS9naXQvYW5ndWxhci1tYXRlcmlhbC1kZXNpZ24tdGVtcGxhdGUvc3JjL2NvbXBvbmVudHMvc2lkZW1lbnUvbWVudVRvZ2dsZS9kaXJlY3RpdmVzL21lbnVUb2dnbGUuZGlyZWN0aXZlLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUNBLENBQUMsWUFBWTtBQUNULGlCQURTOztBQUVULFlBQVEsTUFBUixDQUFlLFVBQWYsRUFDSyxTQURMLENBQ2UsWUFEZixFQUM2QixVQUQ3QixFQUZTO0FBSVQsZUFBVyxPQUFYLEdBQXFCLENBQUMsa0JBQUQsRUFBcUIsVUFBckIsQ0FBckIsQ0FKUzs7QUFNVCxhQUFTLFVBQVQsQ0FBb0IsZ0JBQXBCLEVBQXNDLFFBQXRDLEVBQWdEO0FBQzVDLFlBQUksWUFBWTtBQUNaLG1CQUFPO0FBQ0gseUJBQVMsR0FBVDtBQUNBLGdDQUFnQixHQUFoQjtBQUNBLDZCQUFhLEdBQWI7YUFISjtBQUtBLHdCQUFZLGNBQVo7QUFDQSwwQkFBYyxJQUFkO0FBQ0EsOEJBQWtCLElBQWxCO0FBQ0Esa0JBQU0sUUFBTjtTQVRBLENBRHdDOztBQWE1QyxlQUFPLFNBQVAsQ0FiNEM7O0FBZTVDLGlCQUFTLFFBQVQsQ0FBa0IsS0FBbEIsRUFBeUIsT0FBekIsRUFBa0M7QUFDOUIsNkJBQWlCLG1EQUFqQixFQUFzRSxJQUF0RSxDQUEyRSxVQUFVLElBQVYsRUFBZ0I7QUFDdkYsb0JBQUksUUFBSixDQUR1RjtBQUV2RiwyQkFBVyxRQUFRLE9BQVIsQ0FBZ0IsSUFBaEIsQ0FBWCxDQUZ1RjtBQUd2Rix3QkFBUSxNQUFSLENBQWUsUUFBZixFQUh1RjtBQUl2Rix5QkFBUyxRQUFULEVBQW1CLEtBQW5CLEVBSnVGO2FBQWhCLENBQTNFLENBRDhCO1NBQWxDO0tBZko7O0FBeUJBLG1CQUFlLE9BQWYsR0FBeUIsQ0FBQyxJQUFELEVBQU8saUJBQVAsQ0FBekIsQ0EvQlM7O0FBaUNULGFBQVMsY0FBVCxDQUF3QixFQUF4QixFQUE0QixlQUE1QixFQUE2QztBQUN6QyxZQUFJLElBQUosQ0FEeUM7QUFFekMsZUFBTyxJQUFQLENBRnlDO0FBR3pDLGFBQUssSUFBTCxHQUFZLGVBQVosQ0FIeUM7QUFJekMsZ0JBQVEsR0FBUixDQUFZLEtBQUssSUFBTCxDQUFaLENBSnlDOztBQU16QyxhQUFLLE1BQUwsR0FBYyxVQUFVLE9BQVYsRUFBbUI7QUFDN0IsbUJBQU8sWUFBWSxTQUFaLElBQXlCLFlBQVksSUFBWixJQUFvQixRQUFRLE1BQVIsQ0FEdkI7U0FBbkIsQ0FOMkI7O0FBVXpDLGFBQUssTUFBTCxHQUFjLFVBQVUsT0FBVixFQUFtQjtBQUM3QixnQkFBSSxPQUFKLEVBQWE7QUFDVCx3QkFBUSxNQUFSLEdBQWlCLENBQUMsUUFBUSxNQUFSLENBRFQ7YUFBYjtTQURVLENBVjJCO0tBQTdDO0NBakNILEdBQUQiLCJmaWxlIjoibWVudVRvZ2dsZS5kaXJlY3RpdmUuZXM1LmpzIiwic291cmNlc0NvbnRlbnQiOlsiLypnbG9iYWwgYW5ndWxhciAqL1xuKGZ1bmN0aW9uICgpIHtcbiAgICAndXNlIHN0cmljdCc7XG4gICAgYW5ndWxhci5tb2R1bGUoJ3NpZGVtZW51JylcbiAgICAgICAgLmRpcmVjdGl2ZSgnbWVudVRvZ2dsZScsIG1lbnVUb2dnbGUpO1xuICAgIG1lbnVUb2dnbGUuJGluamVjdCA9IFsnJHRlbXBsYXRlUmVxdWVzdCcsICckY29tcGlsZSddO1xuXG4gICAgZnVuY3Rpb24gbWVudVRvZ2dsZSgkdGVtcGxhdGVSZXF1ZXN0LCAkY29tcGlsZSkge1xuICAgICAgICB2YXIgZGlyZWN0aXZlID0ge1xuICAgICAgICAgICAgc2NvcGU6IHtcbiAgICAgICAgICAgICAgICBzZWN0aW9uOiAnPScsXG4gICAgICAgICAgICAgICAgbWVudUlzU2xpZE9wZW46ICc9JyxcbiAgICAgICAgICAgICAgICBtZW51SXNIb3ZlcjogJz0nXG4gICAgICAgICAgICB9LFxuICAgICAgICAgICAgY29udHJvbGxlcjogTWVudVRvZ2dsZUN0cmwsXG4gICAgICAgICAgICBjb250cm9sbGVyQXM6ICd2bScsXG4gICAgICAgICAgICBiaW5kVG9Db250cm9sbGVyOiB0cnVlLFxuICAgICAgICAgICAgbGluazogbGlua0Z1bmNcbiAgICAgICAgfTtcblxuICAgICAgICByZXR1cm4gZGlyZWN0aXZlO1xuXG4gICAgICAgIGZ1bmN0aW9uIGxpbmtGdW5jKHNjb3BlLCBlbGVtZW50KSB7XG4gICAgICAgICAgICAkdGVtcGxhdGVSZXF1ZXN0KCdzaWRlbWVudS9tZW51VG9nZ2xlL3BhcnRpYWxzL21lbnUtdG9nZ2xlLnRwbC5odG1sJykudGhlbihmdW5jdGlvbiAoaHRtbCkge1xuICAgICAgICAgICAgICAgIHZhciB0ZW1wbGF0ZTtcbiAgICAgICAgICAgICAgICB0ZW1wbGF0ZSA9IGFuZ3VsYXIuZWxlbWVudChodG1sKTtcbiAgICAgICAgICAgICAgICBlbGVtZW50LmFwcGVuZCh0ZW1wbGF0ZSk7XG4gICAgICAgICAgICAgICAgJGNvbXBpbGUodGVtcGxhdGUpKHNjb3BlKTtcbiAgICAgICAgICAgIH0pO1xuICAgICAgICB9XG4gICAgfVxuXG4gICAgTWVudVRvZ2dsZUN0cmwuJGluamVjdCA9IFsnJHEnLCAnU2lkZU1lbnVGYWN0b3J5J107XG5cbiAgICBmdW5jdGlvbiBNZW51VG9nZ2xlQ3RybCgkcSwgU2lkZU1lbnVGYWN0b3J5KSB7XG4gICAgICAgIHZhciBzZWxmO1xuICAgICAgICBzZWxmID0gdGhpcztcbiAgICAgICAgc2VsZi5tZW51ID0gU2lkZU1lbnVGYWN0b3J5O1xuICAgICAgICBjb25zb2xlLmxvZyhzZWxmLm1lbnUpO1xuXG4gICAgICAgIHNlbGYuaXNPcGVuID0gZnVuY3Rpb24gKHNlY3Rpb24pIHtcbiAgICAgICAgICAgIHJldHVybiBzZWN0aW9uICE9PSB1bmRlZmluZWQgJiYgc2VjdGlvbiAhPT0gbnVsbCAmJiBzZWN0aW9uLmlzT3BlbjtcbiAgICAgICAgfTtcblxuICAgICAgICBzZWxmLnRvZ2dsZSA9IGZ1bmN0aW9uIChzZWN0aW9uKSB7XG4gICAgICAgICAgICBpZiAoc2VjdGlvbikge1xuICAgICAgICAgICAgICAgIHNlY3Rpb24uaXNPcGVuID0gIXNlY3Rpb24uaXNPcGVuO1xuICAgICAgICAgICAgfVxuICAgICAgICB9O1xuICAgIH1cbn0oKSk7XG4iXX0=</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Feb 28 2016 20:52:10 GMT-0600 (CST)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

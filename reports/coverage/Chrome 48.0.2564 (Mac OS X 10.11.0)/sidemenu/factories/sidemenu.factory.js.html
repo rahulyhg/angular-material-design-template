@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for sidemenu/factories/sidemenu.factory.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">sidemenu/factories/</a> sidemenu.factory.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>12/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">45.45% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>5/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>12/20</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+/*global angular */
+/*jslint esnext: true */
+(function () {
+    'use strict';
+&nbsp;
+    angular.module('sidemenu.factory', []).provider('SideMenuFactory', [function () {
+        var self;
+        var sections;
+&nbsp;
+        this.$get = function () {
+            return {
+                sections: sections,
+&nbsp;
+                setSections: setSections,
+&nbsp;
+                toggleSelectSection: <span class="fstat-no" title="function not covered" >function toggleSelectSection(section) {</span>
+<span class="cstat-no" title="statement not covered" >                    toggleSection(section);</span>
+                },
+                isSectionSelected: <span class="fstat-no" title="function not covered" >function isSectionSelected(section) {</span>
+<span class="cstat-no" title="statement not covered" >                    return _isSectionSelected(section);</span>
+                },
+&nbsp;
+                selectPage: function (_selectPage) {
+<span class="fstat-no" title="function not covered" >                    function selectPage(_x, _x2) {</span>
+<span class="cstat-no" title="statement not covered" >                        return _selectPage.apply(this, arguments);</span>
+                    }
+&nbsp;
+                    selectPage.toString = function () {
+                        return _selectPage.toString();
+                    };
+&nbsp;
+                    return selectPage;
+                }(<span class="fstat-no" title="function not covered" >function (section, page) {</span>
+<span class="cstat-no" title="statement not covered" >                    if (section &amp;&amp; page) {</span>
+<span class="cstat-no" title="statement not covered" >                        selectPage(section, page);</span>
+                    }
+                })
+            };
+        };
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function setSections(sectionObject) {</span>
+<span class="cstat-no" title="statement not covered" >            sections = sectionObject;</span>
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function _isSectionSelected(section) {</span>
+<span class="cstat-no" title="statement not covered" >            if (section) {</span>
+<span class="cstat-no" title="statement not covered" >                return section.isOpen;</span>
+            }
+        }
+    }]);
+})();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qYWNvYnR1Y2tlci9Ub29sYm94L1dvcmtzcGFjZS9naXQvYW5ndWxhci1tYXRlcmlhbC1kZXNpZ24tdGVtcGxhdGUvc3JjL2NvbXBvbmVudHMvc2lkZW1lbnUvZmFjdG9yaWVzL3NpZGVtZW51LmZhY3RvcnkuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUVBLENBQUMsWUFBWTtBQUNULGlCQURTOztBQUVULFlBQVEsTUFBUixDQUFlLGtCQUFmLEVBQW1DLEVBQW5DLEVBQ0ssUUFETCxDQUNjLGlCQURkLEVBQ2lDLENBQUMsWUFBWTtBQUN0QyxZQUFJLElBQUosQ0FEc0M7QUFFdEMsWUFBSSxRQUFKLENBRnNDOztBQUl0QyxhQUFLLElBQUwsR0FBWSxZQUFZO0FBQ3BCLG1CQUFPO0FBQ0gsMEJBQVUsUUFBVjs7QUFFQSw2QkFBYSxXQUFiOztBQUVBLHFDQUFxQiw2QkFBVSxPQUFWLEVBQW1CO0FBQ3BDLGtDQUFjLE9BQWQsRUFEb0M7aUJBQW5CO0FBR3JCLG1DQUFtQiwyQkFBVSxPQUFWLEVBQW1CO0FBQ2xDLDJCQUFPLG1CQUFrQixPQUFsQixDQUFQLENBRGtDO2lCQUFuQjs7QUFJbkI7Ozs7Ozs7Ozs7a0JBQVksVUFBVSxPQUFWLEVBQW1CLElBQW5CLEVBQXlCO0FBQ2pDLHdCQUFJLFdBQVcsSUFBWCxFQUFpQjtBQUNqQixtQ0FBVyxPQUFYLEVBQW9CLElBQXBCLEVBRGlCO3FCQUFyQjtpQkFEUSxDQUFaO2FBWkosQ0FEb0I7U0FBWixDQUowQjs7QUF5QnRDLGlCQUFTLFdBQVQsQ0FBc0IsYUFBdEIsRUFBcUM7QUFDakMsdUJBQVcsYUFBWCxDQURpQztTQUFyQzs7QUFJQSxpQkFBUyxrQkFBVCxDQUEyQixPQUEzQixFQUFvQztBQUNoQyxnQkFBSSxPQUFKLEVBQWE7QUFDVCx1QkFBTyxRQUFRLE1BQVIsQ0FERTthQUFiO1NBREo7S0E3QjBCLENBRGxDLEVBRlM7Q0FBWixHQUFEIiwiZmlsZSI6InNpZGVtZW51LmZhY3RvcnkuZXM1LmpzIiwic291cmNlc0NvbnRlbnQiOlsiLypnbG9iYWwgYW5ndWxhciAqL1xuLypqc2xpbnQgZXNuZXh0OiB0cnVlICovXG4oZnVuY3Rpb24gKCkge1xuICAgICd1c2Ugc3RyaWN0JztcbiAgICBhbmd1bGFyLm1vZHVsZSgnc2lkZW1lbnUuZmFjdG9yeScsIFtdKVxuICAgICAgICAucHJvdmlkZXIoJ1NpZGVNZW51RmFjdG9yeScsIFtmdW5jdGlvbiAoKSB7XG4gICAgICAgICAgICB2YXIgc2VsZjtcbiAgICAgICAgICAgIHZhciBzZWN0aW9ucztcblxuICAgICAgICAgICAgdGhpcy4kZ2V0ID0gZnVuY3Rpb24gKCkge1xuICAgICAgICAgICAgICAgIHJldHVybiB7XG4gICAgICAgICAgICAgICAgICAgIHNlY3Rpb25zOiBzZWN0aW9ucyxcblxuICAgICAgICAgICAgICAgICAgICBzZXRTZWN0aW9uczogc2V0U2VjdGlvbnMsXG5cbiAgICAgICAgICAgICAgICAgICAgdG9nZ2xlU2VsZWN0U2VjdGlvbjogZnVuY3Rpb24gKHNlY3Rpb24pIHtcbiAgICAgICAgICAgICAgICAgICAgICAgIHRvZ2dsZVNlY3Rpb24oc2VjdGlvbik7XG4gICAgICAgICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICAgICAgICAgIGlzU2VjdGlvblNlbGVjdGVkOiBmdW5jdGlvbiAoc2VjdGlvbikge1xuICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIGlzU2VjdGlvblNlbGVjdGVkKHNlY3Rpb24pO1xuICAgICAgICAgICAgICAgICAgICB9LFxuXG4gICAgICAgICAgICAgICAgICAgIHNlbGVjdFBhZ2U6IGZ1bmN0aW9uIChzZWN0aW9uLCBwYWdlKSB7XG4gICAgICAgICAgICAgICAgICAgICAgICBpZiAoc2VjdGlvbiAmJiBwYWdlKSB7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgc2VsZWN0UGFnZShzZWN0aW9uLCBwYWdlKTtcbiAgICAgICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIH07XG4gICAgICAgICAgICB9O1xuXG4gICAgICAgICAgICBmdW5jdGlvbiBzZXRTZWN0aW9ucyAoc2VjdGlvbk9iamVjdCkge1xuICAgICAgICAgICAgICAgIHNlY3Rpb25zID0gc2VjdGlvbk9iamVjdDtcbiAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgZnVuY3Rpb24gaXNTZWN0aW9uU2VsZWN0ZWQoc2VjdGlvbikge1xuICAgICAgICAgICAgICAgIGlmIChzZWN0aW9uKSB7XG4gICAgICAgICAgICAgICAgICAgIHJldHVybiBzZWN0aW9uLmlzT3BlbjtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9XG4gICAgICAgIH1dKTtcbn0oKSk7XG4iXX0=</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Feb 28 2016 20:52:10 GMT-0600 (CST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

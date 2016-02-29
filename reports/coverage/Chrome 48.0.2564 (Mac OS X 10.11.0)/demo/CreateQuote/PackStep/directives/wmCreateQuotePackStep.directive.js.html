@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for demo/CreateQuote/PackStep/directives/wmCreateQuotePackStep.directive.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">demo/CreateQuote/PackStep/directives/</a> wmCreateQuotePackStep.directive.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">20% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>11/55</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">3.85% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">20% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>11/55</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+/*global angular */
+/*jshint esnext: true */
+(function () {
+    angular.module('CreateQuote').directive('wmCreateQuotePackStep', wmCreateQuotePackStep);
+&nbsp;
+    wmCreateQuotePackStep.$inject = ['$templateRequest', '$compile'];
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function wmCreateQuotePackStep($templateRequest, $compile) {</span>
+<span class="cstat-no" title="statement not covered" >        return {</span>
+            restrict: 'AE',
+            scope: {},
+            controller: CreateQuotePackStepController,
+            controllerAs: 'createQuotePack',
+            bindToController: true,
+            link: linkFunc
+        };
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function linkFunc(scope, element) {</span>
+<span class="cstat-no" title="statement not covered" >            var templatePath;</span>
+<span class="cstat-no" title="statement not covered" >            templatePath = 'src/demo/CreateQuote/PackStep/partials/form-pack.tpl.html';</span>
+<span class="cstat-no" title="statement not covered" >            $templateRequest(templatePath).then(<span class="fstat-no" title="function not covered" >function (html) {</span></span>
+<span class="cstat-no" title="statement not covered" >                var template;</span>
+<span class="cstat-no" title="statement not covered" >                template = angular.element(html);</span>
+<span class="cstat-no" title="statement not covered" >                element.append(template);</span>
+<span class="cstat-no" title="statement not covered" >                $compile(template)(scope);</span>
+            });
+        }
+    }
+&nbsp;
+    CreateQuotePackStepController.$inject = ['$scope', '$timeout', 'CreateQuoteObject', 'CreateQuoteFormSteps', 'HideShowErrorSuccess'];
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function CreateQuotePackStepController($scope, $timeout, CreateQuoteObject, CreateQuoteFormSteps, HideShowErrorSuccess) {</span>
+<span class="cstat-no" title="statement not covered" >        var self;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        self = this;</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function getCurrentStep() {</span>
+<span class="cstat-no" title="statement not covered" >            return HideShowErrorSuccess.GetCurrentStep(CreateQuoteFormSteps, 'pack');</span>
+        }
+<span class="fstat-no" title="function not covered" >        function setTabError() {</span>
+<span class="cstat-no" title="statement not covered" >            HideShowErrorSuccess.SetTabError(getCurrentStep(), self.packStepForm);</span>
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function calculateSupplierPackCubicVolume() {</span>
+<span class="cstat-no" title="statement not covered" >            self.data.SupplierPackVolume = isNaN(self.data.SupplierPackLength * self.data.SupplierPackWidth * self.data.SupplierPackHeight) ? 0 : self.data.SupplierPackLength * self.data.SupplierPackWidth * self.data.SupplierPackHeight / 1000000000;</span>
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function calculateWarehousePackCubicVolume() {</span>
+<span class="cstat-no" title="statement not covered" >            self.data.WarehousePackVolume = isNaN(self.data.WarehousePackLength * self.data.WarehousePackWidth * self.data.WarehousePackHeight) ? 0 : self.data.WarehousePackLength * self.data.WarehousePackWidth * self.data.WarehousePackHeight / 1000000000;</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $timeout(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            setTabError();</span>
+<span class="cstat-no" title="statement not covered" >            $scope.$watch(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                return self.packStepForm.$valid;</span>
+            }, <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >                setTabError();</span>
+            });
+        }, 500);
+<span class="cstat-no" title="statement not covered" >        $timeout(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            getCurrentStep().PreviouslyVisited = true;</span>
+        }, 750);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.$watch(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            return self.data.SupplierPackLength;</span>
+        }, <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >            calculateSupplierPackCubicVolume();</span>
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.$watch(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            return self.data.SupplierPackWidth;</span>
+        }, <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >            calculateSupplierPackCubicVolume();</span>
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.$watch(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            return self.data.SupplierPackHeight;</span>
+        }, <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >            calculateSupplierPackCubicVolume();</span>
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.$watch(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            return self.data.WarehousePackLength;</span>
+        }, <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >            calculateWarehousePackCubicVolume();</span>
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.$watch(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            return self.data.WarehousePackWidth;</span>
+        }, <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >            calculateWarehousePackCubicVolume();</span>
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.$watch(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            return self.data.WarehousePackHeight;</span>
+        }, <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >            calculateWarehousePackCubicVolume();</span>
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.$on('$stateChangeStart', <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            setTabError();</span>
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (CreateQuoteObject === {}) {</span>
+<span class="cstat-no" title="statement not covered" >            CreateQuoteObject.Pack = self.data;</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >            self.data = CreateQuoteObject.Pack;</span>
+        }
+    }
+})();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qYWNvYnR1Y2tlci9Ub29sYm94L1dvcmtzcGFjZS9naXQvYW5ndWxhci1tYXRlcmlhbC1kZXNpZ24tdGVtcGxhdGUvc3JjL2RlbW8vQ3JlYXRlUXVvdGUvUGFja1N0ZXAvZGlyZWN0aXZlcy93bUNyZWF0ZVF1b3RlUGFja1N0ZXAuZGlyZWN0aXZlLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFFQSxDQUFDLFlBQVk7QUFDVCxZQUFRLE1BQVIsQ0FBZSxhQUFmLEVBQ0ssU0FETCxDQUNlLHVCQURmLEVBQ3dDLHFCQUR4QyxFQURTOztBQUlULDBCQUFzQixPQUF0QixHQUFnQyxDQUFDLGtCQUFELEVBQXFCLFVBQXJCLENBQWhDLENBSlM7O0FBTVQsYUFBUyxxQkFBVCxDQUFnQyxnQkFBaEMsRUFBa0QsUUFBbEQsRUFBNEQ7QUFDeEQsZUFBTztBQUNILHNCQUFVLElBQVY7QUFDQSxtQkFBTyxFQUFQO0FBQ0Esd0JBQVksNkJBQVo7QUFDQSwwQkFBYyxpQkFBZDtBQUNBLDhCQUFrQixJQUFsQjtBQUNBLGtCQUFNLFFBQU47U0FOSixDQUR3RDs7QUFVeEQsaUJBQVMsUUFBVCxDQUFtQixLQUFuQixFQUEwQixPQUExQixFQUFtQztBQUMvQixnQkFBSSxZQUFKLENBRCtCO0FBRS9CLDJCQUFjLDJEQUFkLENBRitCO0FBRy9CLDZCQUFpQixZQUFqQixFQUErQixJQUEvQixDQUFvQyxVQUFVLElBQVYsRUFBZ0I7QUFDaEQsb0JBQUksUUFBSixDQURnRDtBQUVoRCwyQkFBVyxRQUFRLE9BQVIsQ0FBZ0IsSUFBaEIsQ0FBWCxDQUZnRDtBQUdoRCx3QkFBUSxNQUFSLENBQWUsUUFBZixFQUhnRDtBQUloRCx5QkFBUyxRQUFULEVBQW1CLEtBQW5CLEVBSmdEO2FBQWhCLENBQXBDLENBSCtCO1NBQW5DO0tBVko7O0FBc0JBLGtDQUE4QixPQUE5QixHQUF3QyxDQUFDLFFBQUQsRUFBVyxVQUFYLEVBQXVCLG1CQUF2QixFQUE0QyxzQkFBNUMsRUFBb0Usc0JBQXBFLENBQXhDLENBNUJTOztBQThCVCxhQUFTLDZCQUFULENBQXdDLE1BQXhDLEVBQWdELFFBQWhELEVBQTBELGlCQUExRCxFQUE2RSxvQkFBN0UsRUFBbUcsb0JBQW5HLEVBQXlIO0FBQ3JILFlBQUksSUFBSixDQURxSDs7QUFHckgsZUFBTyxJQUFQLENBSHFIOztBQUtySCxpQkFBUyxjQUFULEdBQTJCO0FBQ3ZCLG1CQUFPLHFCQUFxQixjQUFyQixDQUFvQyxvQkFBcEMsRUFBMEQsTUFBMUQsQ0FBUCxDQUR1QjtTQUEzQjtBQUdBLGlCQUFTLFdBQVQsR0FBd0I7QUFDcEIsaUNBQXFCLFdBQXJCLENBQWlDLGdCQUFqQyxFQUFtRCxLQUFLLFlBQUwsQ0FBbkQsQ0FEb0I7U0FBeEI7O0FBSUEsaUJBQVMsZ0NBQVQsR0FBNkM7QUFDekMsaUJBQUssSUFBTCxDQUFVLGtCQUFWLEdBQStCLE1BQU0sS0FBSyxJQUFMLENBQVUsa0JBQVYsR0FBK0IsS0FBSyxJQUFMLENBQVUsaUJBQVYsR0FBOEIsS0FBSyxJQUFMLENBQVUsa0JBQVYsQ0FBbkUsR0FBbUcsQ0FBbkcsR0FBdUcsS0FBSyxJQUFMLENBQVUsa0JBQVYsR0FBK0IsS0FBSyxJQUFMLENBQVUsaUJBQVYsR0FBOEIsS0FBSyxJQUFMLENBQVUsa0JBQVYsR0FBK0IsVUFBNUYsQ0FEN0Y7U0FBN0M7O0FBSUEsaUJBQVMsaUNBQVQsR0FBNkM7QUFDekMsaUJBQUssSUFBTCxDQUFVLG1CQUFWLEdBQWdDLE1BQU0sS0FBSyxJQUFMLENBQVUsbUJBQVYsR0FBZ0MsS0FBSyxJQUFMLENBQVUsa0JBQVYsR0FBK0IsS0FBSyxJQUFMLENBQVUsbUJBQVYsQ0FBckUsR0FBc0csQ0FBdEcsR0FBMEcsS0FBSyxJQUFMLENBQVUsbUJBQVYsR0FBZ0MsS0FBSyxJQUFMLENBQVUsa0JBQVYsR0FBK0IsS0FBSyxJQUFMLENBQVUsbUJBQVYsR0FBZ0MsVUFBL0YsQ0FEakc7U0FBN0M7O0FBSUEsaUJBQVMsWUFBWTtBQUNqQiwwQkFEaUI7QUFFakIsbUJBQU8sTUFBUCxDQUFjLFlBQU07QUFDaEIsdUJBQU8sS0FBSyxZQUFMLENBQWtCLE1BQWxCLENBRFM7YUFBTixFQUVYLFlBQU07QUFDTCw4QkFESzthQUFOLENBRkgsQ0FGaUI7U0FBWixFQU9OLEdBUEgsRUFwQnFIO0FBNEJySCxpQkFBUyxZQUFZO0FBQ2pCLDZCQUFpQixpQkFBakIsR0FBcUMsSUFBckMsQ0FEaUI7U0FBWixFQUVOLEdBRkgsRUE1QnFIOztBQWdDckgsZUFBTyxNQUFQLENBQWMsWUFBTTtBQUNoQixtQkFBTyxLQUFLLElBQUwsQ0FBVSxrQkFBVixDQURTO1NBQU4sRUFFWCxZQUFNO0FBQ0wsK0NBREs7U0FBTixDQUZILENBaENxSDs7QUFzQ3JILGVBQU8sTUFBUCxDQUFjLFlBQU07QUFDaEIsbUJBQU8sS0FBSyxJQUFMLENBQVUsaUJBQVYsQ0FEUztTQUFOLEVBRVgsWUFBTTtBQUNMLCtDQURLO1NBQU4sQ0FGSCxDQXRDcUg7O0FBNENySCxlQUFPLE1BQVAsQ0FBYyxZQUFNO0FBQ2hCLG1CQUFPLEtBQUssSUFBTCxDQUFVLGtCQUFWLENBRFM7U0FBTixFQUVYLFlBQU07QUFDTCwrQ0FESztTQUFOLENBRkgsQ0E1Q3FIOztBQWtEckgsZUFBTyxNQUFQLENBQWMsWUFBTTtBQUNoQixtQkFBTyxLQUFLLElBQUwsQ0FBVSxtQkFBVixDQURTO1NBQU4sRUFFWCxZQUFNO0FBQ0wsZ0RBREs7U0FBTixDQUZILENBbERxSDs7QUF3RHJILGVBQU8sTUFBUCxDQUFjLFlBQU07QUFDaEIsbUJBQU8sS0FBSyxJQUFMLENBQVUsa0JBQVYsQ0FEUztTQUFOLEVBRVgsWUFBTTtBQUNMLGdEQURLO1NBQU4sQ0FGSCxDQXhEcUg7O0FBOERySCxlQUFPLE1BQVAsQ0FBYyxZQUFNO0FBQ2hCLG1CQUFPLEtBQUssSUFBTCxDQUFVLG1CQUFWLENBRFM7U0FBTixFQUVYLFlBQU07QUFDTCxnREFESztTQUFOLENBRkgsQ0E5RHFIOztBQW9FckgsZUFBTyxHQUFQLENBQVcsbUJBQVgsRUFBZ0MsWUFBSztBQUNqQywwQkFEaUM7U0FBTCxDQUFoQyxDQXBFcUg7O0FBd0VySCxZQUFJLHNCQUFzQixFQUF0QixFQUEwQjtBQUMxQiw4QkFBa0IsSUFBbEIsR0FBeUIsS0FBSyxJQUFMLENBREM7U0FBOUIsTUFFTztBQUNILGlCQUFLLElBQUwsR0FBWSxrQkFBa0IsSUFBbEIsQ0FEVDtTQUZQO0tBeEVKO0NBOUJILEdBQUQiLCJmaWxlIjoid21DcmVhdGVRdW90ZVBhY2tTdGVwLmRpcmVjdGl2ZS5lczUuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKmdsb2JhbCBhbmd1bGFyICovXG4vKmpzaGludCBlc25leHQ6IHRydWUgKi9cbihmdW5jdGlvbiAoKSB7XG4gICAgYW5ndWxhci5tb2R1bGUoJ0NyZWF0ZVF1b3RlJylcbiAgICAgICAgLmRpcmVjdGl2ZSgnd21DcmVhdGVRdW90ZVBhY2tTdGVwJywgd21DcmVhdGVRdW90ZVBhY2tTdGVwKTtcblxuICAgIHdtQ3JlYXRlUXVvdGVQYWNrU3RlcC4kaW5qZWN0ID0gWyckdGVtcGxhdGVSZXF1ZXN0JywgJyRjb21waWxlJ107XG5cbiAgICBmdW5jdGlvbiB3bUNyZWF0ZVF1b3RlUGFja1N0ZXAgKCR0ZW1wbGF0ZVJlcXVlc3QsICRjb21waWxlKSB7XG4gICAgICAgIHJldHVybiB7XG4gICAgICAgICAgICByZXN0cmljdDogJ0FFJyxcbiAgICAgICAgICAgIHNjb3BlOiB7fSxcbiAgICAgICAgICAgIGNvbnRyb2xsZXI6IENyZWF0ZVF1b3RlUGFja1N0ZXBDb250cm9sbGVyLFxuICAgICAgICAgICAgY29udHJvbGxlckFzOiAnY3JlYXRlUXVvdGVQYWNrJyxcbiAgICAgICAgICAgIGJpbmRUb0NvbnRyb2xsZXI6IHRydWUsXG4gICAgICAgICAgICBsaW5rOiBsaW5rRnVuY1xuICAgICAgICB9O1xuXG4gICAgICAgIGZ1bmN0aW9uIGxpbmtGdW5jIChzY29wZSwgZWxlbWVudCkge1xuICAgICAgICAgICAgdmFyIHRlbXBsYXRlUGF0aDtcbiAgICAgICAgICAgIHRlbXBsYXRlUGF0aCA9J3NyYy9kZW1vL0NyZWF0ZVF1b3RlL1BhY2tTdGVwL3BhcnRpYWxzL2Zvcm0tcGFjay50cGwuaHRtbCc7XG4gICAgICAgICAgICAkdGVtcGxhdGVSZXF1ZXN0KHRlbXBsYXRlUGF0aCkudGhlbihmdW5jdGlvbiAoaHRtbCkge1xuICAgICAgICAgICAgICAgIHZhciB0ZW1wbGF0ZTtcbiAgICAgICAgICAgICAgICB0ZW1wbGF0ZSA9IGFuZ3VsYXIuZWxlbWVudChodG1sKTtcbiAgICAgICAgICAgICAgICBlbGVtZW50LmFwcGVuZCh0ZW1wbGF0ZSk7XG4gICAgICAgICAgICAgICAgJGNvbXBpbGUodGVtcGxhdGUpKHNjb3BlKTtcbiAgICAgICAgICAgIH0pO1xuICAgICAgICB9XG4gICAgfVxuXG4gICAgQ3JlYXRlUXVvdGVQYWNrU3RlcENvbnRyb2xsZXIuJGluamVjdCA9IFsnJHNjb3BlJywgJyR0aW1lb3V0JywgJ0NyZWF0ZVF1b3RlT2JqZWN0JywgJ0NyZWF0ZVF1b3RlRm9ybVN0ZXBzJywgJ0hpZGVTaG93RXJyb3JTdWNjZXNzJ107XG5cbiAgICBmdW5jdGlvbiBDcmVhdGVRdW90ZVBhY2tTdGVwQ29udHJvbGxlciAoJHNjb3BlLCAkdGltZW91dCwgQ3JlYXRlUXVvdGVPYmplY3QsIENyZWF0ZVF1b3RlRm9ybVN0ZXBzLCBIaWRlU2hvd0Vycm9yU3VjY2Vzcykge1xuICAgICAgICB2YXIgc2VsZjtcblxuICAgICAgICBzZWxmID0gdGhpcztcblxuICAgICAgICBmdW5jdGlvbiBnZXRDdXJyZW50U3RlcCAoKSB7XG4gICAgICAgICAgICByZXR1cm4gSGlkZVNob3dFcnJvclN1Y2Nlc3MuR2V0Q3VycmVudFN0ZXAoQ3JlYXRlUXVvdGVGb3JtU3RlcHMsICdwYWNrJyk7XG4gICAgICAgIH1cbiAgICAgICAgZnVuY3Rpb24gc2V0VGFiRXJyb3IgKCkge1xuICAgICAgICAgICAgSGlkZVNob3dFcnJvclN1Y2Nlc3MuU2V0VGFiRXJyb3IoZ2V0Q3VycmVudFN0ZXAoKSwgc2VsZi5wYWNrU3RlcEZvcm0pO1xuICAgICAgICB9XG5cbiAgICAgICAgZnVuY3Rpb24gY2FsY3VsYXRlU3VwcGxpZXJQYWNrQ3ViaWNWb2x1bWUgKCkge1xuICAgICAgICAgICAgc2VsZi5kYXRhLlN1cHBsaWVyUGFja1ZvbHVtZSA9IGlzTmFOKHNlbGYuZGF0YS5TdXBwbGllclBhY2tMZW5ndGggKiBzZWxmLmRhdGEuU3VwcGxpZXJQYWNrV2lkdGggKiBzZWxmLmRhdGEuU3VwcGxpZXJQYWNrSGVpZ2h0KSA/IDAgOiBzZWxmLmRhdGEuU3VwcGxpZXJQYWNrTGVuZ3RoICogc2VsZi5kYXRhLlN1cHBsaWVyUGFja1dpZHRoICogc2VsZi5kYXRhLlN1cHBsaWVyUGFja0hlaWdodCAvIDEwMDAwMDAwMDA7XG4gICAgICAgIH1cblxuICAgICAgICBmdW5jdGlvbiBjYWxjdWxhdGVXYXJlaG91c2VQYWNrQ3ViaWNWb2x1bWUoKSB7XG4gICAgICAgICAgICBzZWxmLmRhdGEuV2FyZWhvdXNlUGFja1ZvbHVtZSA9IGlzTmFOKHNlbGYuZGF0YS5XYXJlaG91c2VQYWNrTGVuZ3RoICogc2VsZi5kYXRhLldhcmVob3VzZVBhY2tXaWR0aCAqIHNlbGYuZGF0YS5XYXJlaG91c2VQYWNrSGVpZ2h0KSA/IDAgOiBzZWxmLmRhdGEuV2FyZWhvdXNlUGFja0xlbmd0aCAqIHNlbGYuZGF0YS5XYXJlaG91c2VQYWNrV2lkdGggKiBzZWxmLmRhdGEuV2FyZWhvdXNlUGFja0hlaWdodCAvIDEwMDAwMDAwMDA7XG4gICAgICAgIH1cblxuICAgICAgICAkdGltZW91dChmdW5jdGlvbiAoKSB7XG4gICAgICAgICAgICBzZXRUYWJFcnJvcigpO1xuICAgICAgICAgICAgJHNjb3BlLiR3YXRjaCgoKSA9PiB7XG4gICAgICAgICAgICAgICAgcmV0dXJuIHNlbGYucGFja1N0ZXBGb3JtLiR2YWxpZDtcbiAgICAgICAgICAgIH0sICgpID0+IHtcbiAgICAgICAgICAgICAgICBzZXRUYWJFcnJvcigpO1xuICAgICAgICAgICAgfSk7XG4gICAgICAgIH0sIDUwMCk7XG4gICAgICAgICR0aW1lb3V0KGZ1bmN0aW9uICgpIHtcbiAgICAgICAgICAgIGdldEN1cnJlbnRTdGVwKCkuUHJldmlvdXNseVZpc2l0ZWQgPSB0cnVlO1xuICAgICAgICB9LCA3NTApO1xuXG4gICAgICAgICRzY29wZS4kd2F0Y2goKCkgPT4ge1xuICAgICAgICAgICAgcmV0dXJuIHNlbGYuZGF0YS5TdXBwbGllclBhY2tMZW5ndGg7XG4gICAgICAgIH0sICgpID0+IHtcbiAgICAgICAgICAgIGNhbGN1bGF0ZVN1cHBsaWVyUGFja0N1YmljVm9sdW1lKCk7XG4gICAgICAgIH0pO1xuXG4gICAgICAgICRzY29wZS4kd2F0Y2goKCkgPT4ge1xuICAgICAgICAgICAgcmV0dXJuIHNlbGYuZGF0YS5TdXBwbGllclBhY2tXaWR0aDtcbiAgICAgICAgfSwgKCkgPT4ge1xuICAgICAgICAgICAgY2FsY3VsYXRlU3VwcGxpZXJQYWNrQ3ViaWNWb2x1bWUoKTtcbiAgICAgICAgfSk7XG5cbiAgICAgICAgJHNjb3BlLiR3YXRjaCgoKSA9PiB7XG4gICAgICAgICAgICByZXR1cm4gc2VsZi5kYXRhLlN1cHBsaWVyUGFja0hlaWdodDtcbiAgICAgICAgfSwgKCkgPT4ge1xuICAgICAgICAgICAgY2FsY3VsYXRlU3VwcGxpZXJQYWNrQ3ViaWNWb2x1bWUoKTtcbiAgICAgICAgfSk7XG5cbiAgICAgICAgJHNjb3BlLiR3YXRjaCgoKSA9PiB7XG4gICAgICAgICAgICByZXR1cm4gc2VsZi5kYXRhLldhcmVob3VzZVBhY2tMZW5ndGg7XG4gICAgICAgIH0sICgpID0+IHtcbiAgICAgICAgICAgIGNhbGN1bGF0ZVdhcmVob3VzZVBhY2tDdWJpY1ZvbHVtZSgpO1xuICAgICAgICB9KTtcblxuICAgICAgICAkc2NvcGUuJHdhdGNoKCgpID0+IHtcbiAgICAgICAgICAgIHJldHVybiBzZWxmLmRhdGEuV2FyZWhvdXNlUGFja1dpZHRoO1xuICAgICAgICB9LCAoKSA9PiB7XG4gICAgICAgICAgICBjYWxjdWxhdGVXYXJlaG91c2VQYWNrQ3ViaWNWb2x1bWUoKTtcbiAgICAgICAgfSk7XG5cbiAgICAgICAgJHNjb3BlLiR3YXRjaCgoKSA9PiB7XG4gICAgICAgICAgICByZXR1cm4gc2VsZi5kYXRhLldhcmVob3VzZVBhY2tIZWlnaHQ7XG4gICAgICAgIH0sICgpID0+IHtcbiAgICAgICAgICAgIGNhbGN1bGF0ZVdhcmVob3VzZVBhY2tDdWJpY1ZvbHVtZSgpO1xuICAgICAgICB9KTtcblxuICAgICAgICAkc2NvcGUuJG9uKCckc3RhdGVDaGFuZ2VTdGFydCcsICgpPT4ge1xuICAgICAgICAgICAgc2V0VGFiRXJyb3IoKTtcbiAgICAgICAgfSk7XG5cbiAgICAgICAgaWYgKENyZWF0ZVF1b3RlT2JqZWN0ID09PSB7fSkge1xuICAgICAgICAgICAgQ3JlYXRlUXVvdGVPYmplY3QuUGFjayA9IHNlbGYuZGF0YTtcbiAgICAgICAgfSBlbHNlIHtcbiAgICAgICAgICAgIHNlbGYuZGF0YSA9IENyZWF0ZVF1b3RlT2JqZWN0LlBhY2s7XG4gICAgICAgIH1cblxuICAgIH1cbn0oKSk7XG4iXX0=</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Feb 24 2016 08:52:38 GMT-0600 (CST)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

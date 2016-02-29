@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for common/form-wizard/directives/wmFormSectionBar.directive.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">common/form-wizard/directives/</a> wmFormSectionBar.directive.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>11/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/3</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>11/11</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+/*global angular */
+(function () {
+    'use strict';
+&nbsp;
+    angular.module('formWizard').directive('wmFormSectionBar', wmFormSectionBar);
+    wmFormSectionBar.$inject = ['ColorWays', 'mdThemeProvider', 'walmartBackground', 'asdaBackground'];
+    function wmFormSectionBar(ColorWays, mdThemeProvider, walmartBackground, asdaBackground) {
+        return {
+            restrict: 'AE',
+            link: linkFunc
+        };
+&nbsp;
+        function linkFunc(scope, element) {
+            var colorWays, color;
+            colorWays = ColorWays[mdThemeProvider.activeTheme];
+            color = colorWays[mdThemeProvider.activeTheme].Primary[700];
+            element.css('background-color', color);
+            element.css('color', '#000000');
+        }
+    }
+})();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qYWNvYnR1Y2tlci9Ub29sYm94L1dvcmtzcGFjZS9naXQvYW5ndWxhci1tYXRlcmlhbC1kZXNpZ24tdGVtcGxhdGUvc3JjL2NvbXBvbmVudHMvY29tbW9uL2Zvcm0td2l6YXJkL2RpcmVjdGl2ZXMvd21Gb3JtU2VjdGlvbkJhci5kaXJlY3RpdmUuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQ0EsQ0FBQyxZQUFZO0FBQ1QsaUJBRFM7O0FBRVQsWUFBUSxNQUFSLENBQWUsWUFBZixFQUNLLFNBREwsQ0FDZSxrQkFEZixFQUNtQyxnQkFEbkMsRUFGUztBQUlULHFCQUFpQixPQUFqQixHQUEyQixDQUFDLFdBQUQsRUFBYyxpQkFBZCxFQUFpQyxtQkFBakMsRUFBc0QsZ0JBQXRELENBQTNCLENBSlM7QUFLVCxhQUFTLGdCQUFULENBQTJCLFNBQTNCLEVBQXNDLGVBQXRDLEVBQXVELGlCQUF2RCxFQUEwRSxjQUExRSxFQUEwRjtBQUN0RixlQUFPO0FBQ0gsc0JBQVUsSUFBVjtBQUNBLGtCQUFNLFFBQU47U0FGSixDQURzRjs7QUFNdEYsaUJBQVMsUUFBVCxDQUFtQixLQUFuQixFQUEwQixPQUExQixFQUFtQztBQUMvQixnQkFBSSxTQUFKLEVBQWUsS0FBZixDQUQrQjtBQUUvQix3QkFBWSxVQUFVLGdCQUFnQixXQUFoQixDQUF0QixDQUYrQjtBQUcvQixvQkFBUSxVQUFVLGdCQUFnQixXQUFoQixDQUFWLENBQXVDLE9BQXZDLENBQStDLEdBQS9DLENBQVIsQ0FIK0I7QUFJL0Isb0JBQVEsR0FBUixDQUFZLGtCQUFaLEVBQWdDLEtBQWhDLEVBSitCO0FBSy9CLG9CQUFRLEdBQVIsQ0FBWSxPQUFaLEVBQXFCLFNBQXJCLEVBTCtCO1NBQW5DO0tBTko7Q0FMSCxHQUFEIiwiZmlsZSI6IndtRm9ybVNlY3Rpb25CYXIuZGlyZWN0aXZlLmVzNS5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qZ2xvYmFsIGFuZ3VsYXIgKi9cbihmdW5jdGlvbiAoKSB7XG4gICAgJ3VzZSBzdHJpY3QnO1xuICAgIGFuZ3VsYXIubW9kdWxlKCdmb3JtV2l6YXJkJylcbiAgICAgICAgLmRpcmVjdGl2ZSgnd21Gb3JtU2VjdGlvbkJhcicsIHdtRm9ybVNlY3Rpb25CYXIpO1xuICAgIHdtRm9ybVNlY3Rpb25CYXIuJGluamVjdCA9IFsnQ29sb3JXYXlzJywgJ21kVGhlbWVQcm92aWRlcicsICd3YWxtYXJ0QmFja2dyb3VuZCcsICdhc2RhQmFja2dyb3VuZCddO1xuICAgIGZ1bmN0aW9uIHdtRm9ybVNlY3Rpb25CYXIgKENvbG9yV2F5cywgbWRUaGVtZVByb3ZpZGVyLCB3YWxtYXJ0QmFja2dyb3VuZCwgYXNkYUJhY2tncm91bmQpIHtcbiAgICAgICAgcmV0dXJuIHtcbiAgICAgICAgICAgIHJlc3RyaWN0OiAnQUUnLFxuICAgICAgICAgICAgbGluazogbGlua0Z1bmNcbiAgICAgICAgfTtcblxuICAgICAgICBmdW5jdGlvbiBsaW5rRnVuYyAoc2NvcGUsIGVsZW1lbnQpIHtcbiAgICAgICAgICAgIHZhciBjb2xvcldheXMsIGNvbG9yO1xuICAgICAgICAgICAgY29sb3JXYXlzID0gQ29sb3JXYXlzW21kVGhlbWVQcm92aWRlci5hY3RpdmVUaGVtZV07XG4gICAgICAgICAgICBjb2xvciA9IGNvbG9yV2F5c1ttZFRoZW1lUHJvdmlkZXIuYWN0aXZlVGhlbWVdLlByaW1hcnlbNzAwXTtcbiAgICAgICAgICAgIGVsZW1lbnQuY3NzKCdiYWNrZ3JvdW5kLWNvbG9yJywgY29sb3IpO1xuICAgICAgICAgICAgZWxlbWVudC5jc3MoJ2NvbG9yJywgJyMwMDAwMDAnKTtcbiAgICAgICAgfVxuICAgIH1cbn0oKSk7XG4iXX0=</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Feb 28 2016 20:52:10 GMT-0600 (CST)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

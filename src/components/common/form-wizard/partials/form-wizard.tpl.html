@@ -1,0 +1,36 @@
+<md-content class="form-wizard" layout="column" layout-align="start start" tab-index="2" style="position: relative;">
+    <div layout="row" style="width: 100%; position: relative;">
+        <div class="md-display-3 padding-top" style="padding-bottom: 30px;">
+            {{vm.wizardTitle}}
+        </div>
+    </div>
+    <div layout="row" layout-align="center center" wm-apply-custom-theme-background class="form-wrapper">
+        <div layout="column" flex layout-align="center center">
+            <div layout="row" layout-align="center center" class="tab-container">
+                <div layout="row" layout-align="center center" flex class="tab-wrapper" wm-form-section-bar ng-repeat="tab in vm.formTabs track by $index" ng-class="{'tab-left': $index === 0, 'tab-right': $index === vm.formTabs.length - 1}">
+                    <md-button class="inactive-tab md-raised" ui-sref=".{{tab.State}}" ui-sref-active="active" wm-form-section-active-tab ng-class="{'has-error': tab.ShowError, 'has-success': tab.ShowComplete}">
+                        <span ng-hide="tab.ShowError || tab.ShowComplete">{{$index + 1}}</span>
+                        <span ng-show="tab.ShowError" class="fa fa-exclamation" style="top: 7px; position: relative;"></span>
+                        <span ng-show="tab.ShowComplete" class="fa fa-check" style="top: 7px; position: relative;"></span>
+                    </md-button>
+                </div>
+            </div>
+            <div layout="row" layout-align="center center" class="tab-container tab-titles">
+                <div layout="row" layout-align="center center" flex ng-repeat="tab in vm.formTabs track by $index">
+                    <div layout="row" layout-align="center center" class="tab-title" ui-sref=".{{tab.State}}" ui-sref-active="active-tab">
+                        <strong ng-class="{'text-danger': tab.ShowError, 'text-success': tab.ShowComplete}">{{tab.Title}}</strong>
+                    </div>
+                </div>
+            </div>
+            <div layout="row" class="form-fields" ui-view></div>
+            <div layout="row" class="form-steppers">
+                <div layout="row" flex layout-align="start start">
+                    <md-button class="md-primary" ng-click="vm.Previous()"> <span class="fa fa-chevron-left"></span>Previous</md-button>
+                </div>
+                <div layout="row" flex layout-align="end end">
+                    <md-button class="md-primary" ng-click="vm.Next()">Next <span class="fa fa-chevron-right"></span></md-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</md-content>
