@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - components/partials/partials.min.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">Report Home</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>components/partials/partials.min.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
+      <p class="stat">77.99</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">59</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
+      <p class="stat">22.60</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
+      <p class="stat">0.44</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">Function weight</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">By Complexity <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="This metric counts the number of distinct paths through a block of code. Lower values are better." data-original-title="Cyclomatic Complexity" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">By SLOC  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">&quot;use strict&quot;;
+
+!function (e) {
+  try {
+    e = angular.module(&quot;AngularMaterialDesignTemplatePartials&quot;);
+  } catch (n) {
+    e = angular.module(&quot;AngularMaterialDesignTemplatePartials&quot;, []);
+  }e.run([&quot;$templateCache&quot;, function (e) {
+    e.put(&quot;sidemenu/partials/sidemenu-classic.tpl.html&quot;, &#039;&lt;div layout=&quot;row&quot;&gt;&lt;md-sidenav class=&quot;md-sidenav-left md-whiteframe-z1 leave fade-in-out sidenav-fixed md-default-theme&quot; md-component-id=&quot;left&quot; flex=&quot;&quot; ng-class=&quot;{\&#039;menu-collapsed\&#039;: !vm.menuIsSlidOpen, \&#039;menu-expanded\&#039;: vm.menuIsSlidOpen}&quot; md-is-locked-open=&quot;true&quot; wm-apply-custom-theme=&quot;&quot;&gt;&lt;md-toolbar&gt;&lt;div class=&quot;md-toolbar-tools&quot;&gt;&lt;h3 class=&quot;ease-expand&quot; ng-class=&quot;{\&#039;show-title\&#039;: (vm.menuIsSlidOpen || vm.menuIsHover), \&#039;hide-title\&#039;: !(vm.menuIsSlidOpen || vm.menuIsHover)}&quot;&gt;&lt;span&gt;Navigation&lt;/span&gt;&lt;/h3&gt;&lt;span flex=&quot;&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;/md-toolbar&gt;&lt;md-content role=&quot;navigation&quot; wm-apply-custom-theme=&quot;&quot;&gt;&lt;ul class=&quot;side-menu&quot;&gt;&lt;li ng-repeat=&quot;section in vm.menu.sections&quot; class=&quot;parent-list-item&quot; ng-class=&quot;{\&#039;parentActive\&#039; : vm.isSectionSelected(section)}&quot;&gt;&lt;h2 class=&quot;menu-heading&quot; ng-if=&quot;section.type === \&#039;heading\&#039;&quot; id=&quot;heading_{{ section.name | nospace }}&quot;&gt;{{section}}&lt;/h2&gt;&lt;menu-link section=&quot;section&quot; ng-if=&quot;section.type === \&#039;link\&#039;&quot; menu-is-slid-open=&quot;vm.menuIsSlidOpen&quot; menu-is-hover=&quot;vm.menuIsHover&quot;&gt;&lt;/menu-link&gt;&lt;menu-toggle section=&quot;section&quot; ng-if=&quot;section.type === \&#039;toggle\&#039;&quot; menu-is-slid-open=&quot;vm.menuIsSlidOpen&quot; menu-is-hover=&quot;vm.menuIsHover&quot;&gt;&lt;/menu-toggle&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/md-content&gt;&lt;/md-sidenav&gt;&lt;div layout=&quot;column&quot; tabindex=&quot;-1&quot; role=&quot;main&quot; class=&quot;fill-width&quot;&gt;&lt;md-toolbar layout=&quot;row&quot; layout-align=&quot;space-between center&quot; ng-class=&quot;{\&#039;menu-expanded\&#039;: vm.menuIsSlidOpen}&quot; class=&quot;toolbar-fixed&quot;&gt;&lt;wm-toolbar-content-left&gt;&lt;/wm-toolbar-content-left&gt;&lt;wm-toolbar-content-center&gt;&lt;/wm-toolbar-content-center&gt;&lt;wm-toolbar-content-right menu-items=&quot;vm.menu.sections&quot;&gt;&lt;/wm-toolbar-content-right&gt;&lt;/md-toolbar&gt;&lt;md-content md-scroll-y=&quot;&quot; layout=&quot;column&quot; flex=&quot;&quot; class=&quot;fill-width fill-height main-content&quot;&gt;&lt;div ui-view=&quot;content&quot; class=&quot;main-content&quot; ng-class=&quot;{\&#039;main-content-menu-closed\&#039;: !vm.menuIsSlidOpen, \&#039;main-content-menu-open\&#039;: vm.menuIsSlidOpen}&quot;&gt;&lt;/div&gt;&lt;/md-content&gt;&lt;footer&gt;&lt;md-toolbar layout=&quot;row&quot; class=&quot;toolbar-fixed-bottom&quot; ng-class=&quot;{\&#039;menu-expanded\&#039;: vm.menuIsSlidOpen}&quot;&gt;&lt;wm-footer layout=&quot;row&quot; layout-align=&quot;start center&quot;&gt;&lt;/wm-footer&gt;&lt;/md-toolbar&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/div&gt;&#039;);
+  }]);
+}(), function (e) {
+  try {
+    e = angular.module(&quot;AngularMaterialDesignTemplatePartials&quot;);
+  } catch (n) {
+    e = angular.module(&quot;AngularMaterialDesignTemplatePartials&quot;, []);
+  }e.run([&quot;$templateCache&quot;, function (e) {
+    e.put(&quot;sidemenu/partials/sidemenu-hover.tpl.html&quot;, &#039;&lt;div layout=&quot;row&quot; class=&quot;fill-height fill-width&quot;&gt;&lt;md-sidenav class=&quot;md-sidenav-left md-whiteframe-z1 leave&quot; md-component-id=&quot;left&quot; flex=&quot;&quot; ng-class=&quot;{\&#039;menu-close\&#039;: !vm.menuIsSlidOpen, \&#039;menu-open\&#039;: vm.menuIsSlidOpen}&quot; ng-mouseenter=&quot;vm.mouseEnter()&quot; ng-mouseleave=&quot;vm.mouseLeave()&quot; md-is-locked-open=&quot;true&quot; wm-apply-custom-theme=&quot;&quot;&gt;&lt;md-toolbar md-scroll-shrink=&quot;&quot;&gt;&lt;div class=&quot;md-toolbar-tools&quot; ng-class=&quot;{\&#039;show-title\&#039;: (vm.menuIsSlidOpen || vm.menuIsHover), \&#039;hide-title\&#039;: !(vm.menuIsSlidOpen || vm.menuIsHover)}&quot;&gt;&lt;h3 class=&quot;fade-in&quot;&gt;&lt;span&gt;GPO Break Room&lt;/span&gt;&lt;/h3&gt;&lt;span flex=&quot;&quot;&gt;&lt;/span&gt;&lt;menu-slide menu-is-slid-open=&quot;vm.menuIsSlidOpen&quot; menu-is-hover=&quot;vm.menuIsHover&quot; menu-items=&quot;vm.menu.sections&quot;&gt;&lt;/menu-slide&gt;&lt;/div&gt;&lt;/md-toolbar&gt;&lt;md-content role=&quot;navigation&quot; wm-apply-custom-theme=&quot;&quot;&gt;&lt;ul class=&quot;side-menu&quot;&gt;&lt;li ng-repeat=&quot;section in vm.menu.sections&quot; class=&quot;parent-list-item&quot; ng-class=&quot;{\&#039;parentActive\&#039; : vm.isSectionSelected(section)}&quot;&gt;&lt;h2 class=&quot;menu-heading&quot; ng-if=&quot;section.type === \&#039;heading\&#039;&quot; id=&quot;heading_{{ section.name | nospace }}&quot;&gt;{{section}}&lt;/h2&gt;&lt;menu-link section=&quot;section&quot; ng-if=&quot;section.type === \&#039;link\&#039;&quot; menu-is-slid-open=&quot;vm.menuIsSlidOpen&quot; menu-is-hover=&quot;vm.menuIsHover&quot;&gt;&lt;/menu-link&gt;&lt;menu-toggle section=&quot;section&quot; ng-if=&quot;section.type === \&#039;toggle\&#039;&quot; menu-is-slid-open=&quot;vm.menuIsSlidOpen&quot; menu-is-hover=&quot;vm.menuIsHover&quot;&gt;&lt;/menu-toggle&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/md-content&gt;&lt;/md-sidenav&gt;&lt;div layout=&quot;column&quot; tabindex=&quot;-1&quot; role=&quot;main&quot; class=&quot;fill-width&quot;&gt;&lt;md-toolbar layout=&quot;row&quot; class=&quot;md-whiteframe-z3&quot;&gt;&lt;div class=&quot;md-toolbar-tools docs-toolbar-tools&quot; flex=&quot;&quot; tabindex=&quot;-1&quot;&gt;&lt;/div&gt;&lt;/md-toolbar&gt;&lt;md-content md-scroll-y=&quot;&quot; layout=&quot;column&quot; flex=&quot;&quot; class=&quot;fill-width&quot;&gt;&lt;div ui-view=&quot;content&quot; class=&quot;main-content&quot; ng-class=&quot;{\&#039;main-content-menu-closed\&#039;: !vm.menuIsSlidOpen, \&#039;main-content-menu-open\&#039;: vm.menuIsSlidOpen}&quot;&gt;&lt;/div&gt;&lt;/md-content&gt;&lt;footer&gt;&lt;md-toolbar layout=&quot;row&quot; class=&quot;toolbar-fixed-bottom&quot; ng-class=&quot;{\&#039;menu-expanded\&#039;: vm.menuIsSlidOpen}&quot;&gt;&lt;/md-toolbar&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/div&gt;&#039;);
+  }]);
+}(), function (e) {
+  try {
+    e = angular.module(&quot;AngularMaterialDesignTemplatePartials&quot;);
+  } catch (n) {
+    e = angular.module(&quot;AngularMaterialDesignTemplatePartials&quot;, []);
+  }e.run([&quot;$templateCache&quot;, function (e) {
+    e.put(&quot;common/form-wizard/partials/form-wizard.tpl.html&quot;, &#039;&lt;md-content class=&quot;form-wizard&quot; layout=&quot;column&quot; layout-align=&quot;start start&quot; tab-index=&quot;2&quot; style=&quot;position: relative;&quot;&gt;&lt;div layout=&quot;row&quot; style=&quot;width: 100%; position: relative;&quot;&gt;&lt;div&gt;&lt;h1&gt;{{vm.wizardTitle}}&lt;/h1&gt;&lt;/div&gt;&lt;/div&gt;&lt;div layout=&quot;row&quot; layout-align=&quot;center center&quot; wm-apply-custom-theme-background=&quot;&quot; class=&quot;form-wrapper&quot;&gt;&lt;div layout=&quot;column&quot; flex=&quot;&quot; layout-align=&quot;center center&quot;&gt;&lt;div layout=&quot;row&quot; layout-align=&quot;center center&quot; class=&quot;tab-container&quot;&gt;&lt;div layout=&quot;row&quot; layout-align=&quot;center center&quot; flex=&quot;&quot; class=&quot;tab-wrapper&quot; ng-repeat=&quot;tab in vm.formTabs track by $index&quot; ng-class=&quot;{\&#039;tab-left\&#039;: $index === 0, \&#039;tab-right\&#039;: $index === vm.formTabs.length - 1}&quot;&gt;&lt;md-button class=&quot;inactive-tab md-raised&quot; ui-sref=&quot;.{{tab.State}}&quot; ui-sref-active=&quot;active-tab&quot; ng-class=&quot;{\&#039;has-error\&#039;: tab.ShowError, \&#039;has-success\&#039;: tab.ShowComplete}&quot;&gt;&lt;span ng-hide=&quot;tab.ShowError || tab.ShowComplete&quot;&gt;{{$index + 1}}&lt;/span&gt; &lt;span ng-show=&quot;tab.ShowError&quot; class=&quot;fa fa-exclamation&quot; style=&quot;top: 7px; position: relative;&quot;&gt;&lt;/span&gt; &lt;span ng-show=&quot;tab.ShowComplete&quot; class=&quot;fa fa-check&quot; style=&quot;top: 7px; position: relative;&quot;&gt;&lt;/span&gt;&lt;/md-button&gt;&lt;/div&gt;&lt;/div&gt;&lt;div layout=&quot;row&quot; layout-align=&quot;center center&quot; class=&quot;tab-container tab-titles&quot;&gt;&lt;div layout=&quot;row&quot; layout-align=&quot;center center&quot; flex=&quot;&quot; ng-repeat=&quot;tab in vm.formTabs track by $index&quot;&gt;&lt;div layout=&quot;row&quot; layout-align=&quot;center center&quot; class=&quot;tab-title&quot; ui-sref=&quot;.{{tab.State}}&quot; ui-sref-active=&quot;active-tab&quot;&gt;&lt;strong ng-class=&quot;{\&#039;text-danger\&#039;: tab.ShowError, \&#039;text-success\&#039;: tab.ShowComplete}&quot;&gt;{{tab.Title}}&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div layout=&quot;row&quot; class=&quot;form-fields&quot; ui-view=&quot;&quot;&gt;&lt;/div&gt;&lt;div layout=&quot;row&quot; class=&quot;form-steppers&quot;&gt;&lt;div layout=&quot;row&quot; flex=&quot;&quot; layout-align=&quot;start start&quot;&gt;&lt;md-button class=&quot;md-primary&quot; ng-click=&quot;vm.Previous()&quot;&gt;&lt;span class=&quot;fa fa-chevron-left&quot;&gt;&lt;/span&gt;Previous&lt;/md-button&gt;&lt;/div&gt;&lt;div layout=&quot;row&quot; flex=&quot;&quot; layout-align=&quot;end end&quot;&gt;&lt;md-button class=&quot;md-primary&quot; ng-click=&quot;vm.Next()&quot;&gt;Next &lt;span class=&quot;fa fa-chevron-right&quot;&gt;&lt;/span&gt;&lt;/md-button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/md-content&gt;&#039;);
+  }]);
+}(), function (e) {
+  try {
+    e = angular.module(&quot;AngularMaterialDesignTemplatePartials&quot;);
+  } catch (n) {
+    e = angular.module(&quot;AngularMaterialDesignTemplatePartials&quot;, []);
+  }e.run([&quot;$templateCache&quot;, function (e) {
+    e.put(&quot;sidemenu/menuLink/partials/menu-link.tpl.html&quot;, &#039;&lt;md-button ng-class=&quot;{\&#039;{{vm.section.icon}}\&#039; : true}&quot; ui-sref-active=&quot;active-state&quot; ui-sref=&quot;{{vm.section.state}}&quot;&gt;&lt;span ng-show=&quot;vm.menuIsSlidOpen || vm.menuIsHover&quot;&gt;{{vm.section | humanizeDoc}}&lt;/span&gt; &lt;span class=&quot;md-visually-hidden&quot; ng-if=&quot;vm.isSelected()&quot;&gt;current page&lt;/span&gt;&lt;/md-button&gt;&#039;);
+  }]);
+}(), function (e) {
+  try {
+    e = angular.module(&quot;AngularMaterialDesignTemplatePartials&quot;);
+  } catch (n) {
+    e = angular.module(&quot;AngularMaterialDesignTemplatePartials&quot;, []);
+  }e.run([&quot;$templateCache&quot;, function (e) {
+    e.put(&quot;sidemenu/menuSlide/partials/menu-slide.tpl.html&quot;, &#039;&lt;md-button ng-show=&quot;menuIsHover || menuIsSlidOpen&quot; class=&quot;menu-btn&quot;&gt;&lt;span flex=&quot;&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa&quot; ng-class=&quot;{\&#039;fa-arrow-left\&#039;: menuIsSlidOpen, \&#039;fa-arrow-right\&#039;: !menuIsSlidOpen}&quot; layout=&quot;row&quot; flex=&quot;&quot; layout-align=&quot;end&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-ellipsis-v&quot; layout=&quot;row&quot; layout-align=&quot;end&quot; flex=&quot;&quot; style=&quot;&quot;&gt;&lt;/span&gt;&lt;/md-button&gt;&#039;);
+  }]);
+}(), function (e) {
+  try {
+    e = angular.module(&quot;AngularMaterialDesignTemplatePartials&quot;);
+  } catch (n) {
+    e = angular.module(&quot;AngularMaterialDesignTemplatePartials&quot;, []);
+  }e.run([&quot;$templateCache&quot;, function (e) {
+    e.put(&quot;sidemenu/menuToggle/partials/menu-toggle.tpl.html&quot;, &#039;&lt;md-button class=&quot;md-button-toggle&quot; ng-class=&quot;{active: vm.isOpen(vm.section), \&#039;{{vm.section.icon}}\&#039; : true}&quot; ng-click=&quot;vm.toggle(vm.section)&quot; aria-controls=&quot;docs-menu-{{vm.section.name | nospace}}&quot; flex=&quot;&quot; layout=&quot;row&quot; aria-expanded=&quot;{{vm.isOpen(vm.section)}}&quot;&gt;&lt;span&gt;{{vm.section.name}}&lt;/span&gt; &lt;span aria-hidden=&quot;true&quot; class=&quot;pull-right fa fa-chevron-down md-toggle-icon&quot; ng-class=&quot;{\&#039;toggled\&#039; : vm.isOpen(vm.section)}&quot;&gt;&lt;/span&gt;&lt;/md-button&gt;&lt;ul ng-show=&quot;vm.isOpen(vm.section)&quot; id=&quot;docs-menu-{{vm.section.name | nospace}}&quot; class=&quot;menu-toggle-list&quot;&gt;&lt;li ng-repeat=&quot;page in vm.section.pages&quot; class=&quot;toggle-section&quot;&gt;&lt;menu-link section=&quot;page&quot; ng-if=&quot;page.type === \&#039;link\&#039;&quot; menu-is-slid-open=&quot;vm.menuIsSlidOpen&quot; menu-is-hover=&quot;vm.menuIsHover&quot; class=&quot;sub-indent&quot;&gt;&lt;/menu-link&gt;&lt;menu-toggle section=&quot;page&quot; ng-if=&quot;page.type === \&#039;toggle\&#039;&quot; menu-is-slid-open=&quot;vm.menuIsSlidOpen&quot; menu-is-hover=&quot;vm.menuIsHover&quot; class=&quot;sub-indent&quot;&gt;&lt;/menu-toggle&gt;&lt;/li&gt;&lt;/ul&gt;&#039;);
+  }]);
+}(), function (e) {
+  try {
+    e = angular.module(&quot;AngularMaterialDesignTemplatePartials&quot;);
+  } catch (n) {
+    e = angular.module(&quot;AngularMaterialDesignTemplatePartials&quot;, []);
+  }e.run([&quot;$templateCache&quot;, function (e) {
+    e.put(&quot;common/toolbar-components/global-search/partials/global-search.tpl.html&quot;, &#039;&lt;span flex=&quot;&quot; class=&quot;fa pad-menu-icon-right&quot; ng-class=&quot;{\&#039;hide-icon\&#039;: vm.menuSearchActive, \&#039;fa-close\&#039;: vm.menuSearchActive, \&#039;show-icon\&#039;: !vm.menuSearchActive, \&#039;fa-search\&#039;: !vm.menuSearchActive}&quot; ng-click=&quot;vm.menuSearchActive = !vm.menuSearchActive&quot;&gt;&lt;/span&gt;&lt;span ng-class=&quot;{\&#039;show-search\&#039;: vm.menuSearchActive, \&#039;hide-search\&#039;: !vm.menuSearchActive}&quot; flex=&quot;&quot;&gt;&lt;md-autocomplete ng-disabled=&quot;globalSearch.isDisabled&quot; md-no-cache=&quot;globalSearch.noCache&quot; md-selected-item=&quot;globalSearch.selectedItem&quot; md-search-text-change=&quot;globalSearch.searchTextChange(globalSearch.searchText)&quot; md-search-text=&quot;globalSearch.searchText&quot; md-selected-item-change=&quot;globalSearch.selectedItemChange(item)&quot; md-items=&quot;item in globalSearch.querySearch(globalSearch.searchText)&quot; md-item-text=&quot;item.name&quot; md-min-length=&quot;0&quot; placeholder=&quot;Enter page name&quot; class=&quot;search-default&quot; ng-class=&quot;{\&#039;show-search\&#039;: vm.menuSearchActive, \&#039;hide-search\&#039;: !vm.menuSearchActive}&quot;&gt;&lt;md-item-template&gt;&lt;span flex=&quot;&quot; layout=&quot;row&quot; layout-align=&quot;center center&quot;&gt;&lt;span flex=&quot;&quot; layout-align=&quot;center center&quot; class=&quot;{{item.icon}} navicon&quot;&gt;&lt;/span&gt; &lt;span flex=&quot;&quot; layout=&quot;column&quot; class=&quot;global-search-text&quot;&gt;&lt;span flex=&quot;&quot;&gt;&lt;strong&gt;{{item.name}}&lt;/strong&gt;&lt;/span&gt; &lt;span flex=&quot;&quot;&gt;{{item.description}}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/md-item-template&gt;&lt;md-not-found&gt;No pages matching &quot;{{globalSearch.searchText}}&quot;.&lt;/md-not-found&gt;&lt;/md-autocomplete&gt;&lt;/span&gt;&#039;);
+  }]);
+}();</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ complexity.cyclomatic }} <br>
+    Length : {{ complexity.halstead.length }} <br>
+    Difficulty : {{ complexity.halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ complexity.halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>

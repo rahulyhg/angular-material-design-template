@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
+    <!-- endinject -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- endinject -->
+    <base href="/">
+</head>
+
+<body ng-app="angularMaterialDesignTemplate" layout="column" ng-cloak>
+    <div class="fill-height fill-width">
+        <div class="fill-height" ui-view ng-cloak></div>
+    </div>
+    <!-- bower:js -->
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/bower_components/angular-messages/angular-messages.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="/bower_components/angular-ui-grid/ui-grid.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/bower_components/angular-material/angular-material.js"></script>
+    <script src="/bower_components/angular-material-icons/angular-material-icons.js"></script>
+    <script src="/bower_components/pdfmake/build/pdfmake.js"></script>
+    <script src="/bower_components/pdfmake/build/vfs_fonts.js"></script>
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script src="/src/app.js"></script>
+    <script src="/src/components/common/providers/dynamic-state.provider.js"></script>
+    <script src="/src/demo/CreateQuote/constants/create-quote-form-steps.constant.js"></script>
+    <script src="/src/md-themes/themes.config.js"></script>
+    <script src="/src/components/common/common.module.js"></script>
+    <script src="/src/demo/CreateQuote/create-quote.module.js"></script>
+    <script src="/src/demo/QuoteSummary/quote-summary.module.js"></script>
+    <script src="/src/demo/QuoteSummary/directives/quote-summary.directive.js"></script>
+    <script src="/src/demo/QuoteSummary/directives/quote-summary-header-button.directive.js"></script>
+    <script src="/src/demo/SideMenu/side-menu.module.js"></script>
+    <script src="/src/demo/SideMenu/constants/side-menu.constant.js"></script>
+    <script src="/src/demo/CreateQuote/directives/wmCreateQuoteFormWizard.directive.js"></script>
+    <script src="/src/demo/draft-bids/draft-bids.module.js"></script>
+    <script src="/src/demo/draft-bids/directives/wmDraftBids.directive.js"></script>
+    <script src="/src/demo/CreateQuote/constants/create-quote-object.constant.js"></script>
+    <script src="/src/demo/CreateQuote/CostingStep/directives/wmCreateQuoteCostingStep.directive.js"></script>
+    <script src="/src/demo/CreateQuote/FreightStep/directives/wmCreateQuoteFreightStep.directive.js"></script>
+    <script src="/src/demo/CreateQuote/GeneralStep/directives/wmCreateQuoteGeneralStep.directive.js"></script>
+    <script src="/src/demo/CreateQuote/PackStep/directives/wmCreateQuotePackStep.directive.js"></script>
+    <script src="/src/demo/CreateQuote/ProductStep/directives/wmCreateQuoteProductStep.directive.js"></script>
+    <script src="/src/components/components.module.js"></script>
+    <script src="/src/md-themes/asda/theme.module.js"></script>
+    <script src="/src/md-themes/asda/asda.constant.js"></script>
+    <script src="/src/md-themes/asda/accent.constant.js"></script>
+    <script src="/src/md-themes/asda/background.constant.js"></script>
+    <script src="/src/md-themes/constants/constants.module.js"></script>
+    <script src="/src/md-themes/asda/primary.constant.js"></script>
+    <script src="/src/md-themes/factories/factories.module.js"></script>
+    <script src="/src/md-themes/asda/warn.constant.js"></script>
+    <script src="/src/md-themes/walmart/theme.module.js"></script>
+    <script src="/src/md-themes/walmart/walmart.constant.js"></script>
+    <script src="/src/md-themes/constants/mdThemeProvider.constant.js"></script>
+    <script src="/src/md-themes/constants/colorways.constant.js"></script>
+    <script src="/src/components/common/form-wizard/form-wizard.module.js"></script>
+    <script src="/src/components/common/form-wizard/directives/wmFormSectionActiveTab.directive.js"></script>
+    <script src="/src/components/common/form-wizard/directives/wmFormSectionBar.directive.js"></script>
+    <script src="/src/components/common/form-wizard/directives/wmFormWizard.directive.js"></script>
+    <script src="/src/components/common/form-wizard/factories/HideShowErrorSuccess.factory.js"></script>
+    <script src="/src/md-themes/walmart/accent.constant.js"></script>
+    <script src="/src/components/toolbar/toolbar.module.js"></script>
+    <script src="/src/md-themes/walmart/background.constant.js"></script>
+    <script src="/src/components/sidemenu/sidemenu.module.js"></script>
+    <script src="/src/md-themes/walmart/primary.constant.js"></script>
+    <script src="/src/components/common/directives/directives.module.js"></script>
+    <script src="/src/md-themes/walmart/warn.constant.js"></script>
+    <script src="/src/components/common/factories/factories.module.js"></script>
+    <script src="/src/components/common/toolbar-components/toolbar-components.module.js"></script>
+    <script src="/src/components/common/toolbar-components/global-search/global-search.module.js"></script>
+    <script src="/src/components/common/toolbar-components/global-search/directives/global-search.directive.js"></script>
+    <script src="/src/components/sidemenu/toolbar/directives/wmToolbarContentRight.directive.js"></script>
+    <script src="/src/components/sidemenu/toolbar/directives/wmToolbarContentLeft.directive.js"></script>
+    <script src="/src/components/sidemenu/toolbar/directives/wmToolbarContentCenter.directive.js"></script>
+    <script src="/src/components/sidemenu/menuToggle/directives/menuToggle.directive.js"></script>
+    <script src="/src/components/sidemenu/menuLink/directives/menuLink.directive.js"></script>
+    <script src="/src/components/sidemenu/menuSlide/directives/menuSlide.directive.js"></script>
+    <script src="/src/components/sidemenu/footer/wmFooter.directive.js"></script>
+    <script src="/src/components/sidemenu/factories/sidemenu.factory.js"></script>
+    <script src="/src/components/sidemenu/directives/sideMenu.directive.js"></script>
+    <script src="/src/components/common/filters/removewhitespace.filter.js"></script>
+    <script src="/src/components/common/filters/lowercase.filter.js"></script>
+    <script src="/src/components/common/filters/filters.package.js"></script>
+    <script src="/src/components/common/filters/yesno.filter.js"></script>
+    <script src="/src/components/common/factories/traverseMenuItems.factory.js"></script>
+    <script src="/src/components/common/directives/wmApplyCustomTheme.directive.js"></script>
+    <script src="/src/components/common/directives/wmApplyCustomButtonTheme.directive.js"></script>
+    <script src="/src/components/common/directives/wmApplyCustomThemeBackground.directive.js"></script>
+    <script src="/src/components/partials/partials.min.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>

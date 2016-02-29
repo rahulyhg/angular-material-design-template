@@ -1,0 +1,57 @@
+<wm-form-wizard wizard-title="demo.wizardTitle" form-tabs="demo.steps"></wm-form-wizard>
+<div class="lock-size" layout="row" layout-align="center center">
+<md-fab-speed-dial md-direction="left" class="md-scale" md-open="demo.draftBidIsOpen" ng-cloak>
+    <md-fab-trigger>
+        <md-button aria-label="menu" class="md-fab md-primary">
+            <md-icon>
+                <wm-draft-bids flex draft-bid-is-open="demo.draftBidIsOpen" class="pad-menu-icon-right" style="cursor: pointer;"></wm-draft-bids>
+            </md-icon>
+        </md-button>
+    </md-fab-trigger>
+    <md-fab-actions>
+        <md-button flex layout="column" layout-align="center center" style="margin-right: 20px;" class="md-fab md-raised md-mini" wm-apply-custom-button-theme color-code="700" background-color-code="700" color-type="Warn">
+            <md-icon class="fa fa-close" ng-aria="Close" wm-apply-custom-button-theme color-code="700" background-color-code="700" color-type="Warn" style="top: 8px; position: relative;"></md-icon>
+            <md-tooltip direction="down">Close</md-tooltip>
+        </md-button>
+        <md-button flex layout="column" layout-align="center center" style="margin-right: 20px;" class="md-fab md-raised md-mini" wm-apply-custom-button-theme color-code="700" background-color-code="700" color-type="Primary">
+            <md-menu>
+                <md-button ng-click="$mdOpenMenu($event)" class="md-icon-button" aria-label="Open Draft Bids">
+                    <md-icon class="fa fa-list" ng-aria="View Draft Bids" wm-apply-custom-button-theme color-code="500" background-color-code="700" color-type="Primary" style="top: 2px; position: relative;"></md-icon>
+                    <md-tooltip direction="down">View Drafts</md-tooltip>
+                </md-button>
+                <md-menu-content>
+                    <md-menu-item>
+                        <md-button class="md-warn" layout="row" layout-align="end end" style="text-align: right;">
+                            Close <span class="fa fa-close" ng-aria="Close"></span>
+                        </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                        <md-button class="md-primary" layout="row" layout-align="start start">
+                            8668155 - Test Product 1
+                        </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                        <md-button class="md-primary" layout="row" layout-align="start start">
+                            8668156 - Test Product 2
+                        </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                        <md-button class="md-primary" layout="row" layout-align="start start">
+                            8668157 - Test Product 3
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+            <md-tooltip direction="down">View Drafts</md-tooltip>
+        </md-button>
+        <md-button flex layout="column" layout-align="center center" style="margin-right: 20px;" class="md-fab md-raised md-mini" wm-apply-custom-button-theme color-code="700" background-color-code="700" color-type="Primary">
+            <md-icon class="fa fa-plus" ng-aria="New Draft" wm-apply-custom-button-theme color-code="700" background-color-code="700" color-type="Primary" style="top: 10px; position: relative;"></md-icon>
+            <md-tooltip direction="down" color-type="Primary">Add New</md-tooltip>
+        </md-button>
+        <md-button flex layout="column" layout-align="center center" style="margin-right: 20px;" class="md-fab md-raised md-mini" wm-apply-custom-button-theme color-code="500" background-color-code="700" color-type="Warn">
+            <md-icon class="fa fa-trash" ng-aria="Delete Draft" wm-apply-custom-button-theme color-code="500" background-color-code="700" color-type="Warn" style="top: 8px; position: relative;"></md-icon>
+            <md-tooltip direction="down">Delete</md-tooltip>
+        </md-button>
+    </md-fab-actions>
+</md-fab-speed-dial>
+</div>

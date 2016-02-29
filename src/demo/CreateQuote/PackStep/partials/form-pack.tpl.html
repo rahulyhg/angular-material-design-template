@@ -1,0 +1,110 @@
+<div layout="column" class="" ng-cloak>
+    <form name="createQuotePack.packStepForm">
+        <div layout="row" class="field-row">
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Pack Type (required)</label>
+                <md-select name="PackType" ng-model="createQuotePack.data.PackType" required>
+                    <md-option ng-repeat="packType in createQuotePack.PackTypes" value="{{packType.Id}}">
+                        {{packType.Description}}
+                    </md-option>
+                </md-select>
+                <div ng-messages="createQuotePack.packStepForm.PackType.$error">
+                    <div ng-message="required">Pack Type is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Container Size (required)</label>
+                <md-select name="ContainerSize" ng-model="createQuotePack.data.ContainerSize" required>
+                    <md-option ng-repeat="containerSize in createQuotePack.ContainerSizes" value="{{containerSize.Id}}">
+                        {{containerSize.Display}}
+                    </md-option>
+                </md-select>
+                <div ng-messages="createQuotePack.packStepForm.ContainerSize.$error">
+                    <div ng-message="required">Container Size is required.</div>
+                </div>
+            </md-input-container>
+        </div>
+        <div layout="row" class="field-row">
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Container Load Quantity (required)</label>
+                <input name="ContainerLoadQuantity" ng-model="createQuotePack.data.ContainerLoadQuantity" required>
+                <div ng-messages="createQuotePack.packStepForm.ContainerLoadQuantity.$error">
+                    <div ng-message="required">Container Load Quantity is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Supplier Quantity (required)</label>
+                <input name="SupplierQuantity" ng-model="createQuotePack.data.SupplierQuantity" required>
+                <div ng-messages="createQuotePack.packStepForm.SupplierQuantity.$error">
+                    <div ng-message="required">Supplier Quantity is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Warehouse Quantity (required)</label>
+                <input name="WarehouseQuantity" ng-model="createQuotePack.data.WarehouseQuantity" required>
+                <div ng-messages="createQuotePack.packStepForm.WarehouseQuantity.$error">
+                    <div ng-message="required">Warehouse Quantity is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Gross Weight in KG (required)</label>
+                <input name="GrossWeight" ng-model="createQuotePack.data.GrossWeight" required>
+                <div ng-messages="createQuotePack.packStepForm.GrossWeight.$error">
+                    <div ng-message="required">Gross Weight is required.</div>
+                </div>
+            </md-input-container>
+        </div>
+        <div layout="row" class="field-row">
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Supplier Pack Length in cm (required)</label>
+                <input name="SupplierPackLength" ng-model="createQuotePack.data.SupplierPackLength" required>
+                <div ng-messages="createQuotePack.packStepForm.SupplierPackLength.$error">
+                    <div ng-message="required">Supplier Pack Length is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Supplier Pack Width in cm (required)</label>
+                <input name="SupplierPackWidth" ng-model="createQuotePack.data.SupplierPackWidth" required>
+                <div ng-messages="createQuotePack.packStepForm.SupplierPackWidth.$error">
+                    <div ng-message="required">Supplier Pack Width is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Supplier Pack Height in cm (required)</label>
+                <input name="SupplierPackHeight" ng-model="createQuotePack.data.SupplierPackHeight" required>
+                <div ng-messages="createQuotePack.packStepForm.SupplierPackHeight.$error">
+                    <div ng-message="required">Supplier Pack Height is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container style="top: 10px;">
+                Supplier Pack Volume: {{createQuotePack.data.SupplierPackVolume}} m&sup3;
+            </md-input-container>
+        </div>
+        <div layout="row" class="field-row">
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Warehouse Pack Length in cm (required)</label>
+                <input name="WarehousePackLength" ng-model="createQuotePack.data.WarehousePackLength" required>
+                <div ng-messages="createQuotePack.packStepForm.WarehousePackLength.$error">
+                    <div ng-message="required">Warehouse Pack Length is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Warehouse Pack Width in cm (required)</label>
+                <input name="WarehousePackWidth" ng-model="createQuotePack.data.WarehousePackWidth" required>
+                <div ng-messages="createQuotePack.packStepForm.WarehousePackWidth.$error">
+                    <div ng-message="required">Warehouse Pack Width is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Warehouse Pack Height in cm (required)</label>
+                <input name="WarehousePackHeight" ng-model="createQuotePack.data.WarehousePackHeight" required>
+                <div ng-messages="createQuotePack.packStepForm.WarehousePackHeight.$error">
+                    <div ng-message="required">Warehouse Pack Height is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container style="top: 10px;">
+                Warehouse Pack Volume: {{createQuotePack.data.WarehousePackVolume}} m&sup3;
+            </md-input-container>
+        </div>
+    </form>
+</div>

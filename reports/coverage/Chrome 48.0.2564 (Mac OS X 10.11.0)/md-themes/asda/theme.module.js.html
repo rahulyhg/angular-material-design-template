@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for md-themes/asda/theme.module.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">md-themes/asda/</a> theme.module.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>10/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>10/10</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+(function () {
+    angular.module('asdaTheme', []).config(configFunc);
+    configFunc.$inject = ['$mdThemingProvider', 'asdaPrimary', 'asdaAccent', 'asdaWarn', 'asdaBackground'];
+    function configFunc($mdThemingProvider, asdaPrimary, asdaAccent, asdaWarn, asdaBackground) {
+        var deepCopy = JSON.parse(JSON.stringify(asdaPrimary));
+        $mdThemingProvider.definePalette('asdaPrimary', deepCopy);
+&nbsp;
+        $mdThemingProvider.definePalette('asdaAccent', angular.copy(asdaAccent));
+&nbsp;
+        $mdThemingProvider.definePalette('asdaWarn', angular.copy(asdaWarn));
+&nbsp;
+        $mdThemingProvider.definePalette('asdaBackground', angular.copy(asdaBackground));
+&nbsp;
+        $mdThemingProvider.theme('ASDA').primaryPalette('asdaPrimary').accentPalette('asdaAccent').warnPalette('asdaWarn').backgroundPalette('asdaBackground');
+    }
+})();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qYWNvYnR1Y2tlci9Ub29sYm94L1dvcmtzcGFjZS9naXQvYW5ndWxhci1tYXRlcmlhbC1kZXNpZ24tdGVtcGxhdGUvc3JjL21kLXRoZW1lcy9hc2RhL3RoZW1lLm1vZHVsZS5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLENBQUMsWUFBWTtBQUNULFlBQVEsTUFBUixDQUFlLFdBQWYsRUFBNEIsRUFBNUIsRUFDSyxNQURMLENBQ1ksVUFEWixFQURTO0FBR1QsZUFBVyxPQUFYLEdBQXFCLENBQUMsb0JBQUQsRUFBdUIsYUFBdkIsRUFBc0MsWUFBdEMsRUFBb0QsVUFBcEQsRUFBZ0UsZ0JBQWhFLENBQXJCLENBSFM7QUFJVCxhQUFTLFVBQVQsQ0FBb0Isa0JBQXBCLEVBQXdDLFdBQXhDLEVBQXFELFVBQXJELEVBQWlFLFFBQWpFLEVBQTJFLGNBQTNFLEVBQTJGO0FBQ3ZGLFlBQUksV0FBVyxLQUFLLEtBQUwsQ0FBVyxLQUFLLFNBQUwsQ0FBZSxXQUFmLENBQVgsQ0FBWCxDQURtRjtBQUV2RiwyQkFDSyxhQURMLENBQ21CLGFBRG5CLEVBQ2tDLFFBRGxDLEVBRnVGOztBQUt2RiwyQkFDSyxhQURMLENBQ21CLFlBRG5CLEVBRW1CLFFBQVEsSUFBUixDQUFhLFVBQWIsQ0FGbkIsRUFMdUY7O0FBU3ZGLDJCQUNLLGFBREwsQ0FDbUIsVUFEbkIsRUFFbUIsUUFBUSxJQUFSLENBQWEsUUFBYixDQUZuQixFQVR1Rjs7QUFhdkYsMkJBQ0ssYUFETCxDQUNtQixnQkFEbkIsRUFFbUIsUUFBUSxJQUFSLENBQWEsY0FBYixDQUZuQixFQWJ1Rjs7QUFpQnZGLDJCQUFtQixLQUFuQixDQUF5QixNQUF6QixFQUNLLGNBREwsQ0FDb0IsYUFEcEIsRUFFSyxhQUZMLENBRW1CLFlBRm5CLEVBR0ssV0FITCxDQUdpQixVQUhqQixFQUlLLGlCQUpMLENBSXVCLGdCQUp2QixFQWpCdUY7S0FBM0Y7Q0FKSCxHQUFEIiwiZmlsZSI6InRoZW1lLm1vZHVsZS5lczUuanMiLCJzb3VyY2VzQ29udGVudCI6WyIoZnVuY3Rpb24gKCkge1xuICAgIGFuZ3VsYXIubW9kdWxlKCdhc2RhVGhlbWUnLCBbXSlcbiAgICAgICAgLmNvbmZpZyhjb25maWdGdW5jKTtcbiAgICBjb25maWdGdW5jLiRpbmplY3QgPSBbJyRtZFRoZW1pbmdQcm92aWRlcicsICdhc2RhUHJpbWFyeScsICdhc2RhQWNjZW50JywgJ2FzZGFXYXJuJywgJ2FzZGFCYWNrZ3JvdW5kJ107XG4gICAgZnVuY3Rpb24gY29uZmlnRnVuYygkbWRUaGVtaW5nUHJvdmlkZXIsIGFzZGFQcmltYXJ5LCBhc2RhQWNjZW50LCBhc2RhV2FybiwgYXNkYUJhY2tncm91bmQpIHtcbiAgICAgICAgdmFyIGRlZXBDb3B5ID0gSlNPTi5wYXJzZShKU09OLnN0cmluZ2lmeShhc2RhUHJpbWFyeSkpO1xuICAgICAgICAkbWRUaGVtaW5nUHJvdmlkZXJcbiAgICAgICAgICAgIC5kZWZpbmVQYWxldHRlKCdhc2RhUHJpbWFyeScsIGRlZXBDb3B5KTtcblxuICAgICAgICAkbWRUaGVtaW5nUHJvdmlkZXJcbiAgICAgICAgICAgIC5kZWZpbmVQYWxldHRlKCdhc2RhQWNjZW50JyxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgIGFuZ3VsYXIuY29weShhc2RhQWNjZW50KSk7XG5cbiAgICAgICAgJG1kVGhlbWluZ1Byb3ZpZGVyXG4gICAgICAgICAgICAuZGVmaW5lUGFsZXR0ZSgnYXNkYVdhcm4nLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgYW5ndWxhci5jb3B5KGFzZGFXYXJuKSk7XG5cbiAgICAgICAgJG1kVGhlbWluZ1Byb3ZpZGVyXG4gICAgICAgICAgICAuZGVmaW5lUGFsZXR0ZSgnYXNkYUJhY2tncm91bmQnLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgYW5ndWxhci5jb3B5KGFzZGFCYWNrZ3JvdW5kKSk7XG5cbiAgICAgICAgJG1kVGhlbWluZ1Byb3ZpZGVyLnRoZW1lKCdBU0RBJylcbiAgICAgICAgICAgIC5wcmltYXJ5UGFsZXR0ZSgnYXNkYVByaW1hcnknKVxuICAgICAgICAgICAgLmFjY2VudFBhbGV0dGUoJ2FzZGFBY2NlbnQnKVxuICAgICAgICAgICAgLndhcm5QYWxldHRlKCdhc2RhV2FybicpXG4gICAgICAgICAgICAuYmFja2dyb3VuZFBhbGV0dGUoJ2FzZGFCYWNrZ3JvdW5kJyk7XG4gICAgfVxufSgpKTtcbiJdfQ==</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Feb 24 2016 08:52:38 GMT-0600 (CST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for demo/draft-bids/directives/wmDraftBids.directive.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">demo/draft-bids/directives/</a> wmDraftBids.directive.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">41.18% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>7/17</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">20% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">41.18% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>7/17</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+/*global angular */
+(function () {
+    'use strict';
+&nbsp;
+    angular.module('draftBids').directive('wmDraftBids', wmDraftBids);
+&nbsp;
+    wmDraftBids.$inject = ['$templateRequest', '$compile'];
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function wmDraftBids($templateRequest, $compile) {</span>
+<span class="cstat-no" title="statement not covered" >        return {</span>
+            restrict: 'AE',
+            scope: {
+                draftBidIsOpen: '='
+            },
+            controller: WMDraftBidsController,
+            controllerAs: 'wmDraftBid',
+            link: linkFunc
+        };
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function linkFunc(scope, element) {</span>
+<span class="cstat-no" title="statement not covered" >            $templateRequest('src/components/common/toolbar-components/draft-bids/partials/draft-bid.tpl.html').then(<span class="fstat-no" title="function not covered" >function (html) {</span></span>
+<span class="cstat-no" title="statement not covered" >                var template;</span>
+<span class="cstat-no" title="statement not covered" >                template = angular.element(html);</span>
+<span class="cstat-no" title="statement not covered" >                element.append(template);</span>
+<span class="cstat-no" title="statement not covered" >                $compile(template)(scope);</span>
+<span class="cstat-no" title="statement not covered" >                console.log(scope.draftBidIsOpen);</span>
+            });
+        }
+    }
+&nbsp;
+    WMDraftBidsController.$inject = ['$scope'];
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function WMDraftBidsController($scope) {</span>
+<span class="cstat-no" title="statement not covered" >        var self;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        self = this;</span>
+<span class="cstat-no" title="statement not covered" >        self.draftBidIsOpen = $scope.draftBidIsOpen;</span>
+    }
+})();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qYWNvYnR1Y2tlci9Ub29sYm94L1dvcmtzcGFjZS9naXQvYW5ndWxhci1tYXRlcmlhbC1kZXNpZ24tdGVtcGxhdGUvc3JjL2RlbW8vZHJhZnQtYmlkcy9kaXJlY3RpdmVzL3dtRHJhZnRCaWRzLmRpcmVjdGl2ZS5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFDQSxDQUFDLFlBQVc7QUFDUixpQkFEUTs7QUFFUixZQUFRLE1BQVIsQ0FBZSxXQUFmLEVBQ0ssU0FETCxDQUNlLGFBRGYsRUFDOEIsV0FEOUIsRUFGUTs7QUFLUixnQkFBWSxPQUFaLEdBQXNCLENBQUMsa0JBQUQsRUFBcUIsVUFBckIsQ0FBdEIsQ0FMUTs7QUFPUixhQUFTLFdBQVQsQ0FBc0IsZ0JBQXRCLEVBQXdDLFFBQXhDLEVBQWtEO0FBQzlDLGVBQU87QUFDSCxzQkFBVSxJQUFWO0FBQ0EsbUJBQU87QUFDSCxnQ0FBZ0IsR0FBaEI7YUFESjtBQUdBLHdCQUFZLHFCQUFaO0FBQ0EsMEJBQWMsWUFBZDtBQUNBLGtCQUFNLFFBQU47U0FQSixDQUQ4Qzs7QUFXOUMsaUJBQVMsUUFBVCxDQUFtQixLQUFuQixFQUEwQixPQUExQixFQUFtQztBQUMvQiw2QkFBaUIsaUZBQWpCLEVBQW9HLElBQXBHLENBQXlHLFVBQVUsSUFBVixFQUFnQjtBQUNySCxvQkFBSSxRQUFKLENBRHFIO0FBRXJILDJCQUFXLFFBQVEsT0FBUixDQUFnQixJQUFoQixDQUFYLENBRnFIO0FBR3JILHdCQUFRLE1BQVIsQ0FBZSxRQUFmLEVBSHFIO0FBSXJILHlCQUFTLFFBQVQsRUFBbUIsS0FBbkIsRUFKcUg7QUFLckgsd0JBQVEsR0FBUixDQUFZLE1BQU0sY0FBTixDQUFaLENBTHFIO2FBQWhCLENBQXpHLENBRCtCO1NBQW5DO0tBWEo7O0FBc0JBLDBCQUFzQixPQUF0QixHQUFnQyxDQUFDLFFBQUQsQ0FBaEMsQ0E3QlE7O0FBK0JSLGFBQVMscUJBQVQsQ0FBZ0MsTUFBaEMsRUFBd0M7QUFDcEMsWUFBSSxJQUFKLENBRG9DOztBQUdwQyxlQUFPLElBQVAsQ0FIb0M7QUFJcEMsYUFBSyxjQUFMLEdBQXNCLE9BQU8sY0FBUCxDQUpjO0tBQXhDO0NBL0JILEdBQUQiLCJmaWxlIjoid21EcmFmdEJpZHMuZGlyZWN0aXZlLmVzNS5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qZ2xvYmFsIGFuZ3VsYXIgKi9cbihmdW5jdGlvbiAoKXtcbiAgICAndXNlIHN0cmljdCc7XG4gICAgYW5ndWxhci5tb2R1bGUoJ2RyYWZ0QmlkcycpXG4gICAgICAgIC5kaXJlY3RpdmUoJ3dtRHJhZnRCaWRzJywgd21EcmFmdEJpZHMpO1xuXG4gICAgd21EcmFmdEJpZHMuJGluamVjdCA9IFsnJHRlbXBsYXRlUmVxdWVzdCcsICckY29tcGlsZSddO1xuXG4gICAgZnVuY3Rpb24gd21EcmFmdEJpZHMgKCR0ZW1wbGF0ZVJlcXVlc3QsICRjb21waWxlKSB7XG4gICAgICAgIHJldHVybiB7XG4gICAgICAgICAgICByZXN0cmljdDogJ0FFJyxcbiAgICAgICAgICAgIHNjb3BlOiB7XG4gICAgICAgICAgICAgICAgZHJhZnRCaWRJc09wZW46ICc9J1xuICAgICAgICAgICAgfSxcbiAgICAgICAgICAgIGNvbnRyb2xsZXI6IFdNRHJhZnRCaWRzQ29udHJvbGxlcixcbiAgICAgICAgICAgIGNvbnRyb2xsZXJBczogJ3dtRHJhZnRCaWQnLFxuICAgICAgICAgICAgbGluazogbGlua0Z1bmNcbiAgICAgICAgfTtcblxuICAgICAgICBmdW5jdGlvbiBsaW5rRnVuYyAoc2NvcGUsIGVsZW1lbnQpIHtcbiAgICAgICAgICAgICR0ZW1wbGF0ZVJlcXVlc3QoJ3NyYy9jb21wb25lbnRzL2NvbW1vbi90b29sYmFyLWNvbXBvbmVudHMvZHJhZnQtYmlkcy9wYXJ0aWFscy9kcmFmdC1iaWQudHBsLmh0bWwnKS50aGVuKGZ1bmN0aW9uIChodG1sKSB7XG4gICAgICAgICAgICAgICAgdmFyIHRlbXBsYXRlO1xuICAgICAgICAgICAgICAgIHRlbXBsYXRlID0gYW5ndWxhci5lbGVtZW50KGh0bWwpO1xuICAgICAgICAgICAgICAgIGVsZW1lbnQuYXBwZW5kKHRlbXBsYXRlKTtcbiAgICAgICAgICAgICAgICAkY29tcGlsZSh0ZW1wbGF0ZSkoc2NvcGUpO1xuICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKHNjb3BlLmRyYWZ0QmlkSXNPcGVuKTtcbiAgICAgICAgICAgIH0pO1xuICAgICAgICB9XG4gICAgfVxuXG4gICAgV01EcmFmdEJpZHNDb250cm9sbGVyLiRpbmplY3QgPSBbJyRzY29wZSddO1xuXG4gICAgZnVuY3Rpb24gV01EcmFmdEJpZHNDb250cm9sbGVyICgkc2NvcGUpIHtcbiAgICAgICAgdmFyIHNlbGY7XG5cbiAgICAgICAgc2VsZiA9IHRoaXM7XG4gICAgICAgIHNlbGYuZHJhZnRCaWRJc09wZW4gPSAkc2NvcGUuZHJhZnRCaWRJc09wZW47XG4gICAgfVxufSgpKTtcbiJdfQ==</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Feb 24 2016 08:52:38 GMT-0600 (CST)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

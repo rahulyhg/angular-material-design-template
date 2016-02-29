@@ -1,0 +1,100 @@
+<div layout="column" class="">
+    <form name="createQuoteGeneral.generalStepForm">
+        <div layout="row" class="field-row">
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>GTIN</label>
+                <input name="GTIN" ng-model="createQuoteGeneral.data.GTIN">
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>UPC (required)</label>
+                <input name="UPC" ng-model="createQuoteGeneral.data.UPC" required>
+                <div ng-messages="createQuoteGeneral.generalStepForm.UPC.$error">
+                    <div ng-message="required">UPC is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Product Name (required)</label>
+                <input name="ProductName" ng-model="createQuoteGeneral.data.ProductName" required>
+                <div ng-messages="createQuoteGeneral.generalStepForm.ProductName.$error">
+                    <div ng-message="required">Product Name is required.</div>
+                </div>
+            </md-input-container>
+        </div>
+        <div layout="row" class="field-row">
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Supplier Name (required)</label>
+                <input name="SupplierName" ng-model="createQuoteGeneral.data.Supplier" required>
+                <div ng-messages="createQuoteGeneral.generalStepForm.SupplierName.$error">
+                    <div ng-message="required">Supplier Name is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Buyer (required)</label>
+                <input name="Buyer" ng-model="createQuoteGeneral.data.Buyer" required>
+                <div ng-messages="createQuoteGeneral.generalStepForm.Buyer.$error">
+                    <div ng-message="required">Buyer is required.</div>
+                </div>
+            </md-input-container>
+        </div>
+        <div layout="row" class="field-row">
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Purchase Company (required)</label>
+                <md-select name="PurchaseCompany" ng-model="createQuoteGeneral.data.PurchaseCompany" required>
+                    <md-option ng-repeat="company in createQuoteGeneral.PurchaseCompanies" value="{{state.abbrev}}">
+                        {{company.Description}}
+                    </md-option>
+                </md-select>
+                <div ng-messages="createQuoteGeneral.generalStepForm.PurchaseCompany.$error">
+                    <div ng-message="required">Purchase Company is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Department (required)</label>
+                <md-select name="Department" ng-model="createQuoteGeneral.data.Department" required>
+                    <md-option ng-repeat="department in createQuoteGeneral.Departments" value="{{state.abbrev}}">
+                        {{deparment.Id - department.Description}}
+                    </md-option>
+                </md-select>
+                <div ng-messages="createQuoteGeneral.generalStepForm.Department.$error">
+                    <div ng-message="required">Department is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Deparment Category (required)</label>
+                <md-select name="DepartmentCategory" ng-model="createQuoteGeneral.data.DepartmentCategories" required>
+                    <md-option ng-repeat="departmentCategory in createQuoteGeneral.DepartementCategories" value="{{state.abbrev}}">
+                        {{departmentCategory.Id - departmentCategory.Description}}
+                    </md-option>
+                </md-select>
+                <div ng-messages="createQuoteGeneral.generalStepForm.DepartmentCategory.$error">
+                    <div ng-message="required">Department Category is required.</div>
+                </div>
+            </md-input-container>
+        </div>
+        <div layout="row" class="field-row">
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Credit Office (required)</label>
+                <md-select name="CreditOffice" ng-model="createQuoteGeneral.data.CreditOffice" required>
+                    <md-option ng-repeat="creditOffice in createQuoteGeneral.CreditOffices" value="{{state.abbrev}}">
+                        {{creditOffice.Description}}
+                    </md-option>
+                </md-select>
+                <div ng-messages="createQuoteGeneral.generalStepForm.CreditOffice.$error">
+                    <div ng-message="required">Credit Office is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Event Code (required)</label>
+                <input name="EventCode" ng-model="createQuoteGeneral.data.EventCode" required>
+                <div ng-messages="createQuoteGeneral.generalStepForm.EventCode.$error">
+                    <div ng-message="required">Event Code is required.</div>
+                </div>
+            </md-input-container>
+            <div class="inset">
+                <md-switch ng-model="createQuoteGeneral.data.IsReQuote" aria-label="Is Currently Offered Product?" class="md-primary">
+                    Product Currently Offered? {{ createQuoteGeneral.data.IsReQuote | yesno}}
+                </md-switch>
+            </div>
+        </div>
+    </form>
+</div>

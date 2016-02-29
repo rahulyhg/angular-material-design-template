@@ -1,0 +1,34 @@
+<div layout="column" class="">
+    <form name="createQuoteCosting.costingStepForm">
+        <div layout="row" class="field-row">
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>First Cost</label>
+                <input name="FirstCost" ng-model="createQuoteCosting.data.FirstCost" required>
+                <div ng-messages="createQuoteCosting.costingStepForm.FirstCost.$error">
+                    <div ng-message="required">First Cost is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Store Retail Price</label>
+                <input name="StoreRetailPrice" ng-model="createQuoteCosting.data.StoreRetailPrice" required>
+                <div ng-messages="createQuoteCosting.costingStepForm.StoreRetailPrice.$error">
+                    <div ng-message="required">Store Retail Price is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Bid Currency</label>
+                <md-select name="BidCurrencyCode" ng-model="createQuoteCosting.data.BidCurrencyCode" required>
+                    <md-option ng-repeat="currency in createQuoteCosting.BidCurrencyCodes" value="{{currency.Id}}">
+                        {{currency.Description}}
+                    </md-option>
+                </md-select>
+                <div ng-messages="createQuoteCosting.costingStepForm.BidCurrencyCode.$error">
+                    <div ng-message="required">First Cost is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                Home Office Currency Code
+            </md-input-container>
+        </div>
+    </form>
+</div>

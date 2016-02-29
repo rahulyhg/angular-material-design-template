@@ -1,0 +1,15 @@
+<div class="ui-grid-menu-button">
+<!--
+    <div role="button" ui-grid-one-bind-id-grid="'grid-menu'" class="ui-grid-icon-container" ng-click="toggleMenu()" aria-haspopup="true">
+        <i class="ui-grid-icon-menu" ui-grid-one-bind-aria-label="i18n.aria.buttonLabel">&nbsp;</i>
+    </div>
+-->
+    <div role="button" ui-grid-one-bind-id-grid="'grid-menu'" class="ui-grid-icon-container md-ink-ripple" ng-click="toggleMenu()" aria-haspopup="true" tabindex="0" id="1456502209078-grid-menu">
+        <i class="ui-grid-icon-menu" ui-grid-one-bind-aria-label="i18n.aria.buttonLabel" aria-label="Grid Menu">&nbsp;</i>
+        <div class="md-ripple-container"></div>
+    </div>
+    <div ui-grid-menu menu-items="menuItems"></div>
+</div>
+
+<div ui-grid-menu-button="" ng-if="grid.options.enableGridMenu" class="ng-scope">
+

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for md-themes/walmart/theme.module.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">md-themes/walmart/</a> theme.module.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>9/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>9/9</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+(function () {
+    angular.module('walmartTheme', []).config(configFunc);
+    configFunc.$inject = ['$mdThemingProvider', 'walmartPrimary', 'walmartAccent', 'walmartWarn', 'walmartBackground'];
+    function configFunc($mdThemingProvider, walmartPrimary, walmartAccent, walmartWarn, walmartBackground) {
+        $mdThemingProvider.definePalette('walmartPrimary', angular.copy(walmartPrimary));
+&nbsp;
+        $mdThemingProvider.definePalette('walmartAccent', angular.copy(walmartAccent));
+&nbsp;
+        $mdThemingProvider.definePalette('walmartWarn', angular.copy(walmartWarn));
+&nbsp;
+        $mdThemingProvider.definePalette('walmartBackground', angular.copy(walmartBackground));
+&nbsp;
+        $mdThemingProvider.theme('Walmart').primaryPalette('walmartPrimary').accentPalette('walmartAccent').warnPalette('walmartWarn').backgroundPalette('walmartBackground');
+    }
+})();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qYWNvYnR1Y2tlci9Ub29sYm94L1dvcmtzcGFjZS9naXQvYW5ndWxhci1tYXRlcmlhbC1kZXNpZ24tdGVtcGxhdGUvc3JjL21kLXRoZW1lcy93YWxtYXJ0L3RoZW1lLm1vZHVsZS5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLENBQUMsWUFBWTtBQUNULFlBQVEsTUFBUixDQUFlLGNBQWYsRUFBK0IsRUFBL0IsRUFDSyxNQURMLENBQ1ksVUFEWixFQURTO0FBR1QsZUFBVyxPQUFYLEdBQXFCLENBQUMsb0JBQUQsRUFBdUIsZ0JBQXZCLEVBQXlDLGVBQXpDLEVBQTBELGFBQTFELEVBQXlFLG1CQUF6RSxDQUFyQixDQUhTO0FBSVQsYUFBUyxVQUFULENBQW9CLGtCQUFwQixFQUF3QyxjQUF4QyxFQUF3RCxhQUF4RCxFQUF1RSxXQUF2RSxFQUFvRixpQkFBcEYsRUFBdUc7QUFDbkcsMkJBQ0ssYUFETCxDQUNtQixnQkFEbkIsRUFFbUIsUUFBUSxJQUFSLENBQWEsY0FBYixDQUZuQixFQURtRzs7QUFLbkcsMkJBQ0ssYUFETCxDQUNtQixlQURuQixFQUVtQixRQUFRLElBQVIsQ0FBYSxhQUFiLENBRm5CLEVBTG1HOztBQVNuRywyQkFDSyxhQURMLENBQ21CLGFBRG5CLEVBRW1CLFFBQVEsSUFBUixDQUFhLFdBQWIsQ0FGbkIsRUFUbUc7O0FBYW5HLDJCQUNLLGFBREwsQ0FDbUIsbUJBRG5CLEVBRW1CLFFBQVEsSUFBUixDQUFhLGlCQUFiLENBRm5CLEVBYm1HOztBQWlCbkcsMkJBQW1CLEtBQW5CLENBQXlCLFNBQXpCLEVBQ0ssY0FETCxDQUNvQixnQkFEcEIsRUFFSyxhQUZMLENBRW1CLGVBRm5CLEVBR0ssV0FITCxDQUdpQixhQUhqQixFQUlLLGlCQUpMLENBSXVCLG1CQUp2QixFQWpCbUc7S0FBdkc7Q0FKSCxHQUFEIiwiZmlsZSI6InRoZW1lLm1vZHVsZS5lczUuanMiLCJzb3VyY2VzQ29udGVudCI6WyIoZnVuY3Rpb24gKCkge1xuICAgIGFuZ3VsYXIubW9kdWxlKCd3YWxtYXJ0VGhlbWUnLCBbXSlcbiAgICAgICAgLmNvbmZpZyhjb25maWdGdW5jKTtcbiAgICBjb25maWdGdW5jLiRpbmplY3QgPSBbJyRtZFRoZW1pbmdQcm92aWRlcicsICd3YWxtYXJ0UHJpbWFyeScsICd3YWxtYXJ0QWNjZW50JywgJ3dhbG1hcnRXYXJuJywgJ3dhbG1hcnRCYWNrZ3JvdW5kJ107XG4gICAgZnVuY3Rpb24gY29uZmlnRnVuYygkbWRUaGVtaW5nUHJvdmlkZXIsIHdhbG1hcnRQcmltYXJ5LCB3YWxtYXJ0QWNjZW50LCB3YWxtYXJ0V2Fybiwgd2FsbWFydEJhY2tncm91bmQpIHtcbiAgICAgICAgJG1kVGhlbWluZ1Byb3ZpZGVyXG4gICAgICAgICAgICAuZGVmaW5lUGFsZXR0ZSgnd2FsbWFydFByaW1hcnknLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgYW5ndWxhci5jb3B5KHdhbG1hcnRQcmltYXJ5KSk7XG5cbiAgICAgICAgJG1kVGhlbWluZ1Byb3ZpZGVyXG4gICAgICAgICAgICAuZGVmaW5lUGFsZXR0ZSgnd2FsbWFydEFjY2VudCcsXG4gICAgICAgICAgICAgICAgICAgICAgICAgICBhbmd1bGFyLmNvcHkod2FsbWFydEFjY2VudCkpO1xuXG4gICAgICAgICRtZFRoZW1pbmdQcm92aWRlclxuICAgICAgICAgICAgLmRlZmluZVBhbGV0dGUoJ3dhbG1hcnRXYXJuJyxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgIGFuZ3VsYXIuY29weSh3YWxtYXJ0V2FybikpO1xuXG4gICAgICAgICRtZFRoZW1pbmdQcm92aWRlclxuICAgICAgICAgICAgLmRlZmluZVBhbGV0dGUoJ3dhbG1hcnRCYWNrZ3JvdW5kJyxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgIGFuZ3VsYXIuY29weSh3YWxtYXJ0QmFja2dyb3VuZCkpO1xuXG4gICAgICAgICRtZFRoZW1pbmdQcm92aWRlci50aGVtZSgnV2FsbWFydCcpXG4gICAgICAgICAgICAucHJpbWFyeVBhbGV0dGUoJ3dhbG1hcnRQcmltYXJ5JylcbiAgICAgICAgICAgIC5hY2NlbnRQYWxldHRlKCd3YWxtYXJ0QWNjZW50JylcbiAgICAgICAgICAgIC53YXJuUGFsZXR0ZSgnd2FsbWFydFdhcm4nKVxuICAgICAgICAgICAgLmJhY2tncm91bmRQYWxldHRlKCd3YWxtYXJ0QmFja2dyb3VuZCcpO1xuICAgIH1cbn0oKSk7XG4iXX0=</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Feb 24 2016 08:52:38 GMT-0600 (CST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

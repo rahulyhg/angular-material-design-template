@@ -1,0 +1,37 @@
+<div layout="row" class="fill-height fill-width">
+    <md-sidenav class="md-sidenav-left md-whiteframe-z1 leave" md-component-id="left" flex="" ng-class="{'menu-close': !vm.menuIsSlidOpen, 'menu-open': vm.menuIsSlidOpen}" ng-mouseenter="vm.mouseEnter()" ng-mouseleave="vm.mouseLeave()" md-is-locked-open="true" wm-apply-custom-theme>
+        <md-toolbar md-scroll-shrink>
+            <div class="md-toolbar-tools" ng-class="{'show-title': (vm.menuIsSlidOpen || vm.menuIsHover), 'hide-title': !(vm.menuIsSlidOpen || vm.menuIsHover)}">
+                <h3 class="fade-in">
+                    <span>GPO Break Room</span>
+                </h3>
+                <span flex></span>
+                <menu-slide menu-is-slid-open="vm.menuIsSlidOpen" menu-is-hover="vm.menuIsHover" menu-items="vm.menu.sections"></menu-slide>
+            </div>
+        </md-toolbar>
+        <md-content role="navigation" wm-apply-custom-theme>
+            <ul class="side-menu">
+                <li ng-repeat="section in vm.menu.sections" class="parent-list-item" ng-class="{'parentActive' : vm.isSectionSelected(section)}">
+                    <h2 class="menu-heading" ng-if="section.type === 'heading'" id="heading_{{ section.name | nospace }}">
+                        {{section}}
+                    </h2>
+                    <menu-link section="section" ng-if="section.type === 'link'" menu-is-slid-open="vm.menuIsSlidOpen" menu-is-hover="vm.menuIsHover"></menu-link>
+                    <menu-toggle section="section" ng-if="section.type === 'toggle'" menu-is-slid-open="vm.menuIsSlidOpen" menu-is-hover="vm.menuIsHover"></menu-toggle>
+                </li>
+            </ul>
+        </md-content>
+    </md-sidenav>
+    <div layout="column" tabindex="-1" role="main" class="fill-width">
+        <md-toolbar layout="row" class="md-whiteframe-z3">
+            <div class="md-toolbar-tools docs-toolbar-tools" flex tabindex="-1">
+            </div>
+        </md-toolbar>
+        <md-content md-scroll-y="" layout="column" flex="" class="fill-width">
+            <div ui-view="content" class="main-content" ng-class="{'main-content-menu-closed': !vm.menuIsSlidOpen, 'main-content-menu-open': vm.menuIsSlidOpen}"></div>
+        </md-content>
+        <footer>
+            <md-toolbar layout="row" class="toolbar-fixed-bottom" ng-class="{'menu-expanded': vm.menuIsSlidOpen}">
+            </md-toolbar>
+        </footer>
+    </div>
+</div>

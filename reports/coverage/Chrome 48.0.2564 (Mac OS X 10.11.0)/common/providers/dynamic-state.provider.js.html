@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for common/providers/dynamic-state.provider.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">common/providers/</a> dynamic-state.provider.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">54.55% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>6/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">37.5% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>3/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">66.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">85.71% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>6/7</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">39×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">50×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+<span class="fstat-no" title="function not covered" >function _defineProperty(obj, key, value) {</span> <span class="cstat-no" title="statement not covered" >if (key in obj) { <span class="cstat-no" title="statement not covered" >Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); </span>} else { <span class="cstat-no" title="statement not covered" >obj[key] = value; </span>} <span class="cstat-no" title="statement not covered" ></span>return obj; </span>}
+&nbsp;
+/*global angular */
+/*jshint esnext: true */
+(function () {
+    'use strict';
+&nbsp;
+    angular.module('dynamicState.provider', []).provider('$dynamicState', ['$stateProvider', function ($stateProvider) {
+        this.$get = function () {
+            return {
+                /**
+                * @function addState
+                * @memberof dynamicState.provider
+                * @param {string} title - the title used to build state, url &amp; find template
+                * @param {string} controllerAs - the controller to be used, if false, we don't add a controller (ie. 'UserController as user')
+                * @param {string} templatePrefix - either 'content', 'presentation' or null
+                * @author Alex Boisselle
+                * @description adds states to the dashboards state provider dynamically
+                * @returns {object} user - token and id of user
+                */
+                addState: function addState(state, title, index, template, controllerAs) {
+                    $stateProvider.state(state, {
+                        url: '/' + title,
+                        templateUrl: template,
+                        index: index !== null ? index : <span class="branch-1 cbranch-no" title="branch not covered" >null,</span>
+                        controller: controllerAs ? controllerAs : null
+                    });
+                },
+                addStateWithView: <span class="fstat-no" title="function not covered" >function addStateWithView(state, title, index, view, template, controllerAs) {</span>
+<span class="cstat-no" title="statement not covered" >                    $stateProvider.state(state, {</span>
+                        url: '/' + title,
+                        view: _defineProperty({}, view, {
+                            templateUrl: template,
+                            controller: controllerAs ? controllerAs : null
+                        })
+                    });
+                }
+            };
+        };
+    }]);
+})();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qYWNvYnR1Y2tlci9Ub29sYm94L1dvcmtzcGFjZS9naXQvYW5ndWxhci1tYXRlcmlhbC1kZXNpZ24tdGVtcGxhdGUvc3JjL2NvbXBvbmVudHMvY29tbW9uL3Byb3ZpZGVycy9keW5hbWljLXN0YXRlLnByb3ZpZGVyLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7OztBQUVBLENBQUMsWUFBWTtBQUNULGlCQURTOztBQUVULFlBQVEsTUFBUixDQUFlLHVCQUFmLEVBQXdDLEVBQXhDLEVBQ0ssUUFETCxDQUNjLGVBRGQsRUFDK0IsQ0FBQyxnQkFBRCxFQUFtQixVQUFTLGNBQVQsRUFBd0I7QUFDbEUsYUFBSyxJQUFMLEdBQVksWUFBVTtBQUNsQixtQkFBTzs7Ozs7Ozs7Ozs7QUFXSCwwQkFBVSxrQkFBUyxLQUFULEVBQWdCLEtBQWhCLEVBQXVCLEtBQXZCLEVBQThCLFFBQTlCLEVBQXdDLFlBQXhDLEVBQXNEO0FBQzVELG1DQUFlLEtBQWYsQ0FBcUIsS0FBckIsRUFBNEI7QUFDeEIsNkJBQUssTUFBTSxLQUFOO0FBQ0wscUNBQWEsUUFBYjtBQUNBLCtCQUFPLFVBQVUsSUFBVixHQUFpQixLQUFqQixHQUF5QixJQUF6QjtBQUNQLG9DQUFZLGVBQWUsWUFBZixHQUE4QixJQUE5QjtxQkFKaEIsRUFENEQ7aUJBQXREO0FBUVYsa0NBQWtCLDBCQUFVLEtBQVYsRUFBaUIsS0FBakIsRUFBd0IsS0FBeEIsRUFBK0IsSUFBL0IsRUFBcUMsUUFBckMsRUFBK0MsWUFBL0MsRUFBNkQ7QUFDM0UsbUNBQWUsS0FBZixDQUFxQixLQUFyQixFQUE0QjtBQUN4Qiw2QkFBSyxNQUFNLEtBQU47QUFDTCxrREFDSyxNQUFPO0FBQ0oseUNBQWEsUUFBYjtBQUNBLHdDQUFZLGVBQWUsWUFBZixHQUE4QixJQUE5QjswQkFIcEI7cUJBRkosRUFEMkU7aUJBQTdEO2FBbkJ0QixDQURrQjtTQUFWLENBRHNEO0tBQXhCLENBRGxELEVBRlM7Q0FBWixHQUFEIiwiZmlsZSI6ImR5bmFtaWMtc3RhdGUucHJvdmlkZXIuZXM1LmpzIiwic291cmNlc0NvbnRlbnQiOlsiLypnbG9iYWwgYW5ndWxhciAqL1xuLypqc2hpbnQgZXNuZXh0OiB0cnVlICovXG4oZnVuY3Rpb24gKCkge1xuICAgICd1c2Ugc3RyaWN0JztcbiAgICBhbmd1bGFyLm1vZHVsZSgnZHluYW1pY1N0YXRlLnByb3ZpZGVyJywgW10pXG4gICAgICAgIC5wcm92aWRlcignJGR5bmFtaWNTdGF0ZScsIFsnJHN0YXRlUHJvdmlkZXInLCBmdW5jdGlvbigkc3RhdGVQcm92aWRlcil7XG4gICAgICAgICAgICB0aGlzLiRnZXQgPSBmdW5jdGlvbigpe1xuICAgICAgICAgICAgICAgIHJldHVybiB7XG4gICAgICAgICAgICAgICAgICAgIC8qKlxuICAgICAgICAgICAgICAgICAqIEBmdW5jdGlvbiBhZGRTdGF0ZVxuICAgICAgICAgICAgICAgICAqIEBtZW1iZXJvZiBkeW5hbWljU3RhdGUucHJvdmlkZXJcbiAgICAgICAgICAgICAgICAgKiBAcGFyYW0ge3N0cmluZ30gdGl0bGUgLSB0aGUgdGl0bGUgdXNlZCB0byBidWlsZCBzdGF0ZSwgdXJsICYgZmluZCB0ZW1wbGF0ZVxuICAgICAgICAgICAgICAgICAqIEBwYXJhbSB7c3RyaW5nfSBjb250cm9sbGVyQXMgLSB0aGUgY29udHJvbGxlciB0byBiZSB1c2VkLCBpZiBmYWxzZSwgd2UgZG9uJ3QgYWRkIGEgY29udHJvbGxlciAoaWUuICdVc2VyQ29udHJvbGxlciBhcyB1c2VyJylcbiAgICAgICAgICAgICAgICAgKiBAcGFyYW0ge3N0cmluZ30gdGVtcGxhdGVQcmVmaXggLSBlaXRoZXIgJ2NvbnRlbnQnLCAncHJlc2VudGF0aW9uJyBvciBudWxsXG4gICAgICAgICAgICAgICAgICogQGF1dGhvciBBbGV4IEJvaXNzZWxsZVxuICAgICAgICAgICAgICAgICAqIEBkZXNjcmlwdGlvbiBhZGRzIHN0YXRlcyB0byB0aGUgZGFzaGJvYXJkcyBzdGF0ZSBwcm92aWRlciBkeW5hbWljYWxseVxuICAgICAgICAgICAgICAgICAqIEByZXR1cm5zIHtvYmplY3R9IHVzZXIgLSB0b2tlbiBhbmQgaWQgb2YgdXNlclxuICAgICAgICAgICAgICAgICAqL1xuICAgICAgICAgICAgICAgICAgICBhZGRTdGF0ZTogZnVuY3Rpb24oc3RhdGUsIHRpdGxlLCBpbmRleCwgdGVtcGxhdGUsIGNvbnRyb2xsZXJBcykge1xuICAgICAgICAgICAgICAgICAgICAgICAgJHN0YXRlUHJvdmlkZXIuc3RhdGUoc3RhdGUsIHtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB1cmw6ICcvJyArIHRpdGxlLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRlbXBsYXRlVXJsOiB0ZW1wbGF0ZSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBpbmRleDogaW5kZXggIT09IG51bGwgPyBpbmRleCA6IG51bGwsXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgY29udHJvbGxlcjogY29udHJvbGxlckFzID8gY29udHJvbGxlckFzIDogbnVsbFxuICAgICAgICAgICAgICAgICAgICAgICAgfSk7XG4gICAgICAgICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICAgICAgICAgIGFkZFN0YXRlV2l0aFZpZXc6IGZ1bmN0aW9uIChzdGF0ZSwgdGl0bGUsIGluZGV4LCB2aWV3LCB0ZW1wbGF0ZSwgY29udHJvbGxlckFzKSB7XG4gICAgICAgICAgICAgICAgICAgICAgICAkc3RhdGVQcm92aWRlci5zdGF0ZShzdGF0ZSwge1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHVybDogJy8nICsgdGl0bGUsXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgdmlldzoge1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBbdmlld106IHtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRlbXBsYXRlVXJsOiB0ZW1wbGF0ZSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbnRyb2xsZXI6IGNvbnRyb2xsZXJBcyA/IGNvbnRyb2xsZXJBcyA6IG51bGxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgICAgIH0pO1xuICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgfTtcbiAgICAgICAgICAgIH07XG4gICAgICAgIH1dKTtcbn0oKSk7XG4iXX0=</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Feb 28 2016 20:52:10 GMT-0600 (CST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

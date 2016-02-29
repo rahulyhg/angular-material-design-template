@@ -1,0 +1,23 @@
+@import "_md-content";
+@import "md-sidenav/_md-content";
+@import "md-sidenav/_md-sidenav-css";
+@import "md-sidenav/_md-toggle";
+md-sidenav {
+    //background-color: rgb(2,119,189);
+    overflow: scroll;
+    &.menu-open {
+        min-width: 304px;
+        max-width: 304px;
+        width: 304px;
+    }
+    &.menu-close {
+        width: 40px;
+        transition: width .3s ease-in-out;
+        &:hover {
+            width: 304px;
+        }
+    }
+    &.md-locked-open {
+        position: absolute;
+    }
+}

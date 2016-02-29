@@ -1,0 +1,25 @@
+md-sidenav {
+    &.menu-expanded {
+        visibility: visible;
+        opacity: 1;
+        width: 304px;
+        transition: width 0.3s ease-in-out;
+    }
+    &.menu-collapsed {
+        visibility: hidden;
+        opacity: 0;
+        width: 0px;
+        transition: width 0.3s ease-in-out, visibility 0s .5s, opacity .5s linear;
+    }
+}
+.md-button {
+    &.menu-expanded {
+        font-size: 1.5em;
+        transition: left 0.3s ease-in-out;
+    }
+    &.menu-collapsed {
+        left: 0px;
+        font-size: 1.5em;
+        transition: left 0.3s ease-in-out;
+    }
+}
