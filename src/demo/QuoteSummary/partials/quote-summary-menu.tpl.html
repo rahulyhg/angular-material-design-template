@@ -8,3 +8,80 @@
         </div>
     </div>
 </div>
+
+<!--  jtuck10 add table toolbar-->
+<!--
+  $templateCache.put('ui-grid/ui-grid',
+        "<div ui-i18n=\"en\" class=\"ui-grid\">" +
+        "<div ui-grid-menu-toolbar ng-if=\"grid.options.enableGridToolbar\" toolbar-menu=\"grid.options\">" +
+        "    <md-toolbar>" +
+        "     <div class=\"md-toolbar-tools\">" +
+        "        <h2>" +
+        "          <span>{{grid.options.gridTitle}}</span>" +
+        "        </h2>" +
+        "        <md-menu>"+
+        "            <md-button class=\"md-flat\" aria-label=\"Quote Summary Report\" ng-click=\"$mdOpenMenu($event)\" ng-disabled=\"grid.options.quoteSummaryReports.length < 1 \">"+
+        "               <span>{{grid.options.selectedQuoteSummaryReport.selectedDisplay || 'Select Report'}} <md-icon class=\"ui-grid-icon-angle-down\"></md-icon></span>"+
+        "            </md-button>"+
+        "          <md-menu-content width=\"4\">"+
+        "              <md-menu-item ng-repeat=\"report in grid.options.quoteSummaryReports track by $index\">"+
+        "                   <md-button class=\"md-flat\" ng-click=\"report.action(report)\" ng-class=\"{'md-primary': report.id, 'md-warn': !report.id}\">"+
+        "                       {{report.title}}"+
+        "                   </md-button>"+
+        "              </md-menu-item>"+
+        "          </md-menu-content>"+
+        "        </md-menu>"+
+        "        <span flex></span>" +
+        "        <md-menu>"+
+        "            <md-button class=\"md-flat\" aria-label=\"Statuses\" ng-click=\"$mdOpenMenu($event)\" ng-disabled=\"grid.api.selection && !grid.api.selection.getSelectedRows().length > 0 \">"+
+        "               <span>{{grid.options.selectedStatus.text || 'Select Status'}} <md-icon class=\"ui-grid-icon-angle-down\"></md-icon></span>"+
+        "            </md-button>"+
+        "          <md-menu-content width=\"4\">"+
+        "              <md-menu-item ng-repeat=\"status in grid.options.quoteStatuses track by $index\">"+
+        "                   <md-button class=\"md-flat md-primary\" ng-click=\"status.action(status)\" >"+
+        "                       {{status.text}}"+
+        "                   </md-button>"+
+        "              </md-menu-item>"+
+        "          </md-menu-content>"+
+        "        </md-menu>"+
+        "        <md-button class=\"md-raised md-accent\" aria-label=\"Favorite\" ng-disabled=\"!grid.options.selectedStatus.id || !grid.api.selection.getSelectedRows().length > 0\">" +
+        "           <span>Update Status</span>" +
+        "        </md-button>" +
+        "        <md-menu>"+
+        "          <md-button aria-label=\"Open demo menu\" class=\"md-flat\" ng-click=\"$mdOpenMenu($event)\">"+
+        "            <span>Export <md-icon class=\"ui-grid-icon-angle-down\"></md-icon></span>"+
+        "          </md-button>"+
+        "          <md-menu-content width=\"6\">"+
+        "            <md-menu-item ng-repeat=\"item in grid.options.exportMenuItems\" ng-show=\"item.shown()\">"+
+        "              <md-button class=\"md-flat md-primary\" ng-click=\"item.action()\">"+
+        "                {{item.title}}"+
+        "              </md-button>"+
+        "            </md-menu-item>"+
+        "          </md-menu-content>"+
+        "        </md-menu>"+
+        "      </div>" +
+        "    </md-toolbar>" +
+        "</div>" +
+        " TODO (c0bra): add \"scoped\" attr here, eventually? <style ui-grid-style>.grid{{ grid.id }} {\n" +
+        "      /* Styles for the grid */\n" +
+        "    }\n" +
+        "\n" +
+        "    .grid{{ grid.id }} .ui-grid-row, .grid{{ grid.id }} .ui-grid-cell, .grid{{ grid.id }} .ui-grid-cell .ui-grid-vertical-bar {\n" +
+        "      height: {{ grid.options.rowHeight }}px;\n" +
+        "    }\n" +
+        "\n" +
+        "    .grid{{ grid.id }} .ui-grid-row:last-child .ui-grid-cell {\n" +
+        "      border-bottom-width: {{ ((grid.getTotalRowHeight() < grid.getViewportHeight()) && '1') || '0' }}px;\n" +
+        "    }\n" +
+        "\n" +
+        "    {{ grid.verticalScrollbarStyles }}\n" +
+        "    {{ grid.horizontalScrollbarStyles }}\n" +
+        "\n" +
+        "    /*\n" +
+        "    .ui-grid[dir=rtl] .ui-grid-viewport {\n" +
+        "      padding-left: {{ grid.verticalScrollbarWidth }}px;\n" +
+        "    }\n" +
+        "    */\n" +
+        "\n" +
+        "    {{ grid.customStyles }}</style><div class=\"ui-grid-contents-wrapper\"><div ui-grid-menu-button ng-if=\"grid.options.enableGridMenu\"></div><div ng-if=\"grid.hasLeftContainer()\" style=\"width: 0\" ui-grid-pinned-container=\"'left'\"></div><div ui-grid-render-container container-id=\"'body'\" col-container-name=\"'body'\" row-container-name=\"'body'\" bind-scroll-horizontal=\"true\" bind-scroll-vertical=\"true\" enable-horizontal-scrollbar=\"grid.options.enableHorizontalScrollbar\" enable-vertical-scrollbar=\"grid.options.enableVerticalScrollbar\"></div><div ng-if=\"grid.hasRightContainer()\" style=\"width: 0\" ui-grid-pinned-container=\"'right'\"></div><div ui-grid-grid-footer ng-if=\"grid.options.showGridFooter\"></div><div ng-transclude></div></div></div>"
+-->

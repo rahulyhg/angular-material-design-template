@@ -17,8 +17,8 @@
             </div>
             <div layout="row" layout-align="center center" class="tab-container tab-titles">
                 <div layout="row" layout-align="center center" flex ng-repeat="tab in vm.formTabs track by $index">
-                    <div layout="row" layout-align="center center" class="tab-title" ui-sref=".{{tab.State}}" ui-sref-active="active-tab">
-                        <strong ng-class="{'text-danger': tab.ShowError, 'text-success': tab.ShowComplete}">{{tab.Title}}</strong>
+                    <div layout="row" layout-align="center center" class="tab-title" ui-sref=".{{tab.State}}" ui-sref-active="active-tab" wm-form-section-active-text ng-class="{'text-danger': tab.ShowError, 'text-success': tab.ShowComplete}">
+                        <strong>{{tab.Title}}</strong>
                     </div>
                 </div>
             </div>

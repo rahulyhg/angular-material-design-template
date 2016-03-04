@@ -2,7 +2,7 @@
 /*jshint esnext: true */
 (function () {
     'use strict';
-    angular.module('CreateQuote', ['dynamicState.provider', 'QuoteForm'])
+    angular.module('CreateQuote', ['dynamicState.provider', 'QuoteForm', 'demoCommon'])
 //        .config(['$dynamicStateProvider', 'CreateQuoteFormSteps', function ($dynamicStateProvider, CreateQuoteFormSteps) {
 //            var count;
 //            count  = 0;

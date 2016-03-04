@@ -28,12 +28,18 @@
         }
     }
 
-    CreateQuoteGeneralStepController.$inject = ['$scope', '$timeout', 'CreateQuoteObject', 'HideShowErrorSuccess', 'CreateQuoteFormSteps'];
+    CreateQuoteGeneralStepController.$inject = ['$scope', '$timeout', 'CreateQuoteObject', 'HideShowErrorSuccess', 'CreateQuoteFormSteps', 'http'];
 
-    function CreateQuoteGeneralStepController ($scope, $timeout, CreateQuoteObject, HideShowErrorSuccess, CreateQuoteFormSteps) {
+    function CreateQuoteGeneralStepController ($scope, $timeout, CreateQuoteObject, HideShowErrorSuccess, CreateQuoteFormSteps, http) {
         var self;
 
         self = this;
+
+//        http.GetWithPromise('http://labhonts1250a.lab.wal-mart.com:8081/SourcingWeb/Bidmanagement/Buyer/GetBuyers').then((returnedBuyers) => {
+//            console.log(returnedBuyers);
+//        }, (error) => {
+//            console.log(error);
+//        });
 
         function getCurrentStep () {
             return HideShowErrorSuccess.GetCurrentStep(CreateQuoteFormSteps, 'general');
