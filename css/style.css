@@ -336,6 +336,9 @@ md-autocomplete {
     margin-right: 32px;
     transition: width .5s ease-in-out, min-width .5s ease-in-out; }
 
+.parent-toggle .active {
+  background-color: rgba(0, 0, 0, 0.3); }
+
 .padding-top {
   margin-top: 15px; }
 

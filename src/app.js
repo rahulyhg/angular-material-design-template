@@ -1,7 +1,7 @@
 /*global angular */
 (function () {
     'use strict';
-    angular.module('angularMaterialDesignTemplate', ['ui.router', 'ngMaterial', 'ngAria', 'ngAnimate', 'ngMessages', 'ngMdIcons', 'AngularMaterialDesignTemplatePartials', 'SideMenu', 'components', 'CreateQuote', 'QuoteSummary'])
+    angular.module('angularMaterialDesignTemplate', ['ui.router', 'ngMaterial', 'ngAria', 'ngAnimate', 'ngMessages', 'ngMdIcons', 'AngularMaterialDesignTemplatePartials', 'SideMenu', 'components', 'CreateQuote', 'QuoteSummary', 'viewEdit'])
         .config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
                  function ($stateProvider, $urlRouterProvider, $locationProvider) {
                 $urlRouterProvider.otherwise('/test');
@@ -51,7 +51,7 @@
                                 templateUrl: '/pages/user-views/quote-summary/quote-summary.tpl.html'
                             }
                         }
-                    })
+                    });
 
     }]);
 }());

@@ -15,7 +15,7 @@
                         {{section}}
                     </h2>
                     <menu-link section="section" ng-if="section.type === 'link'" menu-is-slid-open="vm.menuIsSlidOpen" menu-is-hover="vm.menuIsHover"></menu-link>
-                    <menu-toggle section="section" ng-if="section.type === 'toggle'" menu-is-slid-open="vm.menuIsSlidOpen" menu-is-hover="vm.menuIsHover"></menu-toggle>
+                    <menu-toggle section="section" class="parent-toggle" ng-if="section.type === 'toggle'" menu-is-slid-open="vm.menuIsSlidOpen" menu-is-hover="vm.menuIsHover"></menu-toggle>
                 </li>
             </ul>
         </md-content>
