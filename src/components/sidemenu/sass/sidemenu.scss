@@ -1,5 +1,26 @@
-.parent-toggle {
-    .active {
-        background-color: rgba(0, 0, 0, .3);
+md-content {
+    ul:nth-of-type(1) {
+        li {
+            &.parent-list-item.parentActive {
+                menu-toggle:nth-of-type(1) {
+                    &.parent-toggle {
+                        button:nth-of-type(1) {
+                            &.is-parent {
+                                background: rgba(0, 0, 0, .3);
+                                &:hover {
+                                    background: rgba(255,255,255,0.2);
+                                }
+                            }
+                            &.is-submenu.active {
+                                background: rgba(0, 0, 0, .16);
+                                &:hover {
+                                    background: rgba(255,255,255,0.2);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

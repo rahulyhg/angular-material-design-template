@@ -12,6 +12,7 @@
                 isOpen: false,
                 isChildActive: false,
                 description: 'Create and Manage Quotes',
+                isSubMenu: false,
                 pages: [
                     {
                         name: 'Create Quote',
@@ -39,6 +40,7 @@
                         type: 'toggle',
                         icon: 'fa fa-area-chart',
                         description: 'Quote Searches and Reports',
+                        isSubMenu: true,
                         pages: [
                             {
                                 name: 'Quote Summary Report',
@@ -64,6 +66,7 @@
                 isOpen: false,
                 isChildActive: false,
                 description: 'Create and Manage Shipments',
+                isSubMenu: false,
                 pages: [
                     {
                         name: 'Search Quote',

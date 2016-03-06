@@ -1,4 +1,4 @@
-<md-button class="md-button-toggle" ng-class="{active: vm.isOpen(vm.section), '{{vm.section.icon}}' : true}" ng-click="vm.toggle(vm.section)" aria-controls="docs-menu-{{vm.section.name | nospace}}" flex layout="row" aria-expanded="{{vm.isOpen(vm.section)}}">
+<md-button class="md-button-toggle" ng-class="{active: vm.isOpen(vm.section), '{{vm.section.icon}}' : true, 'is-parent': !vm.section.isSubMenu, 'is-submenu': vm.section.isSubMenu}" ng-click="vm.toggle(vm.section)" aria-controls="docs-menu-{{vm.section.name | nospace}}" flex layout="row" aria-expanded="{{vm.isOpen(vm.section)}}">
       <span style="padding-left: 5px;">{{vm.section.name}}</span>
 <!--    <md-tooltip md-direction="right">{{vm.section.description}}</md-tooltip>-->
     <span aria-hidden="true" class=" pull-right fa fa-chevron-down md-toggle-icon" ng-class="{'toggled' : vm.isOpen(vm.section)}"></span>

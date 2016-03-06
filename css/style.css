@@ -336,8 +336,15 @@ md-autocomplete {
     margin-right: 32px;
     transition: width .5s ease-in-out, min-width .5s ease-in-out; }
 
-.parent-toggle .active {
-  background-color: rgba(0, 0, 0, 0.3); }
+md-content ul:nth-of-type(1) li.parent-list-item.parentActive menu-toggle:nth-of-type(1).parent-toggle button:nth-of-type(1).is-parent {
+  background: rgba(0, 0, 0, 0.3); }
+  md-content ul:nth-of-type(1) li.parent-list-item.parentActive menu-toggle:nth-of-type(1).parent-toggle button:nth-of-type(1).is-parent:hover {
+    background: rgba(255, 255, 255, 0.2); }
+
+md-content ul:nth-of-type(1) li.parent-list-item.parentActive menu-toggle:nth-of-type(1).parent-toggle button:nth-of-type(1).is-submenu.active {
+  background: rgba(0, 0, 0, 0.16); }
+  md-content ul:nth-of-type(1) li.parent-list-item.parentActive menu-toggle:nth-of-type(1).parent-toggle button:nth-of-type(1).is-submenu.active:hover {
+    background: rgba(255, 255, 255, 0.2); }
 
 .padding-top {
   margin-top: 15px; }
