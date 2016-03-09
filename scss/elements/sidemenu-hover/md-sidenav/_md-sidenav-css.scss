@@ -68,9 +68,12 @@ md-sidenav {
         .md-button-toggle .md-toggle-icon {
             background-size: 100% auto;
             display: inline-block;
-            margin: auto 15 auto auto;
+            //margin: auto 15 auto auto;
+            margin: auto 13 auto auto;
             width: 15px;
             color: #ffffff;
+            right: -20px;
+            position: relative;
             &.toggled {
                 transform: rotateZ(180deg);
                 -webkit-transform: rotateZ(180deg);

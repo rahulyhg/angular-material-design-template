@@ -1,4 +1,31 @@
-<span class="fa fa-folder"
-      style="font-size: 40px; top: -6px; left: -6px; position: relative;">
-    <span class="fa fa-cirlce-o alert-circle">1</span>
-</span>
+<div>
+    <md-menu>
+        <md-button class="md-icon-button md-primary"
+                   aria-label="Open List of Draft Quotes"
+                   ng-click="$mdOpenMenu($event)">
+            <md-icon class="fa fa-list"></md-icon>
+            <md-tooltip direction="down">Open List of Draft Quotes</md-tooltip>
+        </md-button>
+        <md-menu-content width="6">
+            <md-menu-item>
+                <md-button flex class="md-flat md-warn" style="text-align: right;">
+                    Close
+                    <md-icon class="fa fa-close menu-close-icon" aria-label="Close Draft Bid List"></md-icon>
+                </md-button>
+            </md-menu-item>
+            <md-menu-item ng-repeat="item in [1, 2, 3] track by $index">
+                <md-button class="md-flat md-primary">
+                    {{$index + 1}}: Option {{item}}
+                </md-button>
+            </md-menu-item>
+        </md-menu-content>
+    </md-menu>
+    <md-button class="md-icon-button md-primary md-hue2" aria-label="Create a New Quote">
+        <md-icon class="fa fa-plus"></md-icon>
+        <md-tooltip direction="down">Create New</md-tooltip>
+    </md-button>
+    <md-button class="md-icon-button md-warn" aria-label="Delete Open Quote">
+        <md-icon class="fa fa-trash"></md-icon>
+        <md-tooltip direction="down">Delete Open Quote</md-tooltip>
+    </md-button>
+</div>

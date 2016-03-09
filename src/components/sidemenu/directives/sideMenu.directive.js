@@ -32,9 +32,9 @@
         }
     }
 
-    SideMenuController.$inject = ['$scope', '$mdSidenav', '$mdColorPalette', '$timeout', 'SideMenuFactory'];
+    SideMenuController.$inject = ['$scope', '$mdSidenav', '$mdColorPalette', '$timeout', 'SideMenuFactory', 'ChangeTheme', 'mdThemeProvider'];
 
-    function SideMenuController($scope, $mdSidenav, $mdColorPalette, $timeout, SideMenuFactory) {
+    function SideMenuController($scope, $mdSidenav, $mdColorPalette, $timeout, SideMenuFactory, ChangeTheme, mdThemeProvider) {
         var vm;
         vm = this;
 
@@ -46,8 +46,9 @@
 
         vm.autoFocusContent = false;
         vm.menu = SideMenuFactory;
-        console.log(vm.menu);
         vm.menuIsSlidOpen = true;
+        vm.ActiveTheme = 'Walmart';
+        ChangeTheme.SwapThemes(vm.ActiveTheme);
 
         vm.status = {
             isFirstOpen: true,
@@ -79,5 +80,9 @@
         };
 
         $scope.$on('$viewContentLoaded', initialzeMenuOpen());
+
+        $scope.$on('$activeThemeChanged', () => {
+            vm.ActiveTheme = mdThemeProvider.activeTheme;
+        });
     }
 }());

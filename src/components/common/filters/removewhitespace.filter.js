@@ -5,7 +5,7 @@
         /**
          * Remove all whitespace from display
          */
-        .filter('nospace', function () {
+        .filter('nospace', () => {
         return function (value) {
             return (!value) ? '' : value.replace(/ /g, '');
         };

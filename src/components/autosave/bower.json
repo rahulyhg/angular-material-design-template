@@ -1,0 +1,24 @@
+{
+  "name": "wm-autosave",
+  "homepage": "",
+  "authors": [
+    "Jacob Tucker - jtuck10 <jtuck10@wal-mart.com>"
+  ],
+  "description": "Set of directives used to automatically save form input on tab out",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "autosave",
+    "walmart",
+    "indexeddb"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

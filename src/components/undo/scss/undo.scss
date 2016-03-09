@@ -1,0 +1,12 @@
+.md-icon-button {
+    right: -25px;
+    position: relative;
+    md-icon {
+        &.fa {
+            &.fa-close {
+                top: 5px;
+                position: relative;
+            }
+        }
+    }
+}

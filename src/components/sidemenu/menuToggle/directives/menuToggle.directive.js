@@ -36,7 +36,6 @@
         var self;
         self = this;
         self.menu = SideMenuFactory;
-        console.log(self.menu);
 
         self.isOpen = function (section) {
             return section !== undefined && section !== null && section.isOpen;

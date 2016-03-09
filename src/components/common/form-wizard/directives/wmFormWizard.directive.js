@@ -23,7 +23,7 @@
         function linkFunc(scope, element) {
             var templatePath;
             templatePath ='common/form-wizard/partials/form-wizard.tpl.html';
-            $templateRequest(templatePath).then(function (html) {
+            $templateRequest(templatePath).then((html) => {
                 var template;
                 template = angular.element(html);
                 element.append(template);

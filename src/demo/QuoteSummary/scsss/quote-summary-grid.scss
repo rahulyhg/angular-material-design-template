@@ -25,9 +25,6 @@
     .md-button {
         border-radius: 0px;
     }
-
-
-
     .ui-grid-column-menu-button {
         margin: 0px;
         padding: 0px;
@@ -53,6 +50,9 @@
     }
 }
 
+.ui-grid-top-panel {
+}
+
 .ui-grid-menu-button {
     top: 37px;
     border-radius: 5px;
@@ -60,14 +60,12 @@
     height: 44px;
     width: 44px;
     outline: none;
-
     .ui-grid-icon-container {
         height: 44px;
         width: 44px;
         text-align: center;
         border-radius: 5px;
         outline: none;
-
         .ui-grid-icon-menu {
             top: 9px;
             position: relative;
@@ -77,13 +75,13 @@
 
 .ui-grid-viewport {
     top: 65px;
-//    md-input-container {
-//        &.md-icon-float {
-//            md-icon {
-//                top: 10px;
-//            }
-//        }
-//    }
+    //    md-input-container {
+    //        &.md-icon-float {
+    //            md-icon {
+    //                top: 10px;
+    //            }
+    //        }
+    //    }
 }
 
 .grid {
@@ -102,4 +100,21 @@ md-input-container.md-icon-float > md-icon {
 
 .ui-grid-header-cell .ui-grid-sort-priority-number {
     margin-left: 0px;
+}
+
+.md-button.md-icon-button.md-grid-button {
+    right: 0px;
+    color: white;
+}
+
+button.ui-grid-menu-item.md-flat.md-button {
+    &:hover {
+        background: rgba(0, 0, 0, .1);
+    }
+}
+
+md-menu-item button.md-flat.md-primary.md-button {
+    &:hover {
+        background: rgba(0, 0, 0, .1);
+    }
 }

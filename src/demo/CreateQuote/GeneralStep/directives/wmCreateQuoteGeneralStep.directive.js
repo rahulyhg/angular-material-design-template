@@ -41,6 +41,8 @@
 //            console.log(error);
 //        });
 
+        self.Quote = CreateQuoteObject;
+
         function getCurrentStep () {
             return HideShowErrorSuccess.GetCurrentStep(CreateQuoteFormSteps, 'general');
         }

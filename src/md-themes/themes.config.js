@@ -1,14 +1,20 @@
 (function () {
     'use strict';
     angular.module('wmMdThemes', ['ngMaterial', 'themeConstants', 'asdaTheme', 'walmartTheme'])
-        .config(configFunc);
+        .config(configFunc)
+        .run(runFunc);
+
     configFunc.$inject = ['$mdThemingProvider', 'mdThemeProvider'];
+
     function configFunc($mdThemingProvider, mdThemeProvider) {
-        var activeTheme;
-        activeTheme = 'Walmart';
         mdThemeProvider.globalProvider = $mdThemingProvider;
-        mdThemeProvider.activeTheme = activeTheme;
-        $mdThemingProvider.setDefaultTheme(activeTheme);
+        $mdThemingProvider.alwaysWatchTheme(true);
+    }
+
+    runFunc.$inject = ['$rootScope', '$timeout', 'mdThemeProvider'];
+
+    function runFunc ($rootScope, $timeout, mdThemeProvider) {
+
     }
 }());
 

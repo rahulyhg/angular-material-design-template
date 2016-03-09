@@ -25,9 +25,9 @@
         }
     }
 
-    QuoteSummaryController.$inject = ['i18nService', 'uiGridExporterConstants'];
+    QuoteSummaryController.$inject = ['i18nService', 'uiGridExporterConstants', 'UpdateQuoteSummaryStatus'];
 
-    function QuoteSummaryController (i18nService, uiGridExporterConstants) {
+    function QuoteSummaryController (i18nService, uiGridExporterConstants, UpdateQuoteSummaryStatus) {
         var self, i, data;
 
         self = this;
@@ -264,14 +264,6 @@
                             },
                             order: 206
                         },
-//                        {
-//                            id: 0,
-//                            title: 'Update Status',
-//                            action: function () {
-//                                console.log('Clicked');
-//                            },
-//                            order: 400
-//                        },
                         {
                             id: null,
                             title: 'Update Status',
@@ -282,50 +274,42 @@
                             order: 500
                         },
                         {
-                            id: 1,
-                            title: 'Submitted',
-                            action: function (status) {
-                                self.gridOptions.selectedStatus = status;
-                            },
-                            order: 501
-                        },
-                        {
                             id: 2,
                             title: 'In Review',
-                            action: function (status) {
-                                self.gridOptions.selectedStatus = status;
+                            action: function (event, status) {
+                                UpdateQuoteSummaryStatus.SetStatus(status.title, 5000);
                             },
                             order: 502
                         },
                         {
                             id: 3,
                             title: 'Pending',
-                            action: function (status) {
-                                self.gridOptions.selectedStatus = status;
+                            action: function (event, status) {
+                                UpdateQuoteSummaryStatus.SetStatus(status.title, 5000);
                             },
                             order: 503
                         },
                         {
                             id: 4,
                             title: 'Pending Complete',
-                            action: function (status) {
-                                self.gridOptions.selectedStatus = status;
+                            action: function (event, status) {
+                                UpdateQuoteSummaryStatus.SetStatus(status.title, 5000);
                             },
                             order: 504
                         },
                         {
                             id: 5,
                             title: 'Committed',
-                            action: function (status) {
-                                self.gridOptions.selectedStatus = status;
+                            action: function (event, status) {
+                                UpdateQuoteSummaryStatus.SetStatus(status.title, 5000);
                             },
                             order: 505
                         },
                         {
                             id: 6,
                             title: 'Rejected',
-                            action: function (status) {
-                                self.gridOptions.selectedStatus = status;
+                            action: function (event, status) {
+                                UpdateQuoteSummaryStatus.SetStatus(status.title, 5000);
                             },
                             order: 506
                         },
@@ -338,7 +322,6 @@
                             selectedDisplay: null,
                             title: 'Clear',
                             action: function (report) {
-                                self.gridOptions.selectedQuoteSummaryReport = report;
                                 self.gridOptions.exporterCsvFilename = 'Quote Summary Report.csv';
                             },
                             order: 601

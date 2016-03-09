@@ -3,7 +3,8 @@
 (function () {
     'use strict';
     angular.module('SideMenu', ['dynamicState.provider', 'sidemenu.factory'])
-        .config(['$dynamicStateProvider', 'SideMenuFactoryProvider', 'SideMenuMenuItems', function ($dynamicStateProvider, SideMenuFactoryProvider, SideMenuMenuItems) {
+        .config(['$dynamicStateProvider', 'SideMenuFactoryProvider', 'SideMenuMenuItems',
+                 ($dynamicStateProvider, SideMenuFactoryProvider, SideMenuMenuItems) => {
             SideMenuFactoryProvider.$get().setSections(SideMenuMenuItems);
             angular.forEach(SideMenuMenuItems.menuItems, (menuItem) => {
                 if (menuItem.templateUrl && menuItem.templateUrl !== '') {

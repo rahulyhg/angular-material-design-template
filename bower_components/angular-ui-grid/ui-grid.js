@@ -1940,7 +1940,6 @@ function (gridUtil, uiGridConstants, uiGridGridMenuService, i18nService) {
 
 .filter('titlizetext', function () {
    return function (value) {
-        console.log(value);
         return value.replace(':', '');
     }
 })
@@ -1968,61 +1967,61 @@ function (gridUtil, uiGridConstants, uiGridGridMenuService, i18nService) {
             angular.forEach($scope.menuItems, (menuItem) => {
                 if (menuItem) {
                 var order = menuItem.order
-                    switch(true) {
-                        case (order < 100):
-                            if (!$scope.toolbarItems[0]) {
-                                $scope.toolbarItems[0] = [];
-                            }
-                            $scope.toolBarItems[0].push(menuItem);
-                            break;
-                        case (order >= 100 && order < 200):
-                            if (!$scope.toolbarItems[100]) {
-                                $scope.toolbarItems[100] = [];
-                            }
-                            $scope.toolbarItems[100].push(menuItem);
-                            break;
-                        case (order >= 200 && order < 300):
-                            if (!$scope.toolbarItems[200]) {
-                                $scope.toolbarItems[200] = [];
-                            }
-                            $scope.toolbarItems[200].push(menuItem);
-                            break;
-                        case (order >= 300 && order < 400):
-                            if (!$scope.toolbarItems[300]) {
-                                $scope.toolbarItems[300] = [];
-                            }
-                            $scope.toolbarItems[300].push(menuItem);
-                            break;
-                        case (order >= 400 && order < 500):
-                            if (!$scope.toolbarItems[400]) {
-                                $scope.toolbarItems[400] = [];
-                            }
-                            $scope.toolbarItems[400].push(menuItem);
-                            break;
-                        case (order >= 500 && order < 600):
-                            if (!$scope.toolbarItems[500]) {
-                                $scope.toolbarItems[500] = [];
-                            }
-                            $scope.toolbarItems[500].push(menuItem);
-                            break;
-                        case (order >= 600 && order < 700):
-                            if (!$scope.toolbarItems[600]) {
-                                $scope.toolbarItems[600] = [];
-                            }
-                            $scope.toolbarItems[600].push(menuItem);
-                            break;
+                        switch(true) {
+                            case (order < 100):
+                                if (!$scope.toolbarItems[0]) {
+                                    $scope.toolbarItems[0] = [];
+                                }
+                                $scope.toolBarItems[0].push(menuItem);
+                                break;
+                            case (order >= 100 && order < 200):
+                                if (!$scope.toolbarItems[100]) {
+                                    $scope.toolbarItems[100] = [];
+                                }
+                                $scope.toolbarItems[100].push(menuItem);
+                                break;
+                            case (order >= 200 && order < 300):
+                                if (!$scope.toolbarItems[200]) {
+                                    $scope.toolbarItems[200] = [];
+                                }
+                                $scope.toolbarItems[200].push(menuItem);
+                                break;
+                            case (order >= 300 && order < 400):
+                                if (!$scope.toolbarItems[300]) {
+                                    $scope.toolbarItems[300] = [];
+                                }
+                                $scope.toolbarItems[300].push(menuItem);
+                                break;
+                            case (order >= 400 && order < 500):
+                                if (!$scope.toolbarItems[400]) {
+                                    $scope.toolbarItems[400] = [];
+                                }
+                                $scope.toolbarItems[400].push(menuItem);
+                                break;
+                            case (order >= 500 && order < 600):
+                                if (!$scope.toolbarItems[500]) {
+                                    $scope.toolbarItems[500] = [];
+                                }
+                                $scope.toolbarItems[500].push(menuItem);
+                                break;
+                            case (order >= 600 && order < 700):
+                                if (!$scope.toolbarItems[600]) {
+                                    $scope.toolbarItems[600] = [];
+                                }
+                                $scope.toolbarItems[600].push(menuItem);
+                                break;
+
                     }
-                    console.log($scope.toolbarItems);
                 }
             });
-            console.log($scope.toolbarItems);
+
             $templateRequest('ui-grid/ui-grid-menu-toolbar').then(function (html) {
                 var template;
                 template = angular.element(html);
                 $compile(template)($scope);
                 $elm.replaceWith(template);
             });
-        }
+    }
     }
 
 })();
@@ -25307,6 +25306,8 @@ module.filter('px', function() {
             function selectButtonClick(row, evt) {
                 evt.stopPropagation();
 
+                console.log($elm);
+
                 if (evt.shiftKey) {
                     uiGridSelectionService.shiftSelect(self, row, evt, self.options.multiSelect);
                 } else if (evt.ctrlKey || evt.metaKey) {
@@ -28030,7 +28031,7 @@ angular.module('ui.grid').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('ui-grid/ui-grid-menu-button',
-    "<div class=\"ui-grid-menu-button\"><md-menu md-offset=\"0 -5\" class=\"ui-grid-menu-mid\" ng-show=\"true\"><md-button role=\"button\" ui-grid-one-bind-id-grid=\"'grid-menu'\" class=\"ui-grid-icon-container md-icon-button md-grid-button\" ng-click=\"$mdOpenMenu($event)\" aria-haspopup=\"true\" aria-label=\"Open Grid Menu\"><i class=\"ui-grid-icon-menu\" ui-grid-one-bind-aria-label=\"i18n.aria.buttonLabel\">&nbsp;</i></md-button><div ui-grid-menu menu-items=\"menuItems\"></div></md-menu></div>"
+    "<div class=\"ui-grid-menu-button\" ng-hide=\"grid.options.enableGridToolbar\"><md-menu md-offset=\"0 -5\" class=\"ui-grid-menu-mid\" ng-show=\"true\"><md-button role=\"button\" ui-grid-one-bind-id-grid=\"'grid-menu'\" class=\"ui-grid-icon-container md-icon-button md-grid-button\" ng-click=\"$mdOpenMenu($event)\" aria-haspopup=\"true\" aria-label=\"Open Grid Menu\"><i class=\"ui-grid-icon-menu\" ui-grid-one-bind-aria-label=\"i18n.aria.buttonLabel\">&nbsp;</i></md-button><div ui-grid-menu menu-items=\"menuItems\"></div></md-menu></div>"
   );
 
 
@@ -28058,7 +28059,7 @@ angular.module('ui.grid').run(['$templateCache', function($templateCache) {
         "               </md-button>"+
         "               <md-menu-content width=\"4\">"+
         "                   <md-menu-item ng-repeat=\"item in section track by $index\" ng-if=\"$index !== 0\" ng-show=\"item.shown()\">"+
-        "                       <md-button class=\"md-flat md-primary\" ng-click=\"item.action($event)\">"+
+        "                       <md-button class=\"md-flat md-primary\" ng-click=\"item.action($event, item)\">"+
         "                          <span ng-class=\"{'{{item.icon}}': true}\"> </span>{{item.title}}"+
         "                       </md-button>"+
         "                   </md-menu-item>"+

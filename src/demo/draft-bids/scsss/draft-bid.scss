@@ -1,23 +1,28 @@
-.alert-circle {
-    height: 13px;
-    width: 13px;
-    color: white;
-    /* border: 1px solid white; */
-    border-radius: 50%;
-    font-size: 12px;
-    text-align: center;
-    background: red;
-    left: -20px;
-    position: relative;
+wm-draft-bids {
+    position: absolute;
+    top: 40px;
+    right: 70px;
+    .md-menu {
+        top: 0px;
+        padding: 0px;
+    }
+    .md-button {
+        &.md-icon-button {
+            background-color: rgba(220, 220, 220, 1);
+            &:hover {
+                background-color: rgba(0, 0, 0, .3) !important;
+            }
+            md-icon {
+                top: 5px;
+                position: relative;
+            }
+        }
+    }
 }
 
-md-fab-speed-dial {
-    position: fixed;
-    top: 68px;
-    right: 40px;
-    //width: 100%;
-}
-
-.md-scale:not(.md-is-open) .md-fab-action-item {
-    opacity: 0;
+md-icon {
+    &.menu-close-icon {
+        top: 3px;
+        position: relative;
+    }
 }

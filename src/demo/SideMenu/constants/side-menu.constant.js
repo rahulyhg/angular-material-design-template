@@ -23,7 +23,7 @@
                     },
                     {
                         name: 'View/Edit Quote',
-                        state: 'container.form.viewedit ',
+                        state: 'container.viewedit ',
                         type: 'link',
                         icon: 'fa fa-eye',
                         description: 'View or Update Quote'

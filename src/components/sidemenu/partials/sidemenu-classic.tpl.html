@@ -1,6 +1,6 @@
-<div layout="row">
+<div layout="row" md-theme="{{vm.ActiveTheme}}" md-theme-watch="true">
     <md-sidenav class="md-sidenav-left md-whiteframe-z1 leave fade-in-out sidenav-fixed md-default-theme" md-component-id="left" flex="" ng-class="{'menu-collapsed': !vm.menuIsSlidOpen, 'menu-expanded': vm.menuIsSlidOpen}" md-is-locked-open="true" wm-apply-custom-theme>
-        <md-toolbar>
+        <md-toolbar wm-apply-custom-toolbar-color>
             <div class="md-toolbar-tools">
                 <h3 class="ease-expand" ng-class="{'show-title': (vm.menuIsSlidOpen || vm.menuIsHover), 'hide-title': !(vm.menuIsSlidOpen || vm.menuIsHover)}">
                     <span>Navigation</span>

@@ -2,7 +2,7 @@
     'use strict';
     angular.module('asdaTheme')
         .constant('asdaBackground', {
-        '50': '#ffffff',
+        '50': '#3C3C3C',
         '100': '#ffffff',
         '200': '#ffffff',
         '300': '#ffffff',

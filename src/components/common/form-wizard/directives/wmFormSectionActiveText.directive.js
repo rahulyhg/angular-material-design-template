@@ -37,6 +37,11 @@
                 }
                 element.css('color', color);
             }
+
+            scope.$on('$activeThemeChanged', () => {
+                colorWays = ColorWays[mdThemeProvider.activeTheme];
+                setBorders();
+            });
         }
     }
 }());

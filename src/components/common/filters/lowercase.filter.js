@@ -5,13 +5,13 @@
         /**
          *replace uppercase to regular case
          */
-        .filter('humanizeDoc', function () {
+        .filter('humanizeDoc', () => {
             return function (doc) {
                 if (!doc) {
                     return;
                 }
                 if (doc.type === 'directive') {
-                    return doc.name.replace(/([A-Z])/g, function ($1) {
+                    return doc.name.replace(/([A-Z])/g, ($1) => {
                         return '-' + $1.toLowerCase();
                     });
                 }

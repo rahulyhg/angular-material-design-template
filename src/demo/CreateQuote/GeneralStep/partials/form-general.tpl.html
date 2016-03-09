@@ -3,18 +3,32 @@
         <div layout="row" class="field-row">
             <md-input-container class="md-block" flex-gt-xs>
                 <label>GTIN</label>
-                <input name="GTIN" ng-model="createQuoteGeneral.data.GTIN">
+                <input name="GTIN"
+                       ng-model="createQuoteGeneral.data.GTIN"
+                       wm-auto-save-action
+                       object-store-name="DraftQuotes"
+                       object-to-save="createQuoteGeneral.Quote">
             </md-input-container>
             <md-input-container class="md-block" flex-gt-xs>
                 <label>UPC (required)</label>
-                <input name="UPC" ng-model="createQuoteGeneral.data.UPC" required>
+                <input name="UPC"
+                       ng-model="createQuoteGeneral.data.UPC"
+                       wm-auto-save-action
+                       object-store-name="DraftQuotes"
+                       object-to-save="createQuoteGeneral.Quote"
+                       required>
                 <div ng-messages="createQuoteGeneral.generalStepForm.UPC.$error">
                     <div ng-message="required">UPC is required.</div>
                 </div>
             </md-input-container>
             <md-input-container class="md-block" flex-gt-xs>
                 <label>Product Name (required)</label>
-                <input name="ProductName" ng-model="createQuoteGeneral.data.ProductName" required>
+                <input name="ProductName"
+                       ng-model="createQuoteGeneral.data.ProductName"
+                       wm-auto-save-action
+                       object-store-name="DraftQuotes"
+                       object-to-save="createQuoteGeneral.Quote"
+                       required>
                 <div ng-messages="createQuoteGeneral.generalStepForm.ProductName.$error">
                     <div ng-message="required">Product Name is required.</div>
                 </div>
@@ -23,14 +37,23 @@
         <div layout="row" class="field-row">
             <md-input-container class="md-block" flex-gt-xs>
                 <label>Supplier Name (required)</label>
-                <input name="SupplierName" ng-model="createQuoteGeneral.data.Supplier" required>
+                <input name="SupplierName"
+                       ng-model="createQuoteGeneral.data.Supplier"
+                       wm-auto-save-action
+                       object-store-name="DraftQuotes"
+                       object-to-save="createQuoteGeneral.Quote"
+                       required>
                 <div ng-messages="createQuoteGeneral.generalStepForm.SupplierName.$error">
                     <div ng-message="required">Supplier Name is required.</div>
                 </div>
             </md-input-container>
             <md-input-container class="md-block" flex-gt-xs>
                 <label>Buyer (required)</label>
-                <input name="Buyer" ng-model="createQuoteGeneral.data.Buyer" required>
+                <input name="Buyer"
+                       ng-model="createQuoteGeneral.data.Buyer"
+                       wm-auto-save-action
+                       object-to-save="createQuoteGeneral.Quote"
+                       required>
                 <div ng-messages="createQuoteGeneral.generalStepForm.Buyer.$error">
                     <div ng-message="required">Buyer is required.</div>
                 </div>
@@ -39,7 +62,12 @@
         <div layout="row" class="field-row">
             <md-input-container class="md-block" flex-gt-sm>
                 <label>Purchase Company (required)</label>
-                <md-select name="PurchaseCompany" ng-model="createQuoteGeneral.data.PurchaseCompany" required>
+                <md-select name="PurchaseCompany"
+                           ng-model="createQuoteGeneral.data.PurchaseCompany"
+                           wm-auto-save-action
+                           object-store-name="DraftQuotes"
+                           object-to-save="createQuoteGeneral.Quote"
+                           required>
                     <md-option ng-repeat="company in createQuoteGeneral.PurchaseCompanies" value="{{state.abbrev}}">
                         {{company.Description}}
                     </md-option>
@@ -50,7 +78,12 @@
             </md-input-container>
             <md-input-container class="md-block" flex-gt-sm>
                 <label>Department (required)</label>
-                <md-select name="Department" ng-model="createQuoteGeneral.data.Department" required>
+                <md-select name="Department"
+                           ng-model="createQuoteGeneral.data.Department"
+                           wm-auto-save-action
+                           object-store-name="DraftQuotes"
+                           object-to-save="createQuoteGeneral.Quote"
+                           required>
                     <md-option ng-repeat="department in createQuoteGeneral.Departments" value="{{state.abbrev}}">
                         {{deparment.Id - department.Description}}
                     </md-option>
@@ -61,7 +94,12 @@
             </md-input-container>
             <md-input-container class="md-block" flex-gt-sm>
                 <label>Deparment Category (required)</label>
-                <md-select name="DepartmentCategory" ng-model="createQuoteGeneral.data.DepartmentCategories" required>
+                <md-select name="DepartmentCategory"
+                           ng-model="createQuoteGeneral.data.DepartmentCategories"
+                           wm-auto-save-action
+                           object-store-name="DraftQuotes"
+                           object-to-save="createQuoteGeneral.Quote"
+                           required>
                     <md-option ng-repeat="departmentCategory in createQuoteGeneral.DepartementCategories" value="{{state.abbrev}}">
                         {{departmentCategory.Id - departmentCategory.Description}}
                     </md-option>
@@ -74,7 +112,12 @@
         <div layout="row" class="field-row">
             <md-input-container class="md-block" flex-gt-sm>
                 <label>Credit Office (required)</label>
-                <md-select name="CreditOffice" ng-model="createQuoteGeneral.data.CreditOffice" required>
+                <md-select name="CreditOffice"
+                           ng-model="createQuoteGeneral.data.CreditOffice"
+                           wm-auto-save-action
+                           object-store-name="DraftQuotes"
+                           object-to-save="createQuoteGeneral.Quote"
+                           required>
                     <md-option ng-repeat="creditOffice in createQuoteGeneral.CreditOffices" value="{{state.abbrev}}">
                         {{creditOffice.Description}}
                     </md-option>
@@ -85,13 +128,23 @@
             </md-input-container>
             <md-input-container class="md-block" flex-gt-xs>
                 <label>Event Code (required)</label>
-                <input name="EventCode" ng-model="createQuoteGeneral.data.EventCode" required>
+                <input name="EventCode"
+                       ng-model="createQuoteGeneral.data.EventCode"
+                       wm-auto-save-action
+                       object-store-name="DraftQuotes"
+                       object-to-save="createQuoteGeneral.Quote"
+                       required>
                 <div ng-messages="createQuoteGeneral.generalStepForm.EventCode.$error">
                     <div ng-message="required">Event Code is required.</div>
                 </div>
             </md-input-container>
             <div class="inset">
-                <md-switch ng-model="createQuoteGeneral.data.IsReQuote" aria-label="Is Currently Offered Product?" class="md-primary">
+                <md-switch ng-model="createQuoteGeneral.data.IsReQuote"
+                           aria-label="Is Currently Offered Product?"
+                           class="md-primary"
+                           wm-auto-save-action
+                           object-store-name="DraftQuotes"
+                           object-to-save="createQuoteGeneral.Quote">
                     Product Currently Offered? {{ createQuoteGeneral.data.IsReQuote | yesno}}
                 </md-switch>
             </div>

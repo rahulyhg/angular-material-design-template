@@ -3,7 +3,7 @@
 (function () {
     'use strict';
     angular.module('formWizard', ['dynamicState.provider', 'QuoteForm'])
-        .config(['$dynamicStateProvider', 'CreateQuoteFormSteps', function ($dynamicStateProvider, CreateQuoteFormSteps) {
+        .config(['$dynamicStateProvider', 'CreateQuoteFormSteps', ($dynamicStateProvider, CreateQuoteFormSteps) => {
             var count;
             count  = 0;
             angular.forEach(CreateQuoteFormSteps.steps, (formStep) => {

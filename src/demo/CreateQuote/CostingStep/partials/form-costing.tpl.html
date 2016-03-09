@@ -3,21 +3,36 @@
         <div layout="row" class="field-row">
             <md-input-container class="md-block" flex-gt-xs>
                 <label>First Cost</label>
-                <input name="FirstCost" ng-model="createQuoteCosting.data.FirstCost" required>
+                <input name="FirstCost"
+                       ng-model="createQuoteCosting.data.FirstCost"
+                       wm-auto-save-action
+                       object-store-name="DraftQuotes"
+                       object-to-save="createQuoteCosting.Quote"
+                       required>
                 <div ng-messages="createQuoteCosting.costingStepForm.FirstCost.$error">
                     <div ng-message="required">First Cost is required.</div>
                 </div>
             </md-input-container>
             <md-input-container class="md-block" flex-gt-xs>
                 <label>Store Retail Price</label>
-                <input name="StoreRetailPrice" ng-model="createQuoteCosting.data.StoreRetailPrice" required>
+                <input name="StoreRetailPrice"
+                       ng-model="createQuoteCosting.data.StoreRetailPrice"
+                       wm-auto-save-action
+                       object-store-name="DraftQuotes"
+                       object-to-save="createQuoteCosting.Quote"
+                       required>
                 <div ng-messages="createQuoteCosting.costingStepForm.StoreRetailPrice.$error">
                     <div ng-message="required">Store Retail Price is required.</div>
                 </div>
             </md-input-container>
             <md-input-container class="md-block" flex-gt-sm>
                 <label>Bid Currency</label>
-                <md-select name="BidCurrencyCode" ng-model="createQuoteCosting.data.BidCurrencyCode" required>
+                <md-select name="BidCurrencyCode"
+                           ng-model="createQuoteCosting.data.BidCurrencyCode"
+                           wm-auto-save-action
+                           object-store-name="DraftQuotes"
+                           object-to-save="createQuoteCosting.Quote"
+                           required>
                     <md-option ng-repeat="currency in createQuoteCosting.BidCurrencyCodes" value="{{currency.Id}}">
                         {{currency.Description}}
                     </md-option>

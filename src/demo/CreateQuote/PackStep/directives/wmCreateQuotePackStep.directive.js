@@ -35,6 +35,8 @@
 
         self = this;
 
+        self.Quote = CreateQuoteObject;
+
         function getCurrentStep () {
             return HideShowErrorSuccess.GetCurrentStep(CreateQuoteFormSteps, 'pack');
         }

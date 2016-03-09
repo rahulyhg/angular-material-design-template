@@ -1,5 +1,22 @@
 <span flex layout="row" layout-align="end center">
 <!--    <wm-global-search menu-items="menuItems"></wm-global-search>-->
     <span class="fa fa-bell pad-menu-icon-right"></span>
-    <span class="pad-menu-icon-right">Jacob Tucker</span>
+<!--    <span class="pad-menu-icon-right">Jacob Tucker</span>-->
+    <md-menu>
+      <md-button aria-label="Open User Menu" class="md-flat" ng-click="$mdOpenMenu($event)">
+        <span>Jacob Tucker</span><md-icon class="fa fa-chevron-down"></md-icon>
+      </md-button>
+      <md-menu-content width="4">
+        <md-menu-item>
+          <md-button class="md-flat md-primary" ng-click="toolbarContentRight.SwapThemes('Walmart')">
+            Walmart Theme
+          </md-button>
+        </md-menu-item>
+        <md-menu-item>
+          <md-button class="md-flat md-primary" ng-click="toolbarContentRight.SwapThemes('ASDA')">
+            ASDA Theme
+          </md-button>
+        </md-menu-item>
+      </md-menu-content>
+    </md-menu>
 </span>

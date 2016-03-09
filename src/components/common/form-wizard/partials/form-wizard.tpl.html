@@ -4,7 +4,7 @@
             {{vm.wizardTitle}}
         </div>
     </div>
-    <div layout="row" layout-align="center center" wm-apply-custom-theme-background class="form-wrapper">
+    <div layout="row" layout-align="center center" wm-apply-custom-theme-background active-theme="{{vm.ActiveTheme}}" class="form-wrapper">
         <div layout="column" flex layout-align="center center">
             <div layout="row" layout-align="center center" class="tab-container">
                 <div layout="row" layout-align="center center" flex class="tab-wrapper" wm-form-section-bar ng-repeat="tab in vm.formTabs track by $index" ng-class="{'tab-left': $index === 0, 'tab-right': $index === vm.formTabs.length - 1}">

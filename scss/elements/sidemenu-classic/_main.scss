@@ -1,8 +1,14 @@
 md-sidenav {
+    &.md-sidenav-left {
+        //box-shadow: 5px 2px 4px rgba(0, 0, 0, .2);
+        box-shadow: none !important;
+        top: 64px;
+    }
     &.menu-expanded {
         visibility: visible;
         opacity: 1;
         width: 304px;
+        width: 255px;
         transition: width 0.3s ease-in-out;
     }
     &.menu-collapsed {

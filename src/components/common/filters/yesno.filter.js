@@ -2,7 +2,7 @@
 (function () {
     'use strict';
     angular.module('filters.package')
-        .filter('yesno', function () {
+        .filter('yesno', () => {
         return function (value) {
             return (value) ? 'Yes' : 'No';
         };
